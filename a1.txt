@@ -1,0 +1,221 @@
+Script started on 2022-09-13 19:37:36-04:00
+
+1. Make directory A1 under home directory and change to it.
+
+]0;khang@sjsu:~[khang@sjsu ~]$ mkdir A1
+]0;khang@sjsu:~[khang@sjsu ~]$ cd A1
+
+2. What is your home directory path? /home/khang/A1
+How did you find out (commands used)? pwd
+
+]0;khang@sjsu:~/A1[khang@sjsu A1]$ pwd
+/home/khang/A1
+
+3. What is your UID? 1032 
+What group(s) do you belong? khang  
+How did you find out (command used)? 'groups' and 'id -u username'
+
+]0;khang@sjsu:~/A1[khang@sjsu A1]$ grpus[K[K[Koups
+khang
+]0;khang@sjsu:~/A1[khang@sjsu A1]$ id -u khang
+1034
+
+4.  Create a new directory "temp". Now remove execute permission for myself from this temp directory
+]0;khang@sjsu:~/A1[khang@sjsu A1]$ mkdir temp
+]0;khang@sjsu:~/A1[khang@sjsu A1]$ chmod 666 temp
+
+Are you allowed to cd in that directory? No
+Can you "ls" it? Yes
+Can you "ls -l" it? Yes
+Can you create files under it? No
+
+]0;khang@sjsu:~/A1[khang@sjsu A1]$ cd temp
+bash: cd: temp: Permission denied
+]0;khang@sjsu:~/A1[khang@sjsu A1]$ ls temop[K[Kp
+]0;khang@sjsu:~/A1[khang@sjsu A1]$ ls -l temp
+total 0
+]0;khang@sjsu:~/A1[khang@sjsu A1]$ touch /[K./temp/t[Knewfile.txt
+touch: cannot touch './temp/newfile.txt': Permission denied
+
+
+5) Create a new directory "temp2". 
+Are you allowed to "mv" the directory to "temp3"? Yes  
+Are you allowed to "cp" a directory? Yes  
+If you want to cp an entire directory, how would you do it? using command: cp -R currentDirectory newDirectory
+]0;khang@sjsu:~/A1[khang@sjsu A1]$ mkdir temp2
+]0;khang@sjsu:~/A1[khang@sjsu A1]$ mv temp2 temp3
+]0;khang@sjsu:~/A1[khang@sjsu A1]$ cp -r temp3 temp4
+
+
+6. can you find out which file under directory /proc/ contains information about memory (mem) on your server? Yes, this is 'meminfo'
+command used: ls -l /proc | grep 'mem'
+Which file contains information about the cpu's on your server? cpuinfo
+command used: ls -l /proc | grep 'mem'
+
+]0;khang@sjsu:~/A1[khang@sjsu A1]$ ls -l /proc/[K | greq[Kp 'mem'
+-r--r--r-- 1 root           root                             0 Aug 25 14:43 io[01;31m[Kmem[m[K
+-r--r--r-- 1 root           root                             0 Aug  9 21:47 [01;31m[Kmem[m[Kinfo
+]0;khang@sjsu:~/A1[khang@sjsu A1]$ ls -l /proc | grep 'mem'[K[K[K[Kcpu'
+-r--r--r-- 1 root           root                             0 Aug  9 21:48 [01;31m[Kcpu[m[Kinfo
+
+7. How much total memory is on your server? 73090640kB = 73GB
+]0;khang@sjsu:~/A1[khang@sjsu A1]$ head /proc/meminfo 
+MemTotal:       73080640 kB
+MemFree:         4043904 kB
+MemAvailable:   60838912 kB
+Buffers:            4224 kB
+Cached:         58131520 kB
+SwapCached:         9152 kB
+Active:         56328896 kB
+Inactive:        2278400 kB
+Active(anon):     249152 kB
+Inactive(anon):   785344 kB
+
+8. How many processors are on your server? 256
+What is the processor architecture name? POWER8 
+What is the processor speed in GHz? 3525MHz = 3.525GHz
+]0;khang@sjsu:~/A1[khang@sjsu A1]$ (head -n 10 && tail -n 10) < /proc/meminfo[K[K[K[K[K[K[Kcpuinfo 
+processor	: 0
+cpu		: POWER8 (architected), altivec supported
+clock		: 3525.000000MHz
+revision	: 2.1 (pvr 004b 0201)
+
+processor	: 1
+cpu		: POWER8 (architected), altivec supported
+clock		: 3525.000000MHz
+revision	: 2.1 (pvr 004b 0201)
+
+processor	: 255
+cpu		: POWER8 (architected), altivec supported
+clock		: 3525.000000MHz
+revision	: 2.1 (pvr 004b 0201)
+
+timebase	: 512000000
+platform	: pSeries
+model		: IBM,8286-42A
+machine		: CHRP IBM,8286-42A
+MMU		: Hash
+
+
+* From question 9 to 13, I answered questions before including screen capture because I worked in this file miltiple times. Thank you so much!
+
+
+9. What is the size in GB (GigaBytes) of the hashtags tweet dataset? 7.5MB = 0.0075 GB
+How many lines does it have? 110350 lines
+
+10. Search in the Tweets hashtags file for the case-insensitive word "great" (i.e. "Great" or "GREAT" also count). How many hashtags contain this word? 55
+
+command used: grep -i 'great' downloaded_hashtags_extend.csv | sort | uniq | wc  
+
+11. What character encoding does it have? UTF-8 Unicode text
+
+12. Now use the iconv (or another) command to convert the tweet file to ascii character encoding. Search to read about ascii vs non-ascii encodings.
+
+command used: iconv -f utf-8 -t ascii//TRANSLIT downloaded_hashtags_extend.csv > newfile.txt
+
+Also, I use this command " grep --color='auto' -P -n "[\x80-\xFF]" downloaded_hashtags_extend.csv" to check non-ascii character in file
+
+13. How many unique users tweeted hashtags in the hashtags file (user IDs are in the first column)? 177
+command used: awk -F ',' '{print $1}' newfile.txt | sort | uniq | wc
+
+How many unique tweets were tweeted in this file (tweet IDs are in the last column)? 64698
+command used: awk -F ',' '{print $4}' newfile.txt | sort | uniq | wc
+
+How many unique hashtags (second column) were tweeted in this file? Is it the same as the number of tweets or more or less? 20134 and it is less than the numberof tweets
+
+command used: awk -F ',' '{print $2}' newfile.txt | sort | uniq | wc
+
+]0;khang@sjsu:~/A1[khang@sjsu A1]$ (head -n 10 && tail -n 10) < /proc/cpuinfo [1Pmeminfo[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[23Phead /proc/meminfo [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls -l /proc | grep 'cpu'mem'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7Pcp -r temp3 temp4[3Pmv temp2 temp3[3Pkdir temp2touch ./temp/newfile.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[14Pls -l temp[3Ptempcd[C[C[C[C[C[7@hmod 666[C[C[C[C[C[4Pmkdir[C[C[C[C[Cid -u khang[5Pgroups[3Ppwdcd A1[3@mkdir[C[C[Cvim a1.txt [1@more[C[C[C[C[C[C[C[C[3Pvi a1.txtls[Kcd A1[7@mv a1.txt[C[C[Cscript a1.txt[5Prm -r A1awk -F ',' '{print $2}' newfile.txt | sort | uniq | wc4[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Pgrep --color='auto' -P -n "[\x80-\xFF]" newfile.txtdownloaded_hashtags_exteend.csv[A[C[C[C[C[C[C[C[C[C[Ciconv -f utf-8 -t ascii//TRANSLIT downloaded_hashtags_extend.csv > newfile.txt[A[C[C[27Pfile downloaded_hashtags_extend.csv 
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgrep -i 'great' downloaded_hashtags_extend.csv | sort | uniq | wwc [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[26Pwc -l downloaded_hashtags_extend.csv
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@ls -lh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp  ~test/A1/downloaded_hashtags_extend.csv .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2P(head -n 10 && tail -n 10) < /proc/cpuinfo [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[24Phead /proc/mem[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls -l /proc | grep 'cpu'mem'cpu'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5Phead /proc/meminfo [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[24@(head -n 10 && tail -n 10) < /proc/cpu[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp  ~test/A1/downloaded_hashtags_extend.csv .
+]0;khang@sjsu:~/A1[khang@sjsu A1]$ cp  ~test/A1/downloaded_hashtags_extend.csv .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2P(head -n 10 && tail -n 10) < /proc/cpuinfo [1Pmeminfo[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[23Phead /proc/meminfo [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls -l /proc | grep 'cpu'mem'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7Pcp -r temp3 temp4[3Pmv temp2 temp3[3Pkdir temp2touch ./temp/newfile.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[14Pls -l temp[3Ptempcd[C[C[C[C[C[7@hmod 666[C[C[C[C[C[4Pmkdir[C[C[C[C[Cid -u khang[5Pgroups[3Ppwdcd A1[3@mkdir[C[C[Cvim a1.txt [1@more[C[C[C[C[C[C[C[C[3Pvi a1.txtls[Kcd A1[7@mv a1.txt[C[C[Cscript a1.txt[5Prm -r A1awk -F ',' '{print $2}' newfile.txt | sort | uniq | wc4[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Pgrep --color='auto' -P -n "[\x80-\xFF]" newfile.txtdownloaded_hashtags_exteend.csv[A[C[C[C[C[C[C[C[C[C[Ciconv -f utf-8 -t ascii//TRANSLIT downloaded_hashtags_extend.csv > newfile.txt[A[C[C[27Pfile downloaded_hashtags_extend.csv 
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgrep -i 'great' downloaded_hashtags_extend.csv | sort | uniq | wwc [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[26Pwc -l downloaded_hashtags_extend.csv
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@ls -lh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+-rw-r--r-- 1 khang khang 7.5M Sep 13 19:40 downloaded_hashtags_extend.csv
+]0;khang@sjsu:~/A1[khang@sjsu A1]$ ls -lh downloaded_hashtags_extend.csv [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp  ~test/A1/downloaded_hashtags_extend.csv .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2P(head -n 10 && tail -n 10) < /proc/cpuinfo [1Pmeminfo[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[23Phead /proc/meminfo [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls -l /proc | grep 'cpu'mem'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7Pcp -r temp3 temp4[3Pmv temp2 temp3[3Pkdir temp2touch ./temp/newfile.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[14Pls -l temp[3Ptempcd[C[C[C[C[C[7@hmod 666[C[C[C[C[C[4Pmkdir[C[C[C[C[Cid -u khang[5Pgroups[3Ppwdcd A1[3@mkdir[C[C[Cvim a1.txt [1@more[C[C[C[C[C[C[C[C[3Pvi a1.txtls[Kcd A1[7@mv a1.txt[C[C[Cscript a1.txt[5Prm -r A1awk -F ',' '{print $2}' newfile.txt | sort | uniq | wc4[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Pgrep --color='auto' -P -n "[\x80-\xFF]" newfile.txtdownloaded_hashtags_exteend.csv[A[C[C[C[C[C[C[C[C[C[Ciconv -f utf-8 -t ascii//TRANSLIT downloaded_hashtags_extend.csv > newfile.txt[A[C[C[27Pfile downloaded_hashtags_extend.csv 
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgrep -i 'great' downloaded_hashtags_extend.csv | sort | uniq | wwc [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[26Pwc -l downloaded_hashtags_extend.csv
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+110350 downloaded_hashtags_extend.csv
+]0;khang@sjsu:~/A1[khang@sjsu A1]$ wc -l downloaded_hashtags_extend.csv [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@ls -lh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp  ~test/A1/downloaded_hashtags_extend.csv .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2P(head -n 10 && tail -n 10) < /proc/cpuinfo [1Pmeminfo[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[23Phead /proc/meminfo [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls -l /proc | grep 'cpu'mem'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7Pcp -r temp3 temp4[3Pmv temp2 temp3[3Pkdir temp2touch ./temp/newfile.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[14Pls -l temp[3Ptempcd[C[C[C[C[C[7@hmod 666[C[C[C[C[C[4Pmkdir[C[C[C[C[Cid -u khang[5Pgroups[3Ppwdcd A1[3@mkdir[C[C[Cvim a1.txt [1@more[C[C[C[C[C[C[C[C[3Pvi a1.txtls[Kcd A1[7@mv a1.txt[C[C[Cscript a1.txt[5Prm -r A1awk -F ',' '{print $2}' newfile.txt | sort | uniq | wc4[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Pgrep --color='auto' -P -n "[\x80-\xFF]" newfile.txtdownloaded_hashtags_exteend.csv[A[C[C[C[C[C[C[C[C[C[Ciconv -f utf-8 -t ascii//TRANSLIT downloaded_hashtags_extend.csv > newfile.txt[A[C[C[27Pfile downloaded_hashtags_extend.csv 
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgrep -i 'great' downloaded_hashtags_extend.csv | sort | uniq | wwc [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[26Pwc -l downloaded_hashtags_extend.csv
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgrep -i 'great' downloaded_hashtags_extend.csv | sort | uniq | wwc 
+     55     110    4422
+]0;khang@sjsu:~/A1[khang@sjsu A1]$ grep -i 'great' downloaded_hashtags_extend.csv | sort | uniq | wwc [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[26Pwc -l downloaded_hashtags_extend.csv
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@ls -lh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp  ~test/A1/downloaded_hashtags_extend.csv .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2P(head -n 10 && tail -n 10) < /proc/cpuinfo [1Pmeminfo[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[23Phead /proc/meminfo [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls -l /proc | grep 'cpu'mem'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7Pcp -r temp3 temp4[3Pmv temp2 temp3[3Pkdir temp2touch ./temp/newfile.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[14Pls -l temp[3Ptempcd[C[C[C[C[C[7@hmod 666[C[C[C[C[C[4Pmkdir[C[C[C[C[Cid -u khang[5Pgroups[3Ppwdcd A1[3@mkdir[C[C[Cvim a1.txt [1@more[C[C[C[C[C[C[C[C[3Pvi a1.txtls[Kcd A1[7@mv a1.txt[C[C[Cscript a1.txt[5Prm -r A1awk -F ',' '{print $2}' newfile.txt | sort | uniq | wc4[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Pgrep --color='auto' -P -n "[\x80-\xFF]" newfile.txtdownloaded_hashtags_exteend.csv[A[C[C[C[C[C[C[C[C[C[Ciconv -f utf-8 -t ascii//TRANSLIT downloaded_hashtags_extend.csv > newfile.txt[A[C[C[27Pfile downloaded_hashtags_extend.csv 
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgrep -i 'great' downloaded_hashtags_extend.csv | sort | uniq | wwc [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[27Pfile downloaded_hashtags_extend.csv
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+downloaded_hashtags_extend.csv: UTF-8 Unicode text
+]0;khang@sjsu:~/A1[khang@sjsu A1]$ file downloaded_hashtags_extend.csv [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgrep -i 'great' downloaded_hashtags_extend.csv | sort | uniq | wwc [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[26Pwc -l downloaded_hashtags_extend.csv
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@ls -lh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp  ~test/A1/downloaded_hashtags_extend.csv .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2P(head -n 10 && tail -n 10) < /proc/cpuinfo [1Pmeminfo[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[23Phead /proc/meminfo [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls -l /proc | grep 'cpu'mem'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7Pcp -r temp3 temp4[3Pmv temp2 temp3[3Pkdir temp2touch ./temp/newfile.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[14Pls -l temp[3Ptempcd[C[C[C[C[C[7@hmod 666[C[C[C[C[C[4Pmkdir[C[C[C[C[Cid -u khang[5Pgroups[3Ppwdcd A1[3@mkdir[C[C[Cvim a1.txt [1@more[C[C[C[C[C[C[C[C[3Pvi a1.txtls[Kcd A1[7@mv a1.txt[C[C[Cscript a1.txt[5Prm -r A1awk -F ',' '{print $2}' newfile.txt | sort | uniq | wc4[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Pgrep --color='auto' -P -n "[\x80-\xFF]" newfile.txtdownloaded_hashtags_exteend.csv[A[C[C[C[C[C[C[C[C[C[Ciconv -f utf-8 -t ascii//TRANSLIT downloaded_hashtags_extend.csv > newfile.txt
+]0;khang@sjsu:~/A1[khang@sjsu A1]$ iconv -f utf-8 -t ascii//TRANSLIT downloaded_hashtags_extend.csvv > newfile.txt[A[C[C[27Pfile downloaded_hashtags_extend.csv 
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgrep -i 'great' downloaded_hashtags_extend.csv | sort | uniq | wwc [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[26Pwc -l downloaded_hashtags_extend.csv
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@ls -lh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp  ~test/A1/downloaded_hashtags_extend.csv .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2P(head -n 10 && tail -n 10) < /proc/cpuinfo [1Pmeminfo[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[23Phead /proc/meminfo [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls -l /proc | grep 'cpu'mem'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7Pcp -r temp3 temp4[3Pmv temp2 temp3[3Pkdir temp2touch ./temp/newfile.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[14Pls -l temp[3Ptempcd[C[C[C[C[C[7@hmod 666[C[C[C[C[C[4Pmkdir[C[C[C[C[Cid -u khang[5Pgroups[3Ppwdcd A1[3@mkdir[C[C[Cvim a1.txt [1@more[C[C[C[C[C[C[C[C[3Pvi a1.txtls[Kcd A1[7@mv a1.txt[C[C[Cscript a1.txt[5Prm -r A1awk -F ',' '{print $2}' newfile.txt | sort | uniq | wc4[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Pgrep --color='auto' -P -n "[\x80-\xFF]" newfile.txtdownloaded_hashtags_exteend.csv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[12Pnewfile.txt
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cawk -F ',' '{print $1}' newfile.txt | sort | uniq | wc[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Pgrep --color='auto' -P -n "[\x80-\xFF]" newfile.txtdownloaded_hashtags_exteend.csv
+[32m[K929[m[K[36m[K:[m[K1476778228236931073,slavaukra[01;31m[Kï[m[Kni,2022-04-21 04:58:47+00:00,1517004898600206336
+[32m[K7239[m[K[36m[K:[m[K195578878,elcl[01;31m[Ká[m[Ksico,2022-01-12 21:55:50+00:00,1481384452580380672
+[32m[K7242[m[K[36m[K:[m[K195578878,elcl[01;31m[Ká[m[Ksico,2022-01-12 20:37:00+00:00,1481364611056259082
+[32m[K9954[m[K[36m[K:[m[K195578878,elcl[01;31m[Ká[m[Ksico,2022-01-12 21:55:50+00:00,1481384452580380672
+[32m[K9957[m[K[36m[K:[m[K19557:w8878,elcl[01;31m[Ká[m[Ksico,2022-01-12 20:37:00+00:00,1481364611056259082
+[32m[K10534[m[K[36m[K:[m[K195578878,elcl[01;31m[Ká[m[Ksico,2022-01-12 21:55:50+00:00,1481384452580380672
+[32m[K10537[m[K[36m[K:[m[K195578878,elcl[01;31m[Ká[m[Ksico,2022-01-12 20:37:00+00:00,1481364611056259082
+[32m[K15126[m[K[36m[K:[m[K1159870188420046848,m[01;31m[Ké[m[Kpris,2022-02-12 22:38:50+00:00,1492629294945812482
+[32m[K15132[m[K[36m[K:[m[K1159870188420046848,d[01;31m[Ké[m[Kclarama,2022-01-20 23:00:46+00:00,1484299895976640513
+[32m[K18642[m[K[36m[K:[m[K45379403,m[01;31m[Ké[m[Klenchon,2022-04-11 20:01:02+00:00,1513608078377242631
+[32m[K24790[m[K[36m[K:[m[K3453306553,reichsf[01;31m[Kü[m[Khrerdutton,2022-02-10 19:52:05+00:00,1491862554360295424
+[32m[K31830[m[K[36m[K:[m[K348764745,schr[01;31m[Kö[m[Kder,2022-03-22 13:01:04+00:00,1506254636218474501
+[32m[K32790[m[K[36m[K:[m[K578601744,pot[01;31m[Ká[m[Kssiodobrasil,2022-04-15 20:51:42+00:00,1515070383879303170
+[32m[K32825[m[K[36m[K:[m[K578601744,pot[01;31m[Ká[m[Kssiodobrasil,2022-04-14 01:16:04+00:00,1514412138433069056
+[32m[K32845[m[K[36m[K:[m[K578601744,pot[01;31m[Ká[m[Kssiodobrasil,2022-04-13 22:51:36+00:00,1514375780415029258
+[32m[K32863[m[K[36m[K:[m[K578601744,m[01;31m[Ké[m[Klenchon,2022-04-13 19:37:27+00:00,1514326922964180996
+[32m[K32902[m[K[36m[K:[m[K578601744,nuevarefiner[01;31m[Kí[m[Katalara,2022-04-13 00:18:56+00:00,1514035370857537539
+[32m[K36072[m[K[36m[K:[m[K578601744,feministgecey[01;31m[Kü[m[Kr[01;31m[Kü[m[Ky[01;31m[Kü[m[Kş[01;31m[Kü[m[K,2022-03-08 18:27:52+00:00,1501263448478343168
+[32m[K37635[m[K[36m[K:[m[K41186732,c[01;31m[Ké[m[Ksarch[01;31m[Ká[m[Kvez,2022-03-31 20:11:20+00:00,1509624407442051074
+[32m[K37636[m[K[36m[K:[m[K41186732,c[01;31m[Ké[m[Ksarch[01;31m[Ká[m[Kvezday,2022-03-31 20:11:20+00:00,1509624407442051074
+[32m[K37917[m[K[36m[K:[m[K915201181500297216,ingl[01;31m[Kê[m[Ks,2022-04-20 12:12:48+00:00,1516751734860832768
+[32m[K44357[m[K[36m[K:[m[K967871677399994368,d[01;31m[Kü[m[Ksseldorf,2022-02-05 21:03:21+00:00,1490068553508270085
+[32m[K46595[m[K[36m[K:[m[K144904056,noalareformael[01;31m[Ké[m[Kctrica,2022-04-12 17:04:57+00:00,1513926155048529922
+[32m[K46987[m[K[36m[K:[m[K1148374192586481664,laizquierdaganar[01;31m[Ká[m[Kenandaluc[01;31m[Kí[m[Ka,2022-04-30 17:11:04+00:00,1520450676559654913
+[32m[K47998[m[K[36m[K:[m[K4757894056,slavaukra[01;31m[Kï[m[Kni,2022-03-09 08:50:27+00:00,1501480521892773891
+[32m[K49349[m[K[36m[K:[m[K1255626720578867202,schie[01;31m[Kß[m[Kbefehl,2022-01-30 20:43:35+00:00,1487889249869389824
+[32m[K50947[m[K[36m[K:[m[K981436419087523840,s[01;31m[Kä[m[Kkpol,2022-04-15 18:07:44+00:00,1515029117405732865
+[32m[K56770[m[K[36m[K:[m[K2530758806,santotom[01;31m[Ké[m[K,2022-02-21 04:22:05+00:00,1495614779528192000
+[32m[K56826[m[K[36m[K:[m[K2530758806,r[01;31m[Kí[m[Kodejaneiro,2022-02-16 05:35:08+00:00,1493821223939153923
+[32m[K59052[m[K[36m[K:[m[K3231054096,p[01;31m[Ké[m[Kcresse,2022-02-16 14:40:38+00:00,1493958505627197442
+[32m[K61575[m[K[36m[K:[m[K935349971129311233,andyng[01;31m[Kô[m[K,2022-02-22 06:45:56+00:00,1496013367508893700
+[32m[K62054[m[K[36m[K:[m[K1309237180418666499,solidarit[01;31m[Kä[m[Ktmitkarl,2022-04-27 21:24:53+00:00,1519427389499101186
+[32m[K62063[m[K[36m[K:[m[K1309237180418666499,solidarit[01;31m[Kä[m[Ktmitkarl,2022-04-19 19:09:58+00:00,1516494333515603983
+[32m[K62081[m[K[36m[K:[m[K1309237180418666499,teamsolidarit[01;31m[Kä[m[Kt,2022-04-06 13:23:52+00:00,1511696190974349315
+[32m[K62133[m[K[36m[K:[m[K1309237180418666499,teamr[01;31m[Kü[m[Kcksicht,2022-03-13 08:46:34+00:00,1502929099160969217
+[32m[K63603[m[K[36m[K:[m[K2800413166,peenem[01;31m[Kü[m[Knde,2022-03-21 16:52:18+00:00,1505950438277152768
+[32m[K69079[m[K[36m[K:[m[K29447428,libert[01;31m[Ké[m[Ks,2022-02-12 20:01:40+00:00,1492589742818570248
+[32m[K82093[m[K[36m[K:[m[K971082899381305344,slavaukra[01;31m[Kï[m[Kni,2022-02-27 02:31:46+00:00,1497761347026636800
+[32m[K83297[m[K[36m[K:[m[K1011581275851943938,[01;31m[Ké[m[Kcoles,2022-01-17 13:26:02+00:00,1483068096734765058
+[32m[K83572[m[K[36m[K:[m[K22996614,petr[01;31m[Kó[m[Kpolis,2022-02-17 01:16:16+00:00,1494118464948109312
+[32m[K87081[m[K[36m[K:[m[K943925946,compi[01;31m[Kè[m[Kgne,2022-03-30 08:37:10+00:00,1509087323492868096
+[32m[K89565[m[K[36m[K:[m[K989200133215617024,reichsb[01;31m[Kü[m[Krger,2022-04-21 18:38:45+00:00,1517211251700649984
+[32m[K98416[m[K[36m[K:[m[K1107055570106961920,orb[01;31m[Ká[m[Kn,2022-04-07 23:04:53+00:00,1512204794487836673
+[32m[K100579[m[K[36m[K:[m[K36902944,slavaukra[01;31m[Kï[m[Kni,2022-03-21 02:49:33+00:00,1505738352615641089
+[32m[K101724[m[K[36m[K:[m[K1381367533,zemmourtrocad[01;31m[Ké[m[Kro,2022-03-27 18:16:10+00:00,1508145872906956809
+[32m[K103665[m[K[36m[K:[m[K1486065115157843968,lasoufri[01;31m[Kè[m[Kre,2022-04-12 12:14:57+00:00,1513853172954984451
+[32m[K104547[m[K[36m[K:[m[K1103424042911105035,na[01;31m[Kï[m[Kveart,2022-02-13 19:04:26+00:00,1492937729902006284
+[32m[K105447[m[K[36m[K:[m[K1335822241234358274,chalk[01;31m[Kí[m[Kda,2022-02-26 23:14:51+00:00,1497711788464431108
+[32m[K106134[m[K[36m[K:[m[K36902944,s[01;31m[Kä[m[Kkpol,2022-01-13 04:20:59+00:00,1481481377468063745
+[32m[K109096[m[K[36m[K:[m[K1381367533,pr[01;31m[Ké[m[Ksidentielle,2022-02-20 09:27:10+00:00,1495329169491832833
+[32m[K109147[m[K[36m[K:[m[K1381367533,7f[01;31m[Ké[m[Kvrier,2022-02-08 15:49:44+00:00,1491076791238537216
+[32m[K109266[m[K[36m[K:[m[K1381367533,p[01;31m[Ké[m[Kricardites,2022-01-08 21:47:10+00:00,1479932717496156166
+[32m[K110108[m[K[36m[K:[m[K1442877975683293185,querdenkent[01;31m[Kö[m[Ktet,2022-01-08 17:36:03+00:00,1479869523490705410
+]0;khang@sjsu:~/A1[khang@sjsu A1]$ grep --color='auto' -P -n "[\x80-\xFF]" downloaded_hashtags_exteend.csv[A[C[C[C[C[C[C[C[C[C[Ciconv -f utf-8 -t ascii//TRANSLIT downloaded_hashtags_extend.csv > newfile.txt[A[C[C[27Pfile downloaded_hashtags_extend.csv 
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgrep -i 'great' downloaded_hashtags_extend.csv | sort | uniq | wwc [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[26Pwc -l downloaded_hashtags_extend.csv
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@ls -lh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp  ~test/A1/downloaded_hashtags_extend.csv .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2P(head -n 10 && tail -n 10) < /proc/cpuinfo [1Pmeminfo[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[23Phead /proc/meminfo [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls -l /proc | grep 'cpu'mem'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7Pcp -r temp3 temp4[3Pmv temp2 temp3[3Pkdir temp2touch ./temp/newfile.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[14Pls -l temp[3Ptempcd[C[C[C[C[C[7@hmod 666[C[C[C[C[C[4Pmkdir[C[C[C[C[Cid -u khang[5Pgroups[3Ppwdcd A1[3@mkdir[C[C[Cvim a1.txt [1@more[C[C[C[C[C[C[C[C[3Pvi a1.txtls[Kcd A1[7@mv a1.txt[C[C[Cscript a1.txt[5Prm -r A1awk -F ',' '{print $2}' newfile.txt | sort | uniq | wc4[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Pgrep --color='auto' -P -n "[\x80-\xFF]" newfile.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cawk -F ',' '{print $1}' newfile.txt | sort | uniq | wc
+    177     177    2558
+]0;khang@sjsu:~/A1[khang@sjsu A1]$ awk -F ',' '{print $1}' newfile.txt | sort | uniq | wc[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgrep --color='auto' -P -n "[\x80-\xFF]" downloaded_hashtags_exteend.csv[A[C[C[C[C[C[C[C[C[C[Ciconv -f utf-8 -t ascii//TRANSLIT downloaded_hashtags_extend.csv > newfile.txt[A[C[C[27Pfile downloaded_hashtags_extend.csv 
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgrep -i 'great' downloaded_hashtags_extend.csv | sort | uniq | wwc [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[26Pwc -l downloaded_hashtags_extend.csv
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@ls -lh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp  ~test/A1/downloaded_hashtags_extend.csv .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2P(head -n 10 && tail -n 10) < /proc/cpuinfo [1Pmeminfo[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[23Phead /proc/meminfo [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls -l /proc | grep 'cpu'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5Phead /proc/meminfo [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C(head -n 10 && tail -n 10) < /proc/meminfocpuinfo [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp  ~test/A1/downloaded_hashtags_extend.csv .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7Pls -lh downloaded_hashtags_extend.csv [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pwc -l[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgrep -i 'great' downloaded_hashtags_extend.csv | sort | uniq | wwc [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[27Pfile downloaded_hashtags_extend.csv
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ciconv -f utf-8 -t ascii//TRANSLIT downloaded_hashtags_extend.csvv > newfile.txt[A[C[Cgrep --color='auto' -P -n "[\x80-\xFF]" downloaded_hashtags_exte[8Pnd.csv[A[C[C[C[C[C[C[C[C[C[C[9Pawk -F ',' '{print $1}' newfile.txt | sort | uniq | wc
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1@4
+  64698   64698 1293943
+]0;khang@sjsu:~/A1[khang@sjsu A1]$ awk -F ',' '{print $4}' newfile.txt | sort | uniq | wc[1P[1@2
+  20134   20134  240450
+]0;khang@sjsu:~/A1[khang@sjsu A1]$ exit
+
+Script done on 2022-09-13 19:43:02-04:00
