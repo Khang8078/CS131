@@ -1,0 +1,25 @@
+1.  Which customers are the top 3 reviewers (with the most reviews)?
+Customer_id: 50122160 with 21922 reviews
+Customer_id: 50732546 with 9964 reviews
+Customer_id: 52615377 with 2664 reviews
+
+2. What are the top 3 most reviewed products?
+Product_id:  043935806X has 4625 reviews
+Product_id:  0439139597 has 3739 reviews
+Product_id: 525947647 has 2666 reviews
+
+
+Script started on 2022-09-15 22:10:28-04:00
+]0;khang@sjsu:~[khang@sjsu ~]$ cur[K[K[Klogoutawk '{print $4}' amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -nr | head -n 10[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[34Pgrep -i 043935806X amazon_reviews_us_Books_v1_02.tsv | wc[K[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cawk '{print $4}' amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -nr | head -n 10[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[46Phead -n 10 amazon_reviews_us_Books_v1_02.tsv [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kcd worksheet3[7Plogoutawk '{print $2}' amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c |  head -n 10[4@-nr [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[33Pgrep 50122160 amazon_reviews_us_Books_v1_02.tsv | wc[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cawk '{print $2}' amazon_reviews_us_Books_v1_02.tsv | sort -nr | uniq -c |  head -n 10[4P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Clogout[Kcd worksheet3ls[Khead -n 10 amazon_reviews_us_Books_v1_02.tsv [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cawk '{print $4}' amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -nr | head -n 10[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[38Pgrep -i 043935806X amazon_reviews_us_Books_v1_02.tsv | wc[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cawk '{print $4}' amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -nr | head -n 10[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Clogout[K[Kcut -f2 amazon_reviews_us_Books_v1_02.tsv > customer_IDs.txt
+]0;khang@sjsu:~[khang@sjsu ~]$ sort customer_IDs.txt | uniq -c \[K| soe[Krt -nr | head -n 3
+  21922 50122160
+   9964 50732546
+   2664 52615377
+]0;khang@sjsu:~[khang@sjsu ~]$ sort customer_IDs.txt | uniq -c | sort -nr | head -n 3[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccut -f2 amazon_reviews_us_Books_v1_02.tsv > customer_IDs.txt[1P[1@4[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P_IDs.txt[1P_IDs.txt[1P_IDs.txt[1P_IDs.txt[1P_IDs.txt[1P_IDs.txt[1P_IDs.txt[1P_IDs.txtp_IDs.txtr_IDs.txto_IDs.txtd_IDs.txtu_IDs.txtc_IDs.txtt_IDs.txt
+]0;khang@sjsu:~[khang@sjsu ~]$ cut -f4 amazon_reviews_us_Books_v1_02.tsv > product_IDs.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5Psort customer_IDs.txt | uniq -c | sort -nr | head -n 3[C[1P[1P[1P[1P[1P[1P[1P[1P[1@p[1@r[1@o[1@d[1@u[1@c[1@r[1P[1@t
+   4625 043935806X
+   3739 0439139597
+   2666 0525947647
+]0;khang@sjsu:~[khang@sjsu ~]$ [K[khang@sjsu ~]$ [K[khang@sjsu ~]$ [K[khang@sjsu ~]$ [K[khang@sjsu ~]$ exit
+
+Script done on 2022-09-15 22:17:19-04:00
