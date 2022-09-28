@@ -1,0 +1,1000 @@
+   27  cat /proc/cpuinfo 
+   28  watch -n.1 "grep \"^[c]pu MHz\" /proc/cpuinfo"
+   29  cp  ~test/A1/downloaded_hashtags_extend.csv
+   30  cp  ~test/A1/downloaded_hashtags_extend.csv .
+   31  ls
+   32  cd A1
+   33  cp  ~test/A1/downloaded_hashtags_extend.csv .
+   34  view downloaded_hashtags_extend.csv 
+   35  ls
+   36  view downloaded_hashtags_extend.csv 
+   37  grep 'tweeter' downloaded_hashtags_extend.csv 
+   38  grep 'tweet' downloaded_hashtags_extend.csv 
+   39  awk 'tweet' downloaded_hashtags_extend.csv > tweet.csv
+   40  ls tweet.csv 
+   41  view tweet.csv 
+   42  awk 'tweet' downloaded_hashtags_extend.csv > tweet.txt
+   43  view tweet.txt
+   44  awk '/tweet/ {print}' downloaded_hashtags_extend.csv 
+   45  awk '/tweet/ {print}' downloaded_hashtags_extend.csv > tweet.txt
+   46  view tweet.
+   47  view tweet.txt
+   48  ls -l tweet.txt 
+   49  ls -altrh tweet.txt
+   50  ls -lh tweet.txt
+   51  wc -l tweet.txt
+   52  grep -P 'great' tweet.txt | wc
+   53  head -n 100 downloaded_hashtags_extend.csv 
+   54  head -n 10 downloaded_hashtags_extend.csv 
+   55  head -n 100 downloaded_hashtags_extend.csv 
+   56  head -n 1000 downloaded_hashtags_extend.csv 
+   57  cut -c 1-19 downloaded_hashtags_extend.csv 
+   58  cut -c 1-19 downloaded_hashtags_extend.csv | sort | uniq -c
+   59  cut -c 1-9 downloaded_hashtags_extend.csv | sort | uniq -c 
+   60  cut -c 1-9 downloaded_hashtags_extend.csv | sort | uniq -c | wc
+   61  ls
+   62  cd A1
+   63  ls
+   64  pwd
+   65  groups
+   66  id -u khang
+   67  ls
+   68  cd temp
+   69  ls -latr
+   70  view tweet.txt
+   71  touch /home/khang/A1/temp file.txt
+   72  ls home/khang/A1/temp
+   73  ls -l temp
+   74  rmdir temp3
+   75  mkdir temp2
+   76  mv temp2 temp3
+   77  cp temp3 temp4
+   78  cp -r temp3 temp4
+   79  ls -l /proc | grep 'mem'
+   80  ls -l /proc | grep 'cpu'
+   81  head /proc/meminfo
+   82  ls temp
+   83  head -n 10 /proc/cpuinfo | tail -n 10 /proc/cpuinfo
+   84  tail -n 10 /proc/cpuinfo
+   85  head -n 10 /proc/cpuinfo
+   86  cp  ~test/A1/downloaded_hashtags_extend.csv .
+   87  ls
+   88  gunzip downloaded_hashtags_extend.csv
+   89  gzip downloaded_hashtags_extend.csv
+   90  view downloaded_hashtags_extend.csv.gz 
+   91  rm downloaded_hashtags_extend.csv.gz 
+   92  ls
+   93  rm tweet.csv
+   94  rm tweet.txt
+   95  view file.txt
+   96  cp  ~test/A1/downloaded_hashtags_extend.csv .
+   97  history
+   98  awk 'tweet' downloaded_hashtags_extend.csv > tweet.txt
+   99  view tweet.txt
+  100  cd CS131/A1
+  101  ls
+  102  ls -latr
+  103  cd ..
+  104  cd A1
+  105  ls
+  106  history
+  107  wc -l downloaded_hashtags_extend.csv 
+  108  ls -latr downloaded_hashtags_extend.csv 
+  109  ls -latrh downloaded_hashtags_extend.csv 
+  110  grep -P 'great' downloaded_hashtags_extend.csv 
+  111  grep -E 'great|Great|GREAT' downloaded_hashtags_extend.csv 
+  112  grep -i 'great' downloaded_hashtags_extend.csv 
+  113  grep -iF "great..." downloaded_hashtags_extend.csv 
+  114  grep -iF 'GREAT' downloaded_hashtags_extend.csv 
+  115  grep -i great downloaded_hashtags_extend.csv 
+  116  grep -i great downloaded_hashtags_extend.csv | wc
+  117  grep -i great downloaded_hashtags_extend.csv | wc -l
+  118  grep -i great downloaded_hashtags_extend.csv | wc -w
+  119  grep -ilR 'great' downloaded_hashtags_extend.csv 
+  120  grep -iR 'great' downloaded_hashtags_extend.csv 
+  121  grep -iR 'GREAT' downloaded_hashtags_extend.csv 
+  122  view downloaded_hashtags_extend.csv 
+  123  cat downloaded_hashtags_extend.csv 
+  124  file downloaded_hashtags_extend.csv 
+  125  iconv -f utf-8 -t ascii//TRANSLIT
+  126  iconv -f utf-8 -t ascii//TRANSLIT downloaded_hashtags_extend.csv 
+  127  grep --color='auto' -P -n "[\x80-\xFF]"
+  128  grep --color='auto' -P -n "[\x80-\xFF]" downloaded_hashtags_extend.csv
+  129  file -bi downloaded_hashtags_extend.csv 
+  130  iconv -f utf-8 -t ascii//TRANSLIT downloaded_hashtags_extend.csv 
+  131  grep --color='auto' -P -n "[\x80-\xFF]" downloaded_hashtags_extend.csv
+  132  head -n 1 downloaded_hashtags_extend.csv 
+  133  head downloaded_hashtags_extend.csv 
+  134  cut -d “,” -f 2,6 downloaded_hashtags_extend.csv | sort | wc
+  135  cut -d ',' -f 2,6 downloaded_hashtags_extend.csv | sort |wc
+  136  cut -d ',' -f 2,6 downloaded_hashtags_extend.csv
+  137  cut -d ',' -f 1 downloaded_hashtags_extend.csv 
+  138  cut -d ',' -f 1 downloaded_hashtags_extend.csv | sort | uniq -c -d
+  139  cut -d ',' -f 1 downloaded_hashtags_extend.csv | sort | wc
+  140  cut -d ',' -f 1 downloaded_hashtags_extend.csv | sort | wc -l
+  141  logout
+  142  ls
+  143  cd A1
+  144  ls
+  145  history
+  146  cut -d ',' -f 1 downloaded_hashtags_extend.csv | sort | wc -l
+  147  cd ..
+  148  ls
+  149  cut -d ',' -f 1 downloaded_hashtags_extend.csv | sort | wc -l
+  150  cd A1
+  151  view sown
+  152  view downloaded_hashtags_extend.csv 
+  153  cd A1
+  154  history
+  155  cd ..
+  156  grep --color='auto' -P -n "[\x80-\xFF]" downloaded_hashtags_extend.csv
+  157  iconv -f utf-8 -t ascii//TRANSLIT downloaded_hashtags_extend.csv 
+  158  grep --color='auto' -P -n "[\x80-\xFF]" downloaded_hashtags_extend.csv
+  159  iconv -f utf-8 -t ascii//TRANSLIT
+  160  iconv -f utf-8 -t ascii//TRANSLIT downloaded_hashtags_extend.csv 
+  161  cut -d ',' -f 1 downloaded_hashtags_extend.csv | sort | wc
+  162  cut -d ',' -f 1 downloaded_hashtags_extend.csv | sort | wc
+  163  cut -d ',' -f 1 downloaded_hashtags_extend.csv | sort | uniq -c -d
+  164  cut -d ',' -f 1 downloaded_hashtags_extend.csv | sort | uniq -c -d | wc
+  165  cut -d ',' -f 2,6 downloaded_hashtags_extend.csv | sort | wc
+  166  awk -F ',' '{print $1}' downloaded_hashtags_extend.csv | sort | uniq -c
+  167  awk -F ',' '{print $1}' downloaded_hashtags_extend.csv | sort | wc
+  168  awk -F ',' '{print $1}' downloaded_hashtags_extend.csv
+  169  awk -F ',' '{print $1}' downloaded_hashtags_extend.csv | sort 
+  170  awk -F ',' '{print $1}' downloaded_hashtags_extend.csv | sort | uniq
+  171  awk -F ',' '{print $1}' downloaded_hashtags_extend.csv | sort | uniq | wc
+  172  awk -F ',' '{print $4}' downloaded_hashtags_extend.csv | sort | uniq
+  173  awk -F ',' '{print $4}' downloaded_hashtags_extend.csv | sort | uniq | wc
+  174  awk -F ',' '{print $2}' downloaded_hashtags_extend.csv | sort | uniq | wc
+  175  grep --color='auto' -P -n "[\x80-\xFF]" downloaded_hashtags_extend.csv
+  176  grep -iF "great" downloaded_hashtags_extend.csv | wc -l
+  177  grep -iF "great" downloaded_hashtags_extend.csv
+  178  grep -iF "GREAT" downloaded_hashtags_extend.csv
+  179  grep  "GREAT" downloaded_hashtags_extend.csv
+  180  grep "GREAT" downloaded_hashtags_extend.csv
+  181  logout
+  182  cd A1
+  183  history
+  184  head /proc/meminfo
+  185  head /proc/meminfo | ls -latrh
+  186  cat /proc/meminfo
+  187  cat /proc/cpuinfo
+  188  file downloaded_hashtags_extend.csv 
+  189  iconv -f utf-8 -t ascii//TRANSLIT downloaded_hashtags_extend.csv 
+  190  file downloaded_hashtags_extend.csv 
+  191  konwert utf8-ascii downloaded_hashtags_extend.csv 
+  192  uni2ascii -B downloaded_hashtags_extend.csv > new.csv
+  193  what /proc shows
+  194  what /proc 
+  195  iconv -f utf-8 -t ascii//TRANSLIT downloaded_hashtags_extend.csv > new.txt
+  196  view new.txt
+  197  history
+  198  grep --color='auto' -P -n "[\x80-\xFF]" new.txt
+  199  awk -F ',' '{print $1}' new.txt | sort | uniq | wc
+  200  grep --color='auto' -P -n "[\x80-\xFF]" downl
+  201  grep --color='auto' -P -n "[\x80-\xFF]" downloaded_hashtags_extend.csv
+  202  awk -F ',' '{print $4}' new.txt | sort | uniq | wc
+  203  awk -F ',' '{print $2}' new.txt | sort | uniq | wc
+  204  awk -F ',' '{print $1}' new.txt | sort | uniq | wc
+  205  grep -i "säkpol" downloaded_hashtags_extend.csv 
+  206  grep -i "säkpol" new.txt
+  207  grep -i "GREAT" new.txt
+  208  grep -i "GREAT" new.txt | wc -l
+  209  logout
+  210  cd A1
+  211  grep --color='auto' -P -n "[\x80-\xFF]" downloaded_hashtags_extend.csv
+  212  history
+  213  cut -d ',' -f 1 downloaded_hashtags_extend.csv | sort | wc -l
+  214  cut -d ',' -f 1 new.txt | sort | wc -l
+  215  cut -d ',' -f 1 new.txt | sort | uniq | wc -l
+  216  awk -F ',' '{print $1}' new.txt | sort | uniq | wc -l
+  217  cd ..
+  218  rmdir A1
+  219  rm -r A1
+  220  ls 
+  221  view a1.txt
+  222  rm -r a1.txt
+  223  rm -r downloaded_hashtags_extend.csv 
+  224  cd temp
+  225  ls
+  226  cd ..
+  227  rm -r temp
+  228  logout
+  229  cd
+  230  cd ..
+  231  ls
+  232  cd khang
+  233  mkdir A1
+  234  cd A1
+  235  pwd
+  236  id -u khang
+  237  groups
+  238  mkdir temp
+  239  chmod 566 temp
+  240  ls -latr
+  241  chmod 666 temp
+  242  ls -latr
+  243  cd temp
+  244  ls temp
+  245  ls -l temp
+  246  touch ./temp/newfile.txt
+  247  mkdir temp2
+  248  mv temp2 temp3
+  249  cp -help
+  250  cp --help
+  251  history
+  252  cp -r temp3 temp4
+  253  ls -l /proc | grep 'mem'
+  254  ls -l /proc | grep 'cpu'
+  255  head /proc/meminfo 
+  256  head /proc/meminfo | l -h
+  257  head /proc/meminfo | ls -h
+  258  (head -n1 && tail -n1) < /proc/meminfo 
+  259  (head -n1 && tail -n1) < /proc/cpuinfo 
+  260  (head -n1 /proc/cpuinfo ;tail -n1 /proc/cpuinfo)
+  261  (head -n5  /proc/cpuinfo ;tail -n6 /proc/cpuinfo)
+  262  (head -n10  /proc/cpuinfo ;tail -n10 /proc/cpuinfo)
+  263  head /proc/cpuinfo 
+  264  tail /proc/cpuinfo 
+  265  cp  ~test/A1/downloaded_hashtags_extend.csv .
+  266  ls -latrh downloaded_hashtags_extend.csv 
+  267  ls -latrh downloaded_hashtags_extend.csv | wc
+  268  ls -latr downloaded_hashtags_extend.csv | wc
+  269  wx -c downloaded_hashtags_extend.csv 
+  270  wc -c downloaded_hashtags_extend.csv 
+  271  wc -l downloaded_hashtags_extend.csv 
+  272  grep -i "great" downloaded_hashtags_extend.csv | wc -l
+  273  file downloaded_hashtags_extend.csv 
+  274  iconv -f utf-8 -t ascii//TRANSLIT downloaded_hashtags_extend.csv > newfile.txt
+  275  grep --color='auto' -P -n "[\x80-\xFF]" downloaded_hashtags_extend.csv
+  276  grep --color='auto' -P -n "[\x80-\xFF]" newfile.txt
+  277  awk -F ',' '{print $1}' downloaded_hashtags_extend.csv | sort | uniq | wc
+  278  awk -F ',' '{print $2}' downloaded_hashtags_extend.csv | sort | uniq | wc
+  279  awk -F ',' '{print $1}' newfile.txt | sort | uniq | wc
+  280  awk -F ',' '{print $4}' newfile.txt | sort | uniq | wc
+  281  awk -F ',' '{print $2}' newfile.txt | sort | uniq | wc
+  282  awk -F ',' '{print $1}' newfile.txt
+  283  awk -F ',' '{print $1}' newfile.txt | uniq
+  284  script a1.txt
+  285  cat a1.txt
+  286  vi a1.txt
+  287  cd A1
+  288  ls -lh downloaded_hashtags_extend.csv 
+  289  wc -l downloaded_hashtags_extend.csv 
+  290  wc -c downloaded_hashtags_extend.csv 
+  291  awk -F ',' '{print $1}' new.txt | sort | uniq | wc -l
+  292  ls
+  293  awk -F ',' '{print $1}' newfile.txt | sort | uniq | wc -l
+  294  cd ..
+  295  rm -r A1
+  296  script a1.txt
+  297  mkdir A1
+  298  cd A1
+  299  pwd
+  300  id -u khang
+  301  groups
+  302  mkdir temp
+  303  chmod 666 temp
+  304  ls -latr
+  305  cd temp
+  306  ls temp
+  307  ls -l temp
+  308  touch ./temp/new.txt
+  309  mkdir temp2
+  310  mv temp2 temp3
+  311  cp -r temp3 temp4
+  312  ls
+  313  ls -l /proc | grep 'mem
+  314  ls -l /proc | grep 'mem'
+  315  ls -l /proc | grep 'cpu'
+  316  head /proc/meminfo
+  317  ls -lh /proc/meminfo
+  318  (head -n 10 && tail -n 10) < /proc/meminfo
+  319  (head -n 10 && tail -n 10) < /proc/cpuinfo
+  320  cp  ~test/A1/downloaded_hashtags_extend.csv .
+  321  ls -lh downloaded_hashtags_extend.csv 
+  322  wc -l downloaded_hashtags_extend.csv 
+  323  grep -i 'great' downloaded_hashtags_extend.csv | wc -w
+  324  grep -i 'great' downloaded_hashtags_extend.csv | wc 
+  325  grep -i 'great' downloaded_hashtags_extend.csv | wc -l
+  326  grep -i 'great' downloaded_hashtags_extend.csv 
+  327  grep -iF 'great' downloaded_hashtags_extend.csv 
+  328  grep -iP 'great' downloaded_hashtags_extend.csv 
+  329  grep -iP 'great' downloaded_hashtags_extend.csv | uniq
+  330  grep -iP 'great' downloaded_hashtags_extend.csv | sort | sort | wc
+  331  grep -iP 'great' downloaded_hashtags_extend.csv | sort | uniq | wc
+  332  grep -iP 'great' downloaded_hashtags_extend.csv | sort | uniq 
+  333  grep -o 'great' downloaded_hashtags_extend.csv | wc -l
+  334  grep -o 'great' downloaded_hashtags_extend.csv 
+  335  grep -io 'great' downloaded_hashtags_extend.csv 
+  336  grep -i 'great' downloaded_hashtags_extend.csv 
+  337  grep -i 'great' downloaded_hashtags_extend.csv | sort | uniq -c
+  338  grep -i 'great' downloaded_hashtags_extend.csv | sort | uniq -c | wc
+  339  grep -i 'great' downloaded_hashtags_extend.csv  | wc
+  340  grep -i 'great' downloaded_hashtags_extend.csv  | uniq | wc
+  341  grep -i 'great' downloaded_hashtags_extend.csv  | sort | wc
+  342  awk -F ',' '{print $1}' newfile.txt | sort | uniq | wc
+  343  mkdir A1
+  344  cd A1
+  345  pwd
+  346  groups
+  347  id -u khang
+  348  mkdir temp
+  349  chmod 666 temp
+  350  ls -latr 
+  351  cd temp
+  352  ls temp
+  353  ls -l temp
+  354  touch ./temp/new.txt
+  355  mkdir temp2
+  356  mv temp2 temp3
+  357  cp -r temp3 temp 4
+  358  cp -r temp3 temp4
+  359  ls
+  360  ls -l /proc | grep 'mem'
+  361  ls -l /proc | grep 'cpu'
+  362  head /proc/meminfo 
+  363  (head -n 10 && tail -n 10) < /proc/cpuinfo 
+  364  cp  ~test/A1/downloaded_hashtags_extend.csv .
+  365  ls -lh downloaded_hashtags_extend.csv 
+  366  wc -l downloaded_hashtags_extend.csv 
+  367  grep -iF 'great' downloaded_hashtags_extend.csv | sort | uniq | wc 
+  368  file downloaded_hashtags_extend.csv 
+  369  iconv -f utf-8 -t ascii//TRANSLIT downloaded_hashtags_extend.csv > newfile.txt
+  370  grep --color='auto' -P -n "[\x80-\xFF]" downloaded_hashtags_extend.csv
+  371  grep --color='auto' -P -n "[\x80-\xFF]" newfile.txt
+  372  awk -F ',' '{print $1}' newfile.txt | sort | uniq | wc
+  373  awk -F ',' '{print $4}' newfile.txt | sort | uniq | wc
+  374  awk -F ',' '{print $2}' newfile.txt | sort | uniq | wc
+  375  ls
+  376  rm -r A1
+  377  ls
+  378  view a1.txt
+  379  rm -r a1.txt
+  380  script a1.txt
+  381  cat a1.txt
+  382  cd A1
+  383  ls
+  384  cd ..
+  385  ls
+  386  mv a1.txt A1
+  387  ls
+  388  cd A1
+  389  ls
+  390  vi a1.txt
+  391  more a1.txt
+  392  vi a1.txt
+  393  logout
+  394  mkdir A1
+  395  cd A1
+  396  pwd
+  397  groups
+  398  id -u khang
+  399  mkdir temp
+  400  chmod 666 temp
+  401  ls -latr
+  402  cd temp
+  403  ls temp
+  404  ls -l temp
+  405  touch ./temp/test.txt
+  406  mkdir temp2
+  407  mv temp2 temp3
+  408  cp -c temp3 temp4
+  409  ls -l /proc | grep 'mem'
+  410  ls -l /proc | grep 'cpu'
+  411  head /proc/meminfo 
+  412  (head -n 10 && tail -n 10) < /proc/cpuinfo 
+  413  cp  ~test/A1/downloaded_hashtags_extend.csv .
+  414  ls -lh downloaded_hashtags_extend.csv 
+  415  wc -l downloaded_hashtags_extend.csv 
+  416  grep -i 'great' downloaded_hashtags_extend.csv | sort | uniq | wc 
+  417  file downloaded_hashtags_extend.csv 
+  418  iconv -f utf-8 -t ascii//TRANSLIT downloaded_hashtags_extend.csv > newfile.txt
+  419  grep --color='auto' -P -n "[\x80-\xFF]" downloaded_hashtags_extend.csv
+  420  grep --color='auto' -P -n "[\x80-\xFF]" newfile.txt
+  421  awk -F ',' '{print $1}' newfile.txt | sort | uniq | wc
+  422  awk -F ',' '{print $4}' newfile.txt | sort | uniq | wc
+  423  awk -F ',' '{print $2}' newfile.txt | sort | uniq | wc
+  424  rm -r A1
+  425  script a1.txt
+  426  mv a1.txt A1
+  427  cd A1
+  428  ls
+  429  vi a1.txt
+  430  more a1.txt 
+  431  vim a1.txt 
+  432  mkdir A1
+  433  cd A1
+  434  pwd
+  435  groups
+  436  id -u khang
+  437  mkdir temp
+  438  chmod 666 temp
+  439  cd temp
+  440  ls temp
+  441  ls -l temp
+  442  touch ./temp/newfile.txt
+  443  mkdir temp2
+  444  mv temp2 temp3
+  445  cp -r temp3 temp4
+  446  ls -l /proc | grep 'mem'
+  447  ls -l /proc | grep 'cpu'
+  448  head /proc/meminfo 
+  449  (head -n 10 && tail -n 10) < /proc/meminfo
+  450  (head -n 10 && tail -n 10) < /proc/cpuinfo 
+  451  cp  ~test/A1/downloaded_hashtags_extend.csv .
+  452  ls -lh downloaded_hashtags_extend.csv 
+  453  wc -l downloaded_hashtags_extend.csv 
+  454  grep -i 'great' downloaded_hashtags_extend.csv | sort | uniq | wc 
+  455  file downloaded_hashtags_extend.csv 
+  456  iconv -f utf-8 -t ascii//TRANSLIT downloaded_hashtags_extend.csv > newfile.txt
+  457  grep --color='auto' -P -n "[\x80-\xFF]" downloaded_hashtags_extend.csv
+  458  awk -F ',' '{print $1}' newfile.txt | sort | uniq | wc
+  459  awk -F ',' '{print $4}' newfile.txt | sort | uniq | wc
+  460  awk -F ',' '{print $2}' newfile.txt | sort | uniq | wc
+  461  cd A1
+  462  ls
+  463  cat a1.txt
+  464  git branch
+  465  git checkout -b a1
+  466  ls
+  467  git rm -r a1
+  468  git branch –delete a1
+  469  git branch
+  470  git branch a1
+  471  git checkout a1
+  472  git push origin
+  473  git push origin a1
+  474  cd ..
+  475  git clone -b a1 https://github.com/Khang8078/CS131.git a1_KhangHuynh
+  476  cd a1_KhangHuynh/
+  477  ls
+  478  cat a1.txt 
+  479  git clone -b ws1 https://github.com/Khang8078/CS131.git a1_KhangHuynh
+  480  ls
+  481  cd a1_KhangHuynh/
+  482  ls
+  483  view mytestfile.txt 
+  484  view cmds.log 
+  485  cd ..
+  486  git clone -b ws1 https://github.com/Khang8078/CS131.git (Links to an external site.) ws1_KhangHuynh
+  487  git clone -b ws1 https://github.com/Khang8078/CS131.git ws1_KhangHuynh
+  488  rm -r ws1_KhangHuynh/
+  489  ls
+  490  cd A1
+  491  git clone -b ws1 https://github.com/Khang8078/CS131.git ws1_KhangHuynh
+  492  ls 
+  493  cd ws1_KhangHuynh/
+  494  ls
+  495  git clone -b a1 https://github.com/Khang8078/CS131.git a1_KhangHuynh
+  496  cd a1_KhangHuynh/
+  497  ls
+  498  cd ..
+  499  logout
+  500  cd
+  501  ls
+  502  rm -r A1
+  503  ls
+  504  script a1.txt
+  505  cd A1
+  506  cd ..
+  507  ls
+  508  more a1.txt 
+  509  cat a1.txt 
+  510  vi a1.txt 
+  511  cat a1.txt 
+  512  vi a1.txt 
+  513  cat a1.txt 
+  514  vi a1.txt 
+  515  cat a1.txt 
+  516  mv a1.txt A1
+  517  cd A1
+  518  ls
+  519  view a1.txt
+  520  cat a1.txt
+  521  git init
+  522  git branch
+  523  git status
+  524  git add a1.txt 
+  525  git status
+  526  git commit -m "Assignment 1 done!"
+  527  git remote add origin https://github.com/Khang8078/CS131.git
+  528  git branch
+  529  git checkout -b a1
+  530  git branch
+  531  git push -u origin a1
+  532  git branch --delete a1
+  533  git push -u origin a1
+  534  git pull
+  535  git push -u origin a1
+  536  git branch
+  537  git push origin 
+  538  git push --set-upstream origin a1
+  539  git pull origin a1
+  540  git push -u origin a1
+  541  git fetch origin
+  542  git merge origin a1
+  543  git status
+  544  git bracnh -d a1
+  545  git branch -d a1
+  546  git branch
+  547  git checkout -d master
+  548  git checkout -d a1
+  549  git file
+  550  cat-file
+  551  ls
+  552  git add a1.txt
+  553  git push origin a1
+  554  git branch
+  555  git checkout -d a1
+  556  git branch
+  557  git checkout -b A1
+  558  git status
+  559  git log --all -- somefile
+  560  git log --all
+  561  ls
+  562  rmdir a1_KhangHuynh/
+  563  rm -r a1_KhangHuynh/
+  564  ls
+  565  cd CS131/
+  566  ls
+  567  cd ..
+  568  mkdir worksheet3
+  569  cd worksheet3
+  570  wget    https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Books_v1_02.tsv.gz
+  571  gunzip amazon_reviews_us_Books_v1_02.tsv.gz 
+  572  ls
+  573  head amazon_reviews_us_Books_v1_02.tsv 
+  574  cut -d " " -f 1 amazon_reviews_us_Books_v1_02.tsv 
+  575  awk '{print $2,$9}' amazon_reviews_us_Books_v1_02.tsv 
+  576  cut -d " " -f 1 amazon_reviews_us_Books_v1_02.tsv 
+  577  head -n 10 amazon_reviews_us_Books_v1_02.tsv 
+  578  awk '{print $2}' amazon_reviews_us_Books_v1_02.tsv 
+  579  cut -c2 amazon_reviews_us_Books_v1_02.tsv 
+  580  awk '{print $2}' amazon_reviews_us_Books_v1_02.tsv | sort | uniq| wc
+  581  awk '{print $2}' amazon_reviews_us_Books_v1_02.tsv | sort | uniq | wc
+  582  awk '{print $2}' amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c
+  583  sort -k1nr amazon_reviews_us_Books_v1_02.tsv | head -3
+  584  sort -k1nr amazon_reviews_us_Books_v1_02.tsv 
+  585  head -n 3 amazon_reviews_us_Books_v1_02.tsv 
+  586  awk '{print $2}' amazon_reviews_us_Books_v1_02.tsv | sort -r | uniq -c
+  587  awk '{print $2}' amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -nr | head 10
+  588  awk '{print $2}' amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -nr | head -n 10
+  589  grep 50122160 | wc
+  590  grep 50122160 amazon_reviews_us_Books_v1_02.tsv | wc
+  591  awk '{print $2}' amazon_reviews_us_Books_v1_02.tsv | sort -nr | uniq -c |  head -n 10
+  592  awk '{print $2}' amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c |  head -n 10
+  593  logout
+  594  cd worksheet3
+  595  ls
+  596  head -n 10 amazon_reviews_us_Books_v1_02.tsv 
+  597  awk '{print $4}' amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -nr | head -n 10
+  598  grep -i 043935806X amazon_reviews_us_Books_v1_02.tsv 
+  599  grep -i 043935806X amazon_reviews_us_Books_v1_02.tsv | wc
+  600  awk '{print $4}' amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -nr | head -n 10
+  601  logout
+  602  cut -f2 amazon_reviews_us_Books_v1_02.tsv > customer_IDs.txt
+  603  sort customer_IDs.txt | uniq -c | sort -nr | head -n 3
+  604  cut -f4 amazon_reviews_us_Books_v1_02.tsv > product_IDs.txt
+  605  sort product_IDs.txt | uniq -c | sort -nr | head -n 3
+  606  ls
+  607  rm -r ws1_KhangHuynh/
+  608  LS
+  609  ls
+  610  rm -r ws2_KhangHuynh/
+  611  cd CS131
+  612  ls
+  613  cd ..
+  614  rm -r a1_KhangHuynh/
+  615  mem
+  616  memory
+  617  du -h --max-depth=1 | sort -n -k1
+  618  cd worksheet2
+  619  ls
+  620  head -n 3 amazon_reviews_us_Books_v1_02.tsv 
+  621  cut -f 2 -d ' ' amazon_reviews_us_Books_v1_02.tsv > amazon_customerIDs.txt 
+  622  sort amazon_customerIDs.txt | uniq -c | head -n 3
+  623  sort amazon_customerIDs.txt | uniq -c | tail -n 3
+  624  cut -f 2 -d ' ' amazon_reviews_us_Books_v1_02.tsv
+  625  cut -d' ' -f2 amazon_reviews_us_Books_v1_02.tsv
+  626  awk '{print $2}' amazon_reviews_us_Books_v1_02.tsv 
+  627  cut -d " " -f 2 amazon_reviews_us_Books_v1_02.tsv 
+  628  cut -d " " -f 2 amazon_reviews_us_Books_v1_02.tsv | wc 
+  629  awk '{print $2}' amazon_reviews_us_Books_v1_02.tsv 
+  630  sort amazon_customerIDs.txt | uniq -c | tail -3
+  631  head amazon_reviews_us_Books_v1_02.tsv 
+  632  sort amazon_customerIDs.txt | uniq -c | head -n 3
+  633  cat amazon_customerIDs.txt 
+  634  cut -f2 amazon_reviews_us_Books_v1_02.tsv > customer_IDs.txt
+  635  sort customer_IDs.txt | uniq -c | sort -nr | head -n 3
+  636  cut -f4 amazon_reviews_us_Books_v1_02.tsv > product_IDs.txt
+  637  sort product_IDs.txt | uniq -c | sort -nr | head -n 3
+  638  cd ..
+  639  ls
+  640  rm -r worksheet3
+  641  ls
+  642  mkdir worksheet3
+  643  wget    https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Books_v1_02.tsv.gz
+  644  gunzip amazon_reviews_us_Books_v1_02.tsv.gz 
+  645  script ws3.txt
+  646  cat ws3.txt 
+  647  vi ws3.txt 
+  648  grep -i 043935806X product_IDs.txt | wc
+  649  grep -i 0439139597 product_IDs.txt | wc
+  650  history > cmds.log
+  651  cat cmds.log 
+  652  git init
+  653  git status
+  654  git add ws3.txt 
+  655  git add cmds.log 
+  656  git branch
+  657  git checkout -b ws3
+  658  git branch
+  659  git remote add origin https://github.com/Khang8078/CS131.git
+  660  git push -u origin ws3
+  661  git checkout -b ws3 git commit -m "my first commit
+  662   git commit -m "ws3 done!"
+  663  git push -u origin ws3
+  664  cat ws3.txt 
+  665  git clone -b ws3 https://github.com/Khang8078/CS131.git ws3_KhangHuynh
+  666  cd ws3_KhangHuynh/
+  667  ls
+  668  cat ws3.txt 
+  669  cd ..
+  670  cd worksheet3
+  671  ls
+  672  script ws3.txt
+  673  ls
+  674  rm -r amazon_reviews_us_Books_v1_02.tsv 
+  675  rm -r ws3.txt
+  676  view cmds.log 
+  677  cd CS131/
+  678  ls
+  679  cd ..
+  680  mkdir A2
+  681  rmdir A2
+  682  cd
+  683  ls
+  684  mkdir ~/A2/
+  685  cp /home/test/A1/downloaded_tweets_extend_nolf.txt ~/A2/
+  686  cp /home/test/A1/downloaded_tweets_extend_nolf.csv ~/A2/
+  687  cd A2
+  688  cp /home/test/A1/downloaded_tweets_extend_nolf.csv
+  689  cp  ~test/A1/ .
+  690  cp /home/test/A1 .
+  691  cp --help
+  692  cp /home/test/A1 ~/A2/
+  693  cp  ~test/A1/downloaded_hashtags_extend.csv .
+  694  cp  ~test/A1/downloaded_tweets_extend.csv
+  695  cp  ~test/A1/downloaded_tweets_extend.csv .
+  696  cp  ~test/A1/downloaded_tweets_original.csv .
+  697  cp  ~test/A1/downloaded_tweets_extend_original.csv
+  698  cp  ~test/A1/downloaded_tweets_extend_original.csv .
+  699  ls
+  700  rm -r downloaded_tweets_extend.csv 
+  701  rm -r downloaded_tweets_extend.original.csv
+  702  rm -r downloaded_tweets_extend_original.csv
+  703  rm -r downloaded_tweets_extend_original_nolf2.tsv .
+  704  cp  ~test/A1/downloaded_tweets_extend_original_nolf2.tsv
+  705  cp  ~test/A1/downloaded_tweets_extend_original_nolf2.tsv .
+  706  cp  ~test/A1/downloaded_tweets_extend_nolf2.tsv .
+  707  ls
+  708  head -n 10 downloaded_tweets_extend_nolf2.tsv 
+  709  head -n 10 downloaded_tweets_extend_original.nolf2.tsv
+  710  head -n 10 downloaded_tweets_extend_original_nolf2.tsv
+  711  grep 'replied_to' downloaded_tweets_extend_original_nolf2.tsv | head -n 10
+  712  head -n 10 downloaded_tweets_extend_original_nolf2.tsv
+  713  head -n 10 downloaded_tweets_extend_original_n
+  714  head -n 10 downloaded_tweets_extend.nolf2.tsv
+  715  head -n 10 downloaded_tweets_extend_nolf2.tsv
+  716  awk '{print $2}' downloaded_tweets_extend_original_nolf2.tsv | sort | uniq -c | sort -nr | head -n 10
+  717  grep -i 18831926 downloaded_tweets_extend_original_nolf2.tsv | wc
+  718  cut -f2 downloaded_tweets_extend_original_nolf2.tsv | sort | uniq -c | sort -nr | head -n 10
+  719  grep -i 1495480590572961792 downloaded_tweets_extend_original_nolf2.tsv | w
+  720  grep -i 1495480590572961792 downloaded_tweets_extend_original_nolf2.tsv | wc
+  721  cd ..
+  722  ls
+  723  rm -r customer_IDs.txt 
+  724  rm -r product_IDs.txt 
+  725  ls
+  726  rm -r ws3_KhangHuynh/
+  727  logout
+  728  cd A2
+  729  cut -f2 downloaded_tweets_extend_original_nolf2.tsv | sort | uniq -c | sort -nr | head -n 10
+  730  cut -f5 downloaded_tweets_extend_original_nolf2.tsv | sort | uniq -c | sort -nr | head -n 10
+  731  head -n 10 downloaded_tweets_extend_original_nolf2.tsv
+  732  head -n 100 downloaded_tweets_extend_original_nolf2.tsv
+  733  cut -d 'replied_to' -f5 downloaded_tweets_extend_original_nolf2.tsv | sort | uniq -c | sort -nr | head -n 10
+  734  cut -d "replied_to" -f5 downloaded_tweets_extend_original_nolf2.tsv | sort | uniq -c | sort -nr | head -n 10
+  735  cut -d replied_to -f5 downloaded_tweets_extend_original_nolf2.tsv | sort | uniq -c | sort -nr | head -n 10
+  736  awk '{print $5}' downloaded_tweets_extend_original_nolf2.tsv
+  737  awk '{print $6}' downloaded_tweets_extend_original_nolf2.tsv
+  738  cut -d replied_to -f6 downloaded_tweets_extend_original_nolf2.tsv | sort | uniq -c | sort -nr | head -n 10
+  739  cut -d replied_to -f6 downloaded_tweets_extend_original_nolf2.tsv
+  740  cut -f6 downloaded_tweets_extend_original_nolf2.tsv
+  741  cut -f5 downloaded_tweets_extend_original_nolf2.tsv
+  742  grep 'replied_to' downloaded_tweets_extend_original_nolf2.tsv 
+  743  grep 'replied_to' downloaded_tweets_extend_original_nolf2.tsv | uniq -c | wc
+  744  head -n 20 downloaded_tweets_extend_original_nolf2.tsv
+  745  grep 'replied_to' downloaded_tweets_extend_original_nolf2.tsv | uniq -c | wc
+  746  grep 'replied_to' downloaded_tweets_extend_original_nolf2.tsv | sort | uniq -c | sort -nr | head -n 10
+  747  grep 683703028621377537 downloaded_tweets_extend_original_nolf2.tsv
+  748  grep 'replied_to' downloaded_tweets_extend_original_nolf2.tsv | sort | uniq -c | sort -nr 
+  749  grep 'replied_to' downloaded_tweets_extend_original_nolf2.tsv | sort | uniq -c | sort -nr | wc
+  750  grep 'replied_to' downloaded_tweets_extend_original_nolf2.tsv | sort | uniq -c | sort -nr | head -n 100
+  751  grep 683694522941964289 downloaded_tweets_extend_original_nolf2.tsv 
+  752  head -n 20 downloaded_tweets_extend_nolf2.tsv 
+  753  grep -i 'replied_to' downloaded_tweets_extend_original_nolf2.tsv | sort | uniq -c | sort -nr | head -n 100
+  754  grep -i 'replied_to' downloaded_tweets_extend_original_nolf2.tsv | sort | uniq -c | sort -nr | head -n 10
+  755  grep -i "ISIS,Ukraine,DonbRRRRRR,Donetsk,novorossia" downloaded_tweets_extend_original_nolf2.tsv
+  756  grep -i 'replied_to' downloaded_tweets_extend_original_nolf2.tsv | sort | uniq -c | sort -nr | head -n 10
+  757  grep -i 'replied_to' downloaded_tweets_extend_original_nolf2.tsv | sort | uniq -c | sort -nr
+  758  logout
+  759  cd A2
+  760  grep -i 'replied_to' downloaded_tweets_extend_original_nolf2.tsv | sort | uniq -c | sort -nr | head -n 10
+  761  grep 683703028621377537 downloaded_tweets_extend_original_nolf2.tsv
+  762  grep 1520450288095797251 downloaded_tweets_extend_original_nolf2.tsv
+  763  grep -i 1520450288095797251 downloaded_tweets_extend_original_nolf2.tsv
+  764  grep -i 1520183133848539136 downloaded_tweets_extend_original_nolf2.tsv
+  765  head -n 1 downloaded_tweets_extend_original_nolf2.tsv
+  766  head -n 3 downloaded_tweets_extend_original_nolf2.tsv
+  767  head -n 10 downloaded_tweets_extend_original_nolf2.tsv
+  768  awk '{print$6}' downloaded_tweets_extend_original_nolf2.tsv
+  769  cut -f6 downloaded_tweets_extend_original_nolf2.tsv
+  770  cut -f5 downloaded_tweets_extend_original_nolf2.tsv
+  771  head -n 10 downloaded_tweets_extend_nolf2.tsv
+  772  grep -i retweeted downloaded_tweets_extend_nolf2.tsv
+  773  head -n 3 downloaded_tweets_extend_original_nolf2.tsv
+  774  head -n 10 downloaded_tweets_extend_nolf2.tsv
+  775  grep -i 308045021 downloaded_tweets_extend_original_nolf2.tsv
+  776  head -n 10 downloaded_tweets_extend_original_nolf2.tsv
+  777  grep -i 'replied_to' downloaded_tweets_extend_original_nolf2.tsv
+  778  grep -i 93193090  downloaded_tweets_extend_original_nolf2.tsv
+  779  cut -f6 downloaded_tweets_extend_original_nolf2.tsv | sort | uniq -c | sort -nr | head -n 10
+  780  grep -i 18831926 downloaded_tweets_extend_original_nolf2.tsv
+  781  grep -i 18831926 downloaded_tweets_extend_original_nolf2.tsv | wc
+  782  cut -f6 downloaded_tweets_extend_original_nolf2.tsv | sort | uniq -c | sort -nr | head -n 10
+  783  grep -i 18831926 downloaded_tweets_extend_original_nolf2.tsv | sort | uniq -c | wc
+  784  cut -f6 downloaded_tweets_extend_original_nolf2.tsv | sort | uniq -c | sort -nr
+  785  cut -f6 downloaded_tweets_extend_original_nolf2.tsv | sort | uniq -c | sort -nr | head -n 10
+  786  grep -i 380648579  downloaded_tweets_extend_original_nolf2.tsv | sort | uniq -c | wc
+  787  grep -i 29447428  downloaded_tweets_extend_original_nolf2.tsv
+  788  cut -d 29447428 -f6  downloaded_tweets_extend_original_nolf2.tsv
+  789  cut -d "29447428"  -f6  downloaded_tweets_extend_original_nolf2.tsv
+  790  cut --help
+  791  cut -d '29447428' -f6  downloaded_tweets_extend_original_nolf2.tsv
+  792  cut -d'29447428' -f6  downloaded_tweets_extend_original_nolf2.tsv
+  793  grep -i '29447428' -f6  downloaded_tweets_extend_original_nolf2.tsv
+  794  grep -i '29447428'  downloaded_tweets_extend_original_nolf2.tsv
+  795  awk '29447428  {print$6}' downloaded_tweets_extend_original_nolf2.tsv
+  796  awk '29447428 {print}' downloaded_tweets_extend_original_nolf2.tsv
+  797  cut -f6 downloaded_tweets_extend_original_nolf2.tsv | sort | uniq -c | sort -nr
+  798  cut -f6 downloaded_tweets_extend_original_nolf2.tsv | sort | uniq -c | sort -nr | wc
+  799  cut -f6 downloaded_tweets_extend_original_nolf2.tsv | sort | uniq -c | sort -nr | head -n 10
+  800  cut -f6 downloaded_tweets_extend_original_nolf2.tsv | sort | uniq -c | sort -nr | head -n 100
+  801  cut -f2 downloaded_tweets_extend_original_nolf2.tsv | sort | uniq -c | sort -nr | head -n 100
+  802  cut -f2 downloaded_tweets_extend_original_nolf2.tsv | sort | uniq -c | sort -nr | head -n 10
+  803  grep -i 18831926 downloaded_tweets_extend_original_nolf2.tsv
+  804  grep -i 18831926 downloaded_tweets_extend_original_nolf2.tsv 
+  805  downloaded_tweets_extend_original_nolf2.tsv
+  806  grep '18831926' downloaded_tweets_extend_original_nolf2.tsv | awk '{print $1,$3}'
+  807  grep '18831926' downloaded_tweets_extend_original_nolf2.tsv | awk '{print $2}' | wc
+  808  cut -f2 downloaded_tweets_extend_original_nolf2.tsv | sort | uniq -c | sort -nr | head -n 10
+  809  cut -f2 downloaded_tweets_extend_original_nolf2.tsv | sort | uniq -c | sort -nr | head -n 25
+  810  cut -f2 downloaded_tweets_extend_original_nolf2.tsv | sort | uniq -c | sort -nr | head -n 100
+  811  grep '237045706' downloaded_tweets_extend_original_nolf2.tsv | awk '{print $2}' | wc
+  812  logout
+  813  cd A2
+  814  ls
+  815  head -n 10 downloaded_tweets_extend_nolf2.tsv
+  816  grep retweeted downloaded_tweets_extend_nolf2.tsv
+  817  cd A2
+  818  ls
+  819  head -n 10 downloaded_tweets_extend_nolf2.tsv
+  820  head -n 10 retweet.tsv
+  821  grep quoted downloaded_tweets_extend_nolf2.tsv | head -n 10
+  822  cd A2
+  823  ls
+  824  grep 1503477919833858051 downloaded_tweets_extend_nolf2.tsv
+  825  head -n 10 downloaded_tweets_extend_nolf2.tsv
+  826  awk '{print$6}' downloaded_tweets_extend_nolf2.tsv
+  827  grep retweeted downloaded_tweets_extend_nolf2.tsv | head 
+  828  grep -i retweeted downloaded_tweets_extend_nolf2/.tsv > retweet.tsv
+  829  grep -i retweeted downloaded_tweets_extend_nolf2.tsv > retweet.tsv
+  830  cut -f2 retweet.tsv | sort | uniq -c | sort -nr | wc
+  831  cut -f2 retweet.tsv | sort | uniq -c | sort -nr | head -n 1-
+  832  cut -f2 retweet.tsv | sort | uniq -c | sort -nr | head -n 10
+  833  grep 45379403 downloaded_tweets_extend_nolf2.tsv
+  834  cd A2
+  835  history
+  836  ls
+  837  sed -e 's/^"//' -e 's/"$//' < quoted_hashtags.tsv | tr , '\n'
+  838  sed -e 's/^"//' -e 's/"$//' < quoted_hashtags.tsv | tr , '\n' |tr '[:upper:]' '[:lower:]'
+  839  sed -e 's/^"//' -e 's/"$//' < quoted_hashtags.tsv | tr , '\n' |tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -nr | head -n 10
+  840  ls
+  841  sort quoted_hashtags.use.tsv
+  842  sort quoted_hashtags.use.tsv | uniq -c | sort -nr | head -n 10
+  843  sed -e 's/^"//' -e 's/"$//' < quoted_hashtags.tsv | tr , '\n' |tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -nr | head -n 10
+  844  grep -i retweeted extend.tsv | cut -f4 > retweeted.tsv
+  845  cat retweet
+  846  grep -i retweeted extend.tsv > retweet.tsv 
+  847  cut -f4 retweet.tsv > retweet_hashtags.tsv
+  848  sed -e 's/^"//' -e 's/"$//' < retweet_hashtags.tsv | tr , '\n' |tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -nr | head -n 10
+  849  grep -i replied extend.tsv > head -n 10 
+  850  grep -i replied extend.tsv | head -n 10 
+  851  grep -i replied_to extend.tsv > replied_to.tsv 
+  852  cut -f4 replied_to.tsv > replied_to_hashtags.tsv
+  853  sed -e 's/^"//' -e 's/"$//' < replied_to_hashtags.tsv | tr , '\n' |tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -nr | head -n 10
+  854  history 
+  855  history > cmds.log
+  856    cat cmds.log 
+  857  cd ..
+  858  ls
+  859  mkdir worksheet4
+  860  cd worksheet4
+  861  cd ..
+  862  cd worksheet4
+  863  cd ..
+  864  cd worksheet3
+  865  ls
+  866  cd worksheet2
+  867  cd ..
+  868  cd worksheet2
+  869  ls
+  870  head -n 10 amazon_reviews_us_Books_v1_02.tsv 
+  871  awk '{print$8,$9}' amazon_reviews_us_Books_v1_02.tsv 
+  872  awk '{print$9}' amazon_reviews_us_Books_v1_02.tsv 
+  873  head -n 10 amazon_reviews_us_Books_v1_02.tsv 
+  874  grep 0385730586 amazon_reviews_us_Books_v1_02.tsv 
+  875  head -n 1 amazon_reviews_us_Books_v1_02.tsv 
+  876  grep 0385730586 amazon_reviews_us_Books_v1_02.tsv | awk '{print$9}'
+  877  head -n 1 amazon_reviews_us_Books_v1_02.tsv 
+  878  head -n 10 amazon_reviews_us_Books_v1_02.tsv 
+  879  grep 0385730586 amazon_reviews_us_Books_v1_02.tsv | awk '{print$8}'
+  880  grep 0385730586 amazon_reviews_us_Books_v1_02.tsv | cut -f9
+  881  grep 0385730586 amazon_reviews_us_Books_v1_02.tsv | cut -f8
+  882  head -n 1 amazon_reviews_us_Books_v1_02.tsv | cut -f9
+  883  grep 0385730586 amazon_reviews_us_Books_v1_02.tsv 
+  884  grep 0385730586 amazon_reviews_us_Books_v1_02.tsv | cut -f9 > product1_txt
+  885  cat product1_txt 
+  886  $ count=0; total=0; for i in $( awk '{ print $2; }' file.txt );do total=$(echo $total+$i | bc ); grep 0385730586 amazon_reviews_us_Books_v1_02.tsv | cut -f9 > product1_txt
+  887  cat product1_txt 
+  888  ls
+  889  rm -r pro
+  890  rm -r product1_txt 
+  891  grep 0385730586 amazon_reviews_us_Books_v1_02.tsv | cut -f9 > product1.txt
+  892  count=0; total=0; for i in $( awk '{ print $1; ] ' product1.txt); do total=$ (echo $total+$i | bc ) ; \
+  893  count=0;
+  894  awk '{ total += $1; count++ } END { print total/count }' product1.txt
+  895  history
+  896  history > cmds.log
+  897   logout
+  898  cd A2
+  899  ls
+  900  file downloaded_tweets_extend_original_nolf2.tsv
+  901  file downloaded_tweets_extend_nolf2.tsv 
+  902  iconv -f utf-8 -t ascii//TRANSLIT downloaded_tweets_extend_original_nolf2.tsv > extend_original.tsv
+  903  iconv -f utf-8 -t ascii//TRANSLIT downloaded_tweets_extend_nolf2.tsv > extend.tsv
+  904  cut -f2 extend_original.tsv | sort | uniq -c | sort -nr | head -n 10
+  905  cut -f2 downloaded_tweets_extend_original_nolf2.tsv | sort | uniq -c | sort -nr | head -n 10
+  906  cut -f6 downloaded_tweets_extend_original_nolf2.tsv | sort | uniq -c | sort -nr | head -n 10
+  907  cut -f6 extend_original.tsv | sort | uniq -c | sort -nr | head -n 10
+  908  grep 29447428 extend_original.tsv
+  909  grep -i retweeted extend.tsv | head -n 10
+  910  head -n 10 extend.tsv 
+  911  grep retweeted extend.tsv | cut -f2 | sort | uniq -c | sort -nr | wc
+  912  grep retweeted extend.tsv | cut -f2 | sort | uniq -c | sort -nr | head -n 10
+  913  grep -i  retweeted extend.tsv | cut -f2 | sort | uniq -c | sort -nr | head -n 10
+  914  grep -i retweeted downloaded_tweets_extend_nolf2.tsv > retweet.tsv
+  915  cut -f2 retweet.tsv | sort | uniq -c | sort -nr | head -n 10
+  916  head -n 20 extend.tsv 
+  917  grep -i journalism,NPR extend.tsv | head -n 10
+  918  grep -i journalism,NPR extend.tsv
+  919  cut -f4 extend.tsv | sort | uniq -c | sort -nr | head -n 10
+  920  grep -i ukraine extend.tsv | wc
+  921  grep -i Ukraine extend.tsv | wc
+  922  grep -i Ukraine extend.tsv
+  923  od -a extend.tsv 
+  924  tr '[:upper:]' '[:lower:]' < extend.tsv > extend.lower.tsv
+  925  dif extend.tsv extend.lower.tsv 
+  926  diff extend.tsv extend.lower.tsv
+  927  diff -c  extend.tsv extend.lower.tsv | head -n 10
+  928  diff -c  extend.tsv extend.lower.tsv  | grep "^+" 
+  929  diff -c  extend.tsv extend.lower.tsv | grep "^+" 
+  930  grep quoted extend.tsv | head -n 10
+  931  grep busymom extend.tsv | head -n 10
+  932  grep -i quoted extend.tsv > quoted.tsv
+  933  cut -f4 quoted.tsv | head -n 20
+  934  cut -f4 quoted.tsv > quoted_hashtags.tsv
+  935  more quoted_hashtags.tsv 
+  936  tr ',' '\n' quoted_hashtags.tsv 
+  937  tr ',' '\n' quoted_hashtags.tsv > quoted_hashtags_comma.tsv
+  938  tr ',' '\n' <  quoted_hashtags.tsv
+  939  tr '"' '' <  quoted_hashtags.tsv
+  940  tr  <  quoted_hashtags.tsv
+  941  tr ',' '\n' <  quoted_hashtags.tsv > quoted_hashtags_comma.tsv
+  942  tr '"' '' <  quoted_hashtags_comma.tsv > quoted_hashtags_comma_".tsv
+  943  tr '"' '' <  quoted_hashtags_comma.tsv > quoted_hashtags_comma_doublequotes.tsv
+  944  cat quoted_hashtags_comma.tsv 
+  945  sed -e 's/^"//' -e 's/"$//' < quoted_hashtags.tsv
+  946  cat quoted_hashtags.tsv
+  947  ls
+  948  cat quoted_hashtags_comma_doublequotes.tsv
+  949  view quoted_hashtags_comma_doublequotes.tsv
+  950  sed -e 's/^"//' -e 's/"$//' < quoted_hashtags.tsv > quoted_hashatgs_doublequotes.tsv
+  951  cat quoted_hashatgs_doublequotes.tsv
+  952  tr ',' '\n' <  quoted_hashtags_doublequotes.tsv > quoted_hashtags_comma_doublequotes.tsv
+  953  ls
+  954  tr ',' '\n' <  quoted_hashatgs_doublequotes.tsv   > quoted_hashtags_comma_doublequotes.tsv
+  955  cat quoted_hashtags_comma_doublequotes.tsv
+  956  tr '[:
+  957  ls
+  958  tr '[:upper:]' '[:lower:]' < quoted_hashtags_comma_doublequotes.tsv > quoted_hashtags.use.tsv
+  959  sort quoted_hashtags_use.tsv | uniq -c | sort -nr | head -n 10
+  960  ls
+  961  cat quoted_hashtags.use.tsv
+  962  sort quoted_hashtags.use.tsv
+  963  sort quoted_hashtags.use.tsv | uniq -c
+  964  sort quoted_hashtags.use.tsv | uniq -c | sort -nr
+  965  sort quoted_hashtags.use.tsv | uniq -c | sort -nr | head -n 30
+  966  alias l='ls -latr'
+  967  l
+  968  alias w='ls -latr | wc'
+  969  w
+  970  vi .bashrc
+  971  source .bashrc
+  972  l
+  973  w
+  974  mkdir CUSTOMERS
+  975  mkdir PRODUCTS 
+  976  head -n 10 amazon_reviews_us_Books_v1_02.tsv 
+  977  awk '{print$2'} amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -nr | head -n 5
+  978  grep 50122160 amazon_reviews_us_Books_v1_02.tsv | cut -f 9 >  CUSTOMERS/50122160.txt
+  979  grep 50732546 amazon_reviews_us_Books_v1_02.tsv | cut -f 9 >  CUSTOMERS/50732546.txt
+  980  grep 52615377 amazon_reviews_us_Books_v1_02.tsv | cut -f 9 >  CUSTOMERS/52615377.txt
+  981  awk '{print$4'} amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -nr | head -n 5
+  982  grep 0525947647 amazon_reviews_us_Books_v1_02.tsv | cut -f 9 >  PRODUCTS/0525947647.txt
+  983  grep 0895260174 amazon_reviews_us_Books_v1_02.tsv | cut -f 9 >  PRODUCTS/0895260174.txt
+  984  grep 0385504209 amazon_reviews_us_Books_v1_02.tsv | cut -f 9 >  PRODUCTS/0385504209.txt
+  985  head -n 5 CUSTOMERS/50122160.txt
+  986  head -n 5 PRODUCTS/0895260174.txt
+  987  count=0; total=0; for i in $( awk '{ print $1; }' amazon_reviews_us_Books_v1_02.tsv );do total=$(echo $total+$i | bc ); ((count++)); done; echo "scale=2; $total / $count" | bc
+  988  count=0; total=0; for i in $( awk '{ print $1; }' CUSTOMERS/50122160.txt );do total=$(echo $total+$i | bc ); ((count++)); done; echo "scale=2; $total / $count" | bc
+  989  awk '{ total += $2; count++ } END { print total/count }' CUSTOMERS/50122160.txt
+  990  awk '{ total += $1; count++ } END { print total/count }' CUSTOMERS/50122160.txt
+  991  count=0; total=0; for i in $( awk '{ print $1; }' CUSTOMERS/50732546.txt );do total=$(echo $total+$i | bc ); ((count++)); done; echo "scale=2; $total / $count" | bc
+  992  awk '{ total += $1; count++ } END { print total/count }' CUSTOMERS/50732546.txt 
+  993  count=0; total=0; for i in $( awk '{ print $1; }' 52615377.txt );do total=$(echo $total+$i | bc ); ((count++)); done; echo "scale=2; $total / $count" | bc
+  994  count=0; total=0; for i in $( awk '{ print $1; }' CUSTOMERS/52615377.txt );do total=$(echo $total+$i | bc ); ((count++)); done; echo "scale=2; $total / $count" | bc
+  995  count=0; total=0; for i in $( awk '{ print $1; }' PRODUCTS/0525947647.txt );do total=$(echo $total+$i | bc ); ((count++)); done; echo "scale=2; $total / $count" | bc
+  996  count=0; total=0; for i in $( awk '{ print $1; }' PRODUCTS/0895260174.txt );do total=$(echo $total+$i | bc ); ((count++)); done; echo "scale=2; $total / $count" | bc
+  997  count=0; total=0; for i in $( awk '{ print $1; }' PRODUCTS/0385504209.txt );do total=$(echo $total+$i | bc ); ((count++)); done; echo "scale=2; $total / $count" | bc
+  998  alias l='ls -latr'
+  999  l
+ 1000  alias l='ls -latr'
+ 1001  l
+ 1002  alias w='ls -latr | wc'
+ 1003  w
+ 1004  vi .bashrc
+ 1005  source .bashrc
+ 1006  mkdir CUSTOMERS
+ 1007  mkdir PRODUCTS
+ 1008  cp ~/worksheet2/amazon_reviews_us_Books_v1_02.tsv .
+ 1009  awk '{print$2'} amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -nr | head -n 5
+ 1010  grep 50122160 amazon_reviews_us_Books_v1_02.tsv | cut -f 9 >  CUSTOMERS/50122160.txt
+ 1011  count=0; total=0; for i in $( awk '{ print $1; }' CUSTOMERS/50122160.txt );do total=$(echo $total+$i | bc ); ((count++)); done; echo "scale=2; $total / $count" | bc
+ 1012  awk '{ total += $1; count++ } END { print total/count }' CUSTOMERS/50122160.txt
+ 1013  grep 50732546 amazon_reviews_us_Books_v1_02.tsv | cut -f 9 >  CUSTOMERS/50732546.txt
+ 1014  count=0; total=0; for i in $( awk '{ print $1; }' CUSTOMERS/50732546.txt );do total=$(echo $total+$i | bc ); ((count++)); done; echo "scale=2; $total / $count" | bc
+ 1015  grep 52615377 amazon_reviews_us_Books_v1_02.tsv | cut -f 9 >  CUSTOMERS/52615377.txt
+ 1016  count=0; total=0; for i in $( awk '{ print $1; }' CUSTOMERS/52615377.txt );do total=$(echo $total+$i | bc ); ((count++)); done; echo "scale=2; $total / $count" | bc
+ 1017  awk '{print$4'} amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -nr | head -n 5
+ 1018  grep 0525947647 amazon_reviews_us_Books_v1_02.tsv | cut -f 9 >  PRODUCTS/0525947647.txt
+ 1019  count=0; total=0; for i in $( awk '{ print $1; }' PRODUCTS/0525947647.txt );do total=$(echo $total+$i | bc ); ((count++)); done; echo "scale=2; $total / $count" | bc
+ 1020  grep 0895260174 amazon_reviews_us_Books_v1_02.tsv | cut -f 9 >  PRODUCTS/0895260174.txt
+ 1021  count=0; total=0; for i in $( awk '{ print $1; }' PRODUCTS/0895260174.txt );do total=$(echo $total+$i | bc ); ((count++)); done; echo "scale=2; $total / $count" | bc
+ 1022  grep 0385504209 amazon_reviews_us_Books_v1_02.tsv | cut -f 9 >  PRODUCTS/0385504209.txt
+ 1023  count=0; total=0; for i in $( awk '{ print $1; }' PRODUCTS/0385504209.txt);do total=$(echo $total+$i | bc ); ((count++)); done; echo "scale=2; $total / $count" | bc
+ 1024  awk '{ total += $1; count++ } END { print total/count }' CUSTOMERS/0385504209.txt.txt
+ 1025  awk '{ total += $1; count++ } END { print total/count }' PRODUCTS/0385504209.txt
+ 1026  history > cmds.log
