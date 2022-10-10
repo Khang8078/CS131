@@ -1,0 +1,244 @@
+Script started on 2022-10-10 04:05:16-04:00
+1. Command Used
+kkhang@sjsu:~/a3\[khang@sjsu a3]$ 1[Kgrep replied_to downloaded_tweets_extend_original_nolf2_NOBOT.tsv | awk  {'print $6","$2'} | sort > q1.tsv
+kkhang@sjsu:~/a3\[khang@sjsu a3]$ 
+kkhang@sjsu:~/a3\[khang@sjsu a3]$ 
+kkhang@sjsu:~/a3\[khang@sjsu a3]$ 
+Ouput: q1.tsv
+
+
+2. Command Used:
+kkhang@sjsu:~/a3\[khang@sjsu a3]$ awk -F',' '{print $1,$2}' q1.tsv | sort | sort -nr | awk '{ if ($1 >= 3)) {print $1","$2} }' > q2.tsv
+kkhang@sjsu:~/a3\[khang@sjsu a3]$ awk -F',' '{print $1}' q2.tsv | sort | uniq -c | sort -nr | awk '{ if ($$1 >= 3) {print} }'> q2_useID.tsv
+
+Output: q2.tsv
+kkhang@sjsu:~/a3\[khang@sjsu a3]$ 
+kkhang@sjsu:~/a3\[khang@sjsu a3]$ head -n[K[K[K[K[K[K[Kcat q2_useID.tsv 
+     45 3453306553
+     27 29447428
+     14 1238370241169616897
+     13 1108565574
+     11 21525682
+     10 95091601
+     10 48624704
+     10 19739126
+     10 1462548977367359490
+      9 26217297
+      9 18831926
+      9 1120633726478823425
+      8 938494109844729856
+      8 2809959174
+      8 2615581908
+      8 1387010761994682371
+      8 1268223690480615424
+      7 878284831
+      7 15801906
+      6 926164634570067968
+      6 467726691
+      6 45379403
+      6 32871086
+      6 2885493519
+      6 262219168
+      6 1280478731874848769
+      6 1238583088998830081
+      5 92932981
+      5 86626845
+      5 2768501
+      5 254515782
+      5 139109800
+      5 1237314642583658496
+      5 1098819491780153345
+      4 870629200348274688
+      4 76842602
+      4 711608180535640064
+      4 66917778
+      4 65357102
+      4 63942152
+      4 605153786
+      4 490002009
+      4 342863309
+      4 34116377
+      4 3303457302
+      4 3246790436
+      4 2608740770
+      4 255812611
+      4 2227646515
+      4 22187085
+      4 178580925
+      4 1471037967926018051
+      4 14247236
+      4 1335983975613939712
+      4 1238949674989416449
+      4 1117704370630455296
+      4 1096205507348623360
+      4 1080844782
+      4 1005846500583321601
+      3 977204844
+      3 9609622
+      3 950563187296030721
+      3 93880122
+      3 879147821915615233
+      3 843433646962999296
+      3 798953701972938752
+      3 795857631571156992
+      3 793331593
+      3 7587032
+      3 728273994
+      3 722242009
+      3 713752653289955329
+      3 707967655031005186
+      3 58974496
+      3 41438148
+      3 4118285112
+      3 368240745
+      3 35787166
+      3 34247411
+      3 3383159573
+      3 3288075858
+      3 3131144855
+      3 30844417
+      3 307755781
+      3 288277167
+      3 27493883
+      3 255369151
+      3 234694571
+      3 225779417
+      3 20995648
+      3 20559705
+      3 20052899
+      3 19084896
+      3 163018653
+      3 159021888
+      3 15480566
+      3 14707794
+      3 1460176204363972613
+      3 145499533
+      3 14281853
+      3 1421835080813666306
+      3 14157134
+      3 1330859882040463362
+      3 1319916075476262914
+      3 1247612029
+      3 1218721688738615297
+      3 1189799454506799104
+      3 1113341312
+      3 1095523459877068800
+      3 1094971056358637568
+      3 1073606435580325889
+      3 1031000589054828544
+kkhang@sjsu:~/a3\[khang@sjsu a3]$ cat q2_useID.tsv awk -F',' '{print $1}' q2.tsv | sort | uniq -c | sort -nr | awk '{ if ($$1 >= 3) {print} }'> q2_useID.tsvM[C[C[C[C,$2}' q1.tsv | sort | sort -nr | awk '{ if ($1 >= 3)[4P {print $1","$2} }' > q2.tsvMgrep replied_to downloaded_tweets_extend_original_nolf2_NOBOT.tsv | awk {'print $9","$2'} | sort > q1.tsvMcat cmds.log [K
+[KM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kcd a33history[2Pcd A3at q2_userID.tsv awk '{print $1}' replied_to.tsv | sort | uniq -c | sort -nr | awk '{ if  ($1 >= 3) {print} }'| cut -f2 > q2_userID.tsvM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctmux new-session -s a3[K
+[KM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cfoo // create new session with name "foo"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4@tmux[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kcd a3[3@mkdir[C[C[C[1Phistoryls[Kcdtmux kill-session -t a3[Kcat q2_userID.tsv [7@head -n 10[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cawk '{print $1}' replied_to.tsv | sort | uniq -c | sort -nr | awk '{ if  ($1 >= 3) {print} }'| cut -f2 > q2_userID.tsvM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[33P++A[$0]>=3' replied_to.tsv | sort
+[KM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C{print $1,$2}' replied_to.tsv | sort | awk '{A[$0]++}END{for (i in  A){if(A[i]>=3){print i}}}'M[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C if ($1 >= 3) {print} }'[KM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[12P++A[$1]>=3' replied_to.tsv | sort | uniq -c | sort -nr
+[KM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C0[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgrep replied_to downloaded_tweets_extend_original_nolf2_NOBOT.tsv | awk  '{print $9,$2}'| sort > replied_to.tsvM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Chead -n 10 userIDs.tsv [K
+[KM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cawk '{print $1}' q2.tsv | uniq -c | sort -k 1n > userIDs.tsv[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[28P++A[$0]>=3' q1.tsv > q2.tsv[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[9Phead -n 10 userIDs.tsv [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cawk '{print $1}' q2.tsv | uniq -c | sort -k 1n > userIDs.tsv[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CA[$0]++}END{for (i in A){if(A[i]>=3){print i}}}' q1.tsv > q2.tsv  M[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2P q1.tsv > q2.tsv
+[KM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[46Phead -n 10 userIDs.tsv [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cawk '{print $1}' q2.tsv | uniq -c | sort -k 1n > userIDs.tsv[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Chead -n 10 q2.tsv [Kawk '{print $1,$2}' q1.tsv | sort | awk '{A[$0]++}END{for (i in A){if(A[[i]>=3){print i}}}'Mhead -n 10 q1.tsv [K
+[KM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cawk '{print $9,$2}' replied_to.tsv | sort > q1.tsv[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgrep replied_to downloaded_tweets_extend_original_nolf2_NOBOT.tsv > repllied_to.tsvM[C[C[C[C[C[Cawk -F"\t" '($2 != $6) {print $0}' extend_original.tsv > downloaded_tweets_extend_original_nolf2_NOBOT.tsvMscript a3.txt[K
+[KM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ciconv -f utf-8 -t ascii//TRANSLIT downloaded_tweets_extend_original_nolff2.tsv > extend_original.tsvM[22Pcp  ~test/A1/downloaded_tweets_extend_nolf2.tsv .
+[KM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[9@original_[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctmux kill-session [Knew-session -s a3[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdiff list.tsv top30_4.tsv3.tsv[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cawk 'NR==FNR { id[$2]=$2; next }($2 in id){ print id[$1], $0}' top30_3.ttsv top30_4.tsv > list.tsv[KM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cnot in id){ print id[$1], $0}' top30[4@_3.t[C[C[C[C[C[C[C[C[C[C[C[C[C[CM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cin id){ print id[$1], $0}' top30_3.t[4P[C[C[C[C[C[C[C[C[C[C[C[C[C[CM[C[Crm -r list.tsv [K
+[KM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pcat[C[C[C[C[C[C[C[C[C[Cegrep -f top30_3.tsv top30_4.tsv > list.tsv[K[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pgrep -f top30_3.tsv top30_4.tsv[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cegrep -f top30_3.tsv top30_4.tsv > list.tsv[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccat list.tsv [K[2@rm -r[C[C[C[C[C[C[C[C[C[Cawk 'NR==FNR { id[$2]=$2; next }($2 in id){ print id[$1], $0}' top30_3.ttsv top30_4.tsvM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cnot in id){ print id[$1], $0}' top30[4@_3.t[C[C[C[C[C[C[C[C[C[C[C[C[C[CM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cin id){ print id[$1], $0}' top30_3.t[4P[C[C[C[C[C[C[C[C[C[C[C[C[C[C > list.tsvM[46Pdiff list.tsv top30_3.tsv
+[KM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C4.tsv[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Ptmux new-session -s a3[4Pkill-session cp  ~test/A1/downloaded_tweets_extend_original_nolf2.tsv .[9P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ciconv -f utf-8 -t ascii//TRANSLIT downloaded_tweets_extend_original_nolff2.tsv > extend_original.tsvMscript a3.txt[K
+[KM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cawk -F"\t" '($2 != $6) {print $0}' extend_original.tsv > downloaded_tweeets_extend_original_nolf2_NOBOT.tsvMgrep replied_to downloaded_tweets_extend_original_nolf2_NOBOT.tsv > replied_to.tsv[KM[C[C[C[C[C[C[21Pawk '{print $9,$2}' replied_to.tsv | sort > q1.tsv
+[KM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[32Phead -n 10 q1.tsv awk '{print $1,$2}' q1.tsv | sort | awk '{A[$0]++}END{for (i in A){if(A[[i]>=3){print i}}}'Mhead -n 10 q2.tsv [K
+
+
+
+3. Command used:
+[KM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K/etc/gnuplot-5.4.4/src/gnuplot
+
+	G N U P L O T
+	Version 5.4 patchlevel 4    last modified 2022-07-10 
+
+	Copyright (C) 1986-1993, 1998, 2004, 2007-2022
+	Thomas Williams, Colin Kelley and many others
+
+	gnuplot home:     http://www.gnuplot.info
+	faq, bugs, etc:   type "help FAQ"
+	immediate help:   type "help"  (plot window: hit 'h')
+
+Terminal type is now 'unknown'
+gnuplot> set terminal svg
+
+Terminal type is now 'svg'
+Options are 'size 600,480 fixed enhanced font 'Arial,12' butt dashlength 1.0 '
+gnuplot> set output "q3.svg"
+gnuplot> binwidth=5
+gnuplot> 
+gnuplot> bin(x,width)=width*floor(x/width)
+gnuplot> plot 'q2_useID.tsv' using (bin($1,binwidth)):(1.0) smooth freq with boxes
+gnuplot> exit
+kkhang@sjsu:~/a3\[khang@sjsu a3]$ ls
+a3.txt                                             q1.tsv
+downloaded_tweets_extend_nolf2.tsv                 q2.tsv
+downloaded_tweets_extend_original_nolf2_NOBOT.tsv  q2_useID.tsv
+downloaded_tweets_extend_original_nolf2.tsv        [0m[01;35mq3.svg[0m
+extend_original.tsv
+
+
+
+4. 
+Find the 30 most frequent hashtags in these largest clusters of replies you kept (for the users/tweets that got replied to, not the users/tweets doing the replies). Compare to the 30 most frequent hashtags you found in assignment #2 (overall, question 5). Which hashtags appear in these clusters that did not appear in the frequent hashtags from assignment #2 (you can use sort and diff for this)?
+
+--> Answer: russian, fluke-natouch, kgiv, breaking, putin, pumqs, ukrainerussianwar, oneofusallofus, onpoli, covid19ab, dogs, ???????, ohthitiwat, ukrainian
+
+Command used: 
+kkhang@sjsu:~/a3\[khang@sjsu a3]$ grep replied_to downloaded_tweets_extend_original_nolf2_NOBOT.tsv | awk  '{ if ($9 >= 3) {print} }' | sort | cut -f4 > q4.tsv
+kkhang@sjsu:~/a3\[khang@sjsu a3]$ sed -e 's/^"//' -e 's/"$//' < q4.tsv | tr , '\n' | tr '[:upper:]' '[:lowwer:]' | sort | uniq -c | sort -nr | head -n 30 > top30.tsv
+kkhang@sjsu:~/a3\[khang@sjsu a3]$ cut -f4 downloaded_tweets_extend_original_nolf2_NOBOT.tsv > hashtags_NEWW.tsv
+kkhang@sjsu:~/a3\[khang@sjsu a3]$ sed -e 's/^"//' -e 's/"$//' < hashtags_NEW.tsv | tr , '\n' | tr '[:upperr:]' '[:lower:]' | sort | uniq -c | sort -nr | head -n 30 > top30_1.tsv
+
+kkhang@sjsu:~/a3\[khang@sjsu a3]$ 
+kkhang@sjsu:~/a3\[khang@sjsu a3]$ awk 'NR==FNR { id[$2]=$2; next }($2 in id){ print id[$2]}' top30.tsv topp30_1.tsv > check.tsv
+kkhang@sjsu:~/a3\[khang@sjsu a3]$ 
+kkhang@sjsu:~/a3\[khang@sjsu a3]$ diff check.tsv top30_1.tsv
+1,15c1,30
+< ukraine
+< covid19
+< auspol
+< russia
+< longcovid
+< standwithukraine
+< ableg
+< cdnpoli
+< covid
+< omicron
+< demvoice1
+< covidisnotover
+< partygate
+< covidisairborne
+< insiders
+---
+>    3301 ukraine
+>    1604 covid19
+>    1552 auspol
+>    1259 russia
+>    1226 longcovid
+>     951 standwithukraine
+>     767 ableg
+>     502 cdnpoli
+>     486 ????????????
+>     428 covid
+>     418 russian
+>     409 fluke_natouch
+>     393 omicron
+>     388 kyiv
+>     342 breaking
+>     341 putin
+>     331 pmqs
+>     326 ukrainerussiawar
+>     322 demvoice1
+>     319 oneofusallofus
+>     309 onpoli
+>     277 covidisnotover
+>     276 partygate
+>     262 covid19ab
+>     259 dogs
+>     257 ???????
+>     247 covidisairborne
+>     244 ohmthitiwat
+>     242 insiders
+>     229 ukrainian
+kkhang@sjsu:~/a3\[khang@sjsu a3]$ diff check.tsv top30_1.tsv[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cawk 'NR==FNR { id[$2]=$2; next }($2 in id){ print id[$2]}' top30.tsv topp30_1.tsv > check.tsvMsed -e 's/^"//' -e 's/"$//' < hashtags_NEW.tsv | tr , '\n' | tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -nr | head -n 30 > top30_1.tsvM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccut -f4 downloaded_tweets_extend_original_nolf2_NOBOT.tsv > hashtags_NEW.tsv[KM[C[C[C[C[C[C[C[C[C[C[C[Csed -e 's/^"//' -e 's/"$//' < hashtags_NEW.tsv | tr , '\n' | tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -nr | head -n 30 > top30_1.tsvM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cawk 'NR==FNR { id[$2]=$2; next }($2 in id){ print id[$2]}' top30.tsv top30_1.tsv > check.tsv[KM[45Pdiff check.tsv top30_1.tsv
+[KM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ktmux kill-session -t[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[khang@sjsu a3]$ exit
+
+Script done on 2022-10-10 04:08:33-04:00
