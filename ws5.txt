@@ -1,0 +1,18 @@
+Script started on 2022-10-11 19:04:37-04:00
+]0;khang@sjsu:~/worksheet5[khang@sjsu worksheet5]$ 
+]0;khang@sjsu:~/worksheet5[khang@sjsu worksheet5]$ history[1Plogoutgit push -u origin a3[11Pbranchcommit -m "a3 done!"[6Pheckout -b a3[8Pbranchpush -u origin a3remote add origin https://github.com/Khang8078/CS131.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cbranch[Kcheckout -b a3[3Padd q3.svg 2.tsv[C1[C[C[C[C[Ca3.txt[C[5Pstatusadd a3.txt q1.tsv[C2[C[C[C[C[C3.svg[Ccheckout -b a3[8Pbranchremote add origin https://github.com/Khang8078/CS131.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpush -u origin a3[K[11Pbranchcheckout -b a3ommit -m "a3 done!"branch[Kpush -u origin a3logout[Khistory[K
+
+
+Step 1: I put top 1000 customers (with the most reviews)  in one file
+]0;khang@sjsu:~/worksheet5[khang@sjsu worksheet5]$ awk '{print$2'} amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -nr | head -n 10000 | cut -f2 > customer.txt[Ahistory[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Plogoutgit push -u origin a3[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kfot[Kr i in $(cat cus[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kawk '{print$2'} amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -nr | head -n 10000 | awk '{print $2}' > customer.txt
+
+Step 2: I used for loop to redirect the reviews of the top 1000 customers (with the most reviews) to separate files named as CUSTOMERS/custid.txt.
+]0;khang@sjsu:~/worksheet5[khang@sjsu worksheet5]$ for i in $(cat customer.txt) [K; do [K([K ( grep $i[K[khang@sjsu worksheet5]$ for i in $(cat customer.txt); do ( grep $i[K[khang@sjsu worksheet5]$ for i in $(cat customer.txt); do ( grep $i[K[khang@sjsu worksheet5]$ for i in $(cat customer.txt); do ( grep $i[K[khang@sjsu worksheet5]$ for i in $(cat customer.txt); do ( grep $i[K[khang@sjsu worksheet5]$ for i in $(cat customer.txt); do ( grep $i[K[khang@sjsu worksheet5]$ for i in $(cat customer.txt); do ( grep $i[K[khang@sjsu worksheet5]$ for i in $(cat customer.txt); do ( grep $i[K[khang@sjsu worksheet5]$ for i in $(cat customer.txt); do ( grep $i[K[khang@sjsu worksheet5]$ for i in $(cat customer.txt); do ( grep $i[K[khang@sjsu worksheet5]$ for i in $(cat customer.txt); do ( grep $i[K[khang@sjsu worksheet5]$ for i in $(cat customer.txt); do ( grep $i[K[khang@sjsu worksheet5]$ for i in $(cat customer.txt); do ( grep $i amazon_reviews_us_Books_v1_022.tsv | cut f[K-f13,14,15 > CUSTOMERS/$i.txt) [K; done
+]0;khang@sjsu:~/worksheet5[khang@sjsu worksheet5]$ mkdir CUSTOMERSfor i in $(cat customer.txt); do ( grep $i amazon_reviews_us_Books_v1_022.tsv | cut -f13,14,15 > CUSTOMERS/$i.txt); done
+^C
+]0;khang@sjsu:~/worksheet5[khang@sjsu worksheet5]$ ls
+amazon_reviews_us_Books_v1_02.tsv  [0m[38;5;33mCUSTOMERS[0m  customer.txt  ws5.txt
+]0;khang@sjsu:~/worksheet5[khang@sjsu worksheet5]$ exit
+
+Script done on 2022-10-11 19:22:39-04:00
