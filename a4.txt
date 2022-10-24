@@ -1,0 +1,185 @@
+Script started on 2022-10-24 02:30:53-04:00
+
+0. Find the top 10 users who got retweeted the most from other users
+]0;khang@sjsu:~/A4[khang@sjsu A4]$ 
+]0;khang@sjsu:~/A4[khang@sjsu A4]$ 
+]0;khang@sjsu:~/A4[khang@sjsu A4]$ grep retweeted downloaded_tweets_extend_nolf2.tsv | awk -F '\t' '{print $5}' | sed 's/^.* id=//g' | sed 's/ type==retweeted.//g' > retweets.txt
+]0;khang@sjsu:~/A4[khang@sjsu A4]$ fgrep -f retweets.txt downloaded_tweets_extend_original_nolf2.tsv | awk -F '\t' "{print $2}" > user_retweetID.txtt
+]0;khang@sjsu:~/A4[khang@sjsu A4]$ fgrep -f retweets.txt downloaded_tweets_extend_original_nolf2.tsv | awk -F '\t' '{print $2}' > user_retweetID.txtt
+]0;khang@sjsu:~/A4[khang@sjsu A4]$ wc user_retweetID.txt 
+ 43531  43527 580128 user_retweetID.txt
+]0;khang@sjsu:~/A4[khang@sjsu A4]$ sort user_retweetID.txt | uniq -c | sort -nr | head -n 5[K10
+    527 18831926
+    387 1891490382
+    276 163018653
+    274 1495480590572961792
+    254 1231514832479948802
+    250 1219232377605644289
+    189 42836999
+    179 1229752606714728454
+    178 380648579
+    159 1290232189615894531
+]0;khang@sjsu:~/A4[khang@sjsu A4]$ 
+]0;khang@sjsu:~/A4[khang@sjsu A4]$ 
+]0;khang@sjsu:~/A4[khang@sjsu A4]$ 
+
+
+
+repeat assignment #3 (questions 1-4), except use retweets instead of replies.
+
+
+1. command used:
+]0;khang@sjsu:~/A4[khang@sjsu A4]$ for i in $(cat retweets.txt); do ( grep $i downloaded_tweets_extend_original_nolf2.tsv | awk '{print $2}' > userAA.txt; grep $i downloaded_tweets_extend_nolf2.tsv | awk '{print $2}' > userB.txt; paste -d' ' userA.txt userB.txt >> output.txt);  done
+]0;khang@sjsu:~/A4[khang@sjsu A4]$  awk  '$1!=""' output.txt | awk  '$2!=""' output.txt | awk '($1!=$2) {print $1","$2}' | sort > q1.tsv
+]0;khang@sjsu:~/A4[khang@sjsu A4]$ 
+]0;khang@sjsu:~/A4[khang@sjsu A4]$ 
+]0;khang@sjsu:~/A4[khang@sjsu A4]$ cat q1.tsv | head -n 5
+1000005001,4757894056
+1000122949645586432,29447428
+1000499544,2574271742
+1000509814898765825,29447428
+1000563587809624065,614600545
+]0;khang@sjsu:~/A4[khang@sjsu A4]$ 
+
+2. command used:
+]0;khang@sjsu:~/A4[khang@sjsu A4]$ awk -F',' '{print $1,$2}' q1.tsv | sort | sort -nr | awk '{ if ($1 >= 3) {print $1","$2} }' > q2.tsv
+]0;khang@sjsu:~/A4[khang@sjsu A4]$ 
+]0;khang@sjsu:~/A4[khang@sjsu A4]$ awk -F',' '{print $1,$2}' q1.tsv | sort | sort -nr | awk '{ if ($1 >= 3) {print $1","$2} }' > q2.tsv[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccat q1.tsv | head -n 5[K[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1@2
+1519296461435027456,86010091
+1519296461435027456,804582780298412032
+1519296461435027456,804582780298412032
+1517978101208264705,826615125297680384
+1517070646202621952,29188599
+]0;khang@sjsu:~/A4[khang@sjsu A4]$ 
+]0;khang@sjsu:~/A4[khang@sjsu A4]$ awk -F',' '{print $1}' q2.tsv | sort | uniq -c | sort -nr | awk '{ if ($1 >= 3) {print} }'> q2_useID.tsv
+]0;khang@sjsu:~/A4[khang@sjsu A4]$ cat q2_useID.tsv | head -n 5
+   1627 18831926
+    462 1891490382
+    406 380648579
+    366 163018653
+    325 1495480590572961792
+]0;khang@sjsu:~/A4[khang@sjsu A4]$ awk -F',' '{print $1}' q2.tsv | sort | uniq -c | sort -nr | head -n 5
+   1627 18831926
+    462 1891490382
+    406 380648579
+    366 163018653
+    325 1495480590572961792
+
+
+3. command used:
+]0;khang@sjsu:~/A4[khang@sjsu A4]$ /etc/gnuplot-5.4.4/src/gnuplot
+
+	G N U P L O T
+	Version 5.4 patchlevel 4    last modified 2022-07-10 
+
+	Copyright (C) 1986-1993, 1998, 2004, 2007-2022
+	Thomas Williams, Colin Kelley and many others
+
+	gnuplot home:     http://www.gnuplot.info
+	faq, bugs, etc:   type "help FAQ"
+	immediate help:   type "help"  (plot window: hit 'h')
+
+Terminal type is now 'unknown'
+gnuplot> set terminal svg
+
+Terminal type is now 'svg'
+Options are 'size 600,480 fixed enhanced font 'Arial,12' butt dashlength 1.0 '
+gnuplot> set    output "q3.svg"
+gnuplot> set boxwidth 0.9 relative
+gnuplot> set style data histograms
+gnuplot> set style fill solid 1.0 borderv -       -1
+gnuplot> plot 'q2_useID.tsv' using 2, '' using 4, '' using 6
+         warning: Skipping data file with no valid points
+         warning: Skipping data file with no valid points
+gnuplot> exit
+]0;khang@sjsu:~/A4[khang@sjsu A4]$ 
+
+4.
+Find the 30 most frequent hashtags in these largest clusters of replies you kept (for the users/tweets that got replied to, not the users/tweets doing the replies). Compare to the 30 most frequent hashtags you found in assignment #2 (overall, question 5). Which hashtags appear in these clusters that did not appear in the frequent hashtags from assignment #2 (you can use sort and diff for this)?
+
+--> Answer: dogs, ohthitimit, ??????
+
+Command used:  
+]0;khang@sjsu:~/A4[khang@sjsu A4]$ for i in $(cat retweets.txt); do (grep $i downloaded_tweets_extend_original_nolf2.tsv | cut -f4 >> q4.tsv); done [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ke
+]0;khang@sjsu:~/A4[khang@sjsu A4]$ sed -e 's/^"//' -e 's/"$//' < q4.tsv | tr , '\n' | tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -nr | head  -n 30 > top30.tsv
+]0;khang@sjsu:~/A4[khang@sjsu A4]$ cut -f4 downloaded_tweets_extend_original_nolf2.tsv > hashtags_NEW.tsv[1P.tsv[1P.tsv[1P.tsv[1P.tsv_.tsvN.tsvE.tsvW.tsv
+s6[Kls[Kcd ..ut -f4 downloaded_tweets_extend_original_nolf2.tsv > hashtags_NEW.tsv
+]0;khang@sjsu:~/A4[khang@sjsu A4]$ sed -e 's/^"//' -e 's/"$//' < hashtags_NEW.tsv | tr , '\n' | tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort --nr | head -n 30 > top30_1.tsv
+]0;khang@sjsu:~/A4[khang@sjsu A4]$ awk 'NR==FNR { id[$2]=$2; next }($2 in id){ print id[$2]}' top30.tsv top30_1.tsv > check.tsv
+]0;khang@sjsu:~/A4[khang@sjsu A4]$ diff check.tsv top30_1.tsv
+1,27c1,30
+< ukraine
+< covid19
+< auspol
+< russia
+< longcovid
+< ableg
+< standwithukraine
+< cdnpoli
+< omicron
+< covid
+< russian
+< เจ้าแก้มก้อน
+< fluke_natouch
+< kyiv
+< breaking
+< putin
+< pmqs
+< ukrainerussiawar
+< onpoli
+< demvoice1
+< oneofusallofus
+< covidisnotover
+< covid19ab
+< partygate
+< covidisairborne
+< mariupol
+< insiders
+---
+>    3360 ukraine
+>    1775 covid19
+>    1567 auspol
+>    1375 russia
+>    1349 longcovid
+>     835 ableg
+>     782 standwithukraine
+>     550 cdnpoli
+>     480 omicron
+>     465 covid
+>     445 russian
+>     433 เจ้าแก้มก้อน
+>     427 fluke_natouch
+>     416 kyiv
+>     393 breaking
+>     385 putin
+>     341 pmqs
+>     340 ukrainerussiawar
+>     325 onpoli
+>     325 demvoice1
+>     322 oneofusallofus
+>     294 covidisnotover
+>     284 covid19ab
+>     280 partygate
+>     274 covidisairborne
+>     264 mariupol
+>     261 dogs
+>     259 ohmthitiwat
+>     252 insiders
+>     248 โอห์มไง
+]0;khang@sjsu:~/A4[khang@sjsu A4]$ 00[K[K\
+> ^C
+]0;khang@sjsu:~/A4[khang@sjsu A4]$ 
+
+5. Result:  5.png
+]0;khang@sjsu:~/A4[khang@sjsu A4]$ ls
+a4.txt                                       hashtags_NEW.tsv  q2_useID.tsv  retweets.txt  userB.txt
+check.tsv                                    output.txt        [0m[38;5;13mq3.svg[0m        top30_1.tsv   user_retweetID.txt
+downloaded_tweets_extend_nolf2.tsv           q1.tsv            q4.tsv        top30.tsv
+downloaded_tweets_extend_original_nolf2.tsv  q2.tsv            [38;5;13mq5.png[0m        userA.txt
+]0;khang@sjsu:~/A4[khang@sjsu A4]$ exit
+
+
+6. ukraine, covid19, auspol, etc. are popular hashtags for retweet question. 
+18831926, 1891490382, 380648579, etc. are in top who got most retweets.
+Compared with A2, we have almost the same hashtags/ users who retweeted the most other tweets. Popular hashtags are hashtags that got the most retweeted numbers. 
+Script done on 2022-10-24 03:07:13-04:00
