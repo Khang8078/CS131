@@ -1,0 +1,26 @@
+Script started on 2022-10-25 18:39:19-04:00
+
+Product id: 0373836635
+Ouput before remove all commas, dots, semicolons, and these stopwords:  and or if in it, and all html tags, such as <br />
+]0;khang@sjsu:~/ws7[khang@sjsu ws7]$ 
+]0;khang@sjsu:~/ws7[khang@sjsu ws7]$ sed 's/,//g' <  final.txt | sed -e 's/\.//g' | sed 's/;//g' | tr '[:upper:]' '[:lower:]' | sed 's/it//g' | sed  's/in//g' | sed 's/and//g' | sed 's/or//g' | sed 's/if//g' | sed -e 's/<[^>]*>//g'[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[37Pgrep 0373836635 amazon_reviews_us_Books_v1_02.tsv | cut -f 14 > final.txt
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cwc final.txt [Kgrep 0373836635 amazon_reviews_us_Books_v1_02.tsv | cut -f 14 > final.txt
+]0;khang@sjsu:~/ws7[khang@sjsu ws7]$ wc[K[Kcat final.txt 
+Though she is honored to be Chicago Woman of the Year, Victoria Colby-Camp is more euphoric over the mental improvement that her son Jim has shown recently especially since he and Tasha North fell in love.  Jim was snatched almost twenty years ago when he was seven and turned into the killing Seth whose goal was to murder Victoria for abandoning him.  However, her elation would turn to despair if she knew Seth resurfaced and started to rape a pregnant Tasha.<br /><br />Former military strategist Daniel Marks is in town complements of the Colby Agency that wants to hire him.  Also in Chicago is Emily Hastings whose father a veteran homicide detective was murdered.  She finds letters linking her dad to Victoria, the woman's long ago murdered first husband James, and her dad's first partner Marelyn Rutland that confuses her.  Soon she will meet Daniel and they will be embroiled in the COLBY CONSPIRACY that goes back almost two decades ago.<br /><br />Though the subplots can become confusing at first, once the audience comprehends how this complex superb suspense thriller starts to come together, they will want more Colby Agency tales; (see FILES FROM THE COLBY AGENCY: THE BODYGUARD'S BABY PROTECTIVE CUSTODY).  The ensemble cast is solid as fans will feel with Victoria who has overcome so much tragedy, hope Jim \\"defeats\\" Seth with Tasha at his side, and root for Daniel and Emily to make it while wondering what really happened two decades ago.  A final twist marks a strong Webb of deceit tale that showcases a fine author on her A-game.<br /><br />Harriet Klausner
+]0;khang@sjsu:~/ws7[khang@sjsu ws7]$ 
+]0;khang@sjsu:~/ws7[khang@sjsu ws7]$ cat final.txt grep 0373836635 amazon_reviews_us_Books_v1_02.tsv | cut -f 14 > final.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csed 's/,//g' <  final.txt | sed -e 's/\.//g' | sed 's/;//g' | tr '[:upper:]' '[:lower:]' | sed 's/it//g' | sed  's/in//g' | sed 's/and//g' | sed 's/or//g' | sed 's/if//g' | sed -e 's/<[^>]*>//g'
+
+
+Command used: 
+1. Remove all commas, dots, semicolons, and these stopwords:  and or if in it.
+sed 's/,//g' <  final.txt | sed -e 's/\.//g' | sed 's/;//g' | tr '[:upper:]' '[:lower:]' | sed 's/it//g' | sed ^M 's/in//g' | sed 's/and//g' | sed 's/or//g' | sed 's/if//g'
+2. Remove all html tags, such as <br />
+sed -e 's/<[^>]*>//g'
+
+
+Output after remove all commas, dots, semicolons, and these stopwords:  and or if in it, and all html tags, such as <br />
+
+though she is honed to be chicago woman of the year victia colby-camp is me euphic over the mental improvement that her son jim has shown recently especially sce he  tasha nth fell  love  jim was snatched almost twenty years ago when he was seven  turned to the killg seth whose goal was to murder victia f abong him  however her elation would turn to despair  she knew seth resurfaced  started to rape a pregnant tashafmer milary strategist daniel marks is  town complements of the colby agency that wants to hire him  also  chicago is emily hastgs whose father a veteran homicide detective was murdered  she fds letters lkg her dad to victia the woman's long ago murdered first husb james  her dad's first partner marelyn rutl that confuses her  soon she will meet daniel  they will be embroiled  the colby conspiracy that goes back almost two decades agothough the subplots can become confusg at first once the audience comprehends how this complex superb suspense thriller starts to come together they will want me colby agency tales (see files from the colby agency: the bodyguard's baby protective custody)  the ensemble cast is solid as fans will feel wh victia who has overcome so much tragedy hope jim \\"defeats\\" seth wh tasha at his side  root f daniel  emily to make  while wonderg what really happened two decades ago  a fal twist marks a strong webb of dece tale that showcases a fe auth on her a-gameharriet klausner
+]0;khang@sjsu:~/ws7[khang@sjsu ws7]$ exit
+
+Script done on 2022-10-25 18:39:47-04:00
