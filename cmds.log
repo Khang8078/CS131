@@ -1,0 +1,1000 @@
+   22  ls
+   23  cat a3.txt 
+   24  git status
+   25  ls
+   26  git init
+   27  git status
+   28  git add a3.txt 
+   29  git add q1.tsv 
+   30  git add q2.tsv 
+   31  git add q3.svg 
+   32  git checkout -b a3
+   33  git branch
+   34  git remote add origin https://github.com/Khang8078/CS131.git
+   35  git push -u origin a3
+   36  git branch
+   37  git checkout -b a3
+   38  git commit -m "a3 done!"
+   39  git branch
+   40  git push -u origin a3
+   41  logout
+   42  history
+   43  awk '{print$2'} amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -nr | head -n 1000 | cut -f2 > customer.txt
+   44  awk '{print$2'} amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -nr | head -n 1000 | awk '{print $2}' > customer.txt
+   45  for i in $(cat customer.txt); do ( grep $i amazon_reviews_us_Books_v1_02.tsv | cut -f13,14,15 > CUSTOMERS/$i.txt); done
+   46  mkdir CUSTOMERS
+   47  for i in $(cat customer.txt); do ( grep $i amazon_reviews_us_Books_v1_02.tsv | cut -f13,14,15 > CUSTOMERS/$i.txt); done
+   48  ls
+   49  ls
+   50  rm -r a3.txt 
+   51  rm -r q1.tsv 
+   52  rm -r downloaded_tweets_extend_nolf2.tsv
+   53  rm -r downloaded_tweets_extend_original_nolf2.tsv
+   54  ls
+   55  rm -r extend_original.tsv 
+   56  ls -latr
+   57  cd a2
+   58  ls
+   59  cd ..
+   60  ls A2
+   61  rm -r A2
+   62  ls
+   63  mkdir worksheet4
+   64  mkdir worksheet5
+   65  cd worksheet4
+   66  ls
+   67  cd ..
+   68  cd worksheet5
+   69  wget    https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Books_v1_02.tsv.gz
+   70  gunzip amazon_reviews_us_Books_v1_02.tsv.gz
+   71  head -n 10 amazon_reviews_us_Books_v1_02.tsv 
+   72  max=1000
+   73  awk '{print$2'} amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -nr | head -n 1000 | cut -f2 > customer.txt
+   74  head -n 9 customer.txt 
+   75  cut -f2 customer.txt | head -n 3
+   76  awk '{print $2}' customer.txt | head -n 3
+   77  for i in $(cat customer.txt); do echo $i; done
+   78  awk '{print$2'} amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -nr | head -n 1000 | awk '{print $2}' > customer.txt
+   79  head -n 3 customer.txt 
+   80  for i in $(cat customer.txt); do echo $i; done
+   81  for i in $(cat customer.txt); do (grep $i amazon_reviews_us_Books_v1_02.tsv | cut -f 9 >  CUSTOMERS/$i.txt); done
+   82  mkdir CUSTOMERS
+   83  for i in $(cat customer.txt); do (grep $i amazon_reviews_us_Books_v1_02.tsv | cut -f >  CUSTOMERS/$i.txt); done
+   84  ls
+   85  cd CUSTOMERS/
+   86  ld
+   87  ls
+   88  wc
+   89  ls | wc
+   90  cat 51668159.txt
+   91  cd ..
+   92  rm -r CUSTOMERS/
+   93  ls
+   94  mkdir CUSTOMERS
+   95  head -n 10 amazon_reviews_us_Books_v1_02.tsv 
+   96  cut -f456 customer.txt 
+   97  cut -f456 a
+   98  cut -f456 amazon_reviews_us_Books_v1_02.tsv 
+   99  cut -f4 amazon_reviews_us_Books_v1_02.tsv 
+  100  cut -f45 amazon_reviews_us_Books_v1_02.tsv 
+  101  awk '{print $5,$6,$7}' amazon_reviews_us_Books_v1_02.tsv 
+  102  head -n 3 amazon_reviews_us_Books_v1_02.tsv 
+  103  awk '{print $12}' amazon_reviews_us_Books_v1_02.tsv 
+  104  cut -f12 amazon_reviews_us_Books_v1_02.tsv 
+  105  cut -f11 amazon_reviews_us_Books_v1_02.tsv 
+  106  head -n 3 amazon_reviews_us_Books_v1_02.tsv 
+  107  cut -f14 amazon_reviews_us_Books_v1_02.tsv | head -n 3 
+  108  cut -f13,14 amazon_reviews_us_Books_v1_02.tsv | head -n 3 
+  109  ls
+  110  cd CUSTOMERS/
+  111  ls
+  112  cd ..
+  113  rm -r customer.txt 
+  114  rm -r CUSTOMERS/
+  115  script ws5.txt
+  116  cd C
+  117  cd Cq
+  118  cd CUSTOMERS/
+  119  ls
+  120  cat 52804949.txt
+  121  cd ..
+  122  cat ws5.txt 
+  123  vi ws5.txt 
+  124  cat ws5.txt 
+  125  vi ws5.txt 
+  126  cat ws5.txt 
+  127  vi ws5.txt 
+  128  cat ws5.txt 
+  129  git init
+  130  git status
+  131  history > cmds.log
+  132  git status
+  133  git add ws5.txt 
+  134  git add cmds.log 
+  135  git status
+  136  git commit -m "WS5 done!"
+  137  git remote add origin https://github.com/Khang8078/CS131.git
+  138  git branch
+  139  git checkout -b ws5
+  140  git push -u origin ws5
+  141  cd ..
+  142  git clone -b ws5 https://github.com/Khang8078/CS131.git ws5_KhangHuynh
+  143  ls
+  144  cd ws5_KhangHuynh/
+  145  ls
+  146  cat ws5.txt 
+  147  cd ..
+  148  ls
+  149  logout
+  150  ls
+  151  rm -r ws5_KhangHuynh/
+  152  mkdir worksheet6
+  153  cd worksheet6
+  154  wget    https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Books_v1_02.tsv.gz
+  155  gunzip amazon_reviews_us_Books_v1_02.tsv.gz
+  156  head -n 10 amazon_reviews_us_Books_v1_02.tsv 
+  157  crontab -l
+  158  crontab -e
+  159  vi #!/bin/bash
+  160  DATE = `date "+%Y%m%d_%H%M%S"`
+  161  export DATE = `date "+%Y%m%d_%H%M%S"`
+  162  export DATETIME = `date "+%Y%m%d_%H%M%S"`
+  163  export DATETIME=`date "+%Y%m%d_%H%M%S"`
+  164  echo "Using $DATETIME for outdir suffix"
+  165  mkdir ~/PRODUCTS
+  166  ls
+  167  mkdir PRODUCTS
+  168  ls
+  169  logout
+  170  export DATETIME=`date "+%Y%m%d_%H%M%S"`
+  171  mkdir PRODUCTS
+  172  grep “1581603681” amazon_reviews_us_Books_v1_02.tsv | awk -F "\t" '{print $8,$9}' > ~/PRODUCTS/1581603681.txt
+  173  TAB='     '
+  174  cp PRODUCTS/1581603681.txt PRODUCTS/1581603681.$DATETIME.txt
+  175  fgrep -h "1581603681” amazon_reviews_us_Books_v1_02.tsv" > /PRODUCTS/1581603681.txt
+  176  ls
+  177  fgrep -h "1581603681” amazon_reviews_us_Books_v1_02.tsv" > PRODUCTS/1581603681.txt
+  178  cd PRODUCTS/
+  179  ls
+  180  cat 1581603681.txt 
+  181  fgrep -h "1581603681” amazon_reviews_us_Books_v1_02.tsv" > 1581603681.txt
+  182  grep “1581603681” amazon_reviews_us_Books_v1_02.tsv > 1581603681.txt
+  183  cd ..
+  184  grep “1581603681” amazon_reviews_us_Books_v1_02.tsv > PRODUCTS/1581603681.txt
+  185  cat PRODUCTS/1581603681.txt
+  186  ls 
+  187  cd PRODUCTS/
+  188  cat 1581603681.txt 
+  189  cd ..
+  190  grep “1581603681” amazon_reviews_us_Books_v1_02.tsv
+  191  grep -i “1581603681” amazon_reviews_us_Books_v1_02.tsv
+  192  fgrep -h "1581603681” amazon_reviews_us_Books_v1_02.tsv PRODUCTS/1581603681.txt
+  193  fgrep -h "1581603681” amazon_reviews_us_Books_v1_02.tsv >  PRODUCTS/1581603681.txt
+  194  head amazon_reviews_us_Books_v1_02.tsv 
+  195  fgrep -h "1581603681” amazon_reviews_us_Books_v1_02.tsv >  PRODUCTS/1581603681.txt
+  196  grep "1581603681” amazon_reviews_us_Books_v1_02.tsv
+  197  cd ..
+  198  ls
+  199  cd worksheet6
+  200  export DATETIME=`date "+%Y%m%d_%H%M%S"`
+  201  mkdir PRODUCTS
+  202  grep “1581603681” amazon_reviews_us_Books_v1_02.tsv > PRODUCTS/1581603681.txt
+  203  cat PRODUCTS/1581603681.txt
+  204  grep -i 122662979 amazon_reviews_us_Books_v1_02.tsv > PRODUCTS/122662979.txt
+  205  cat PRODUCTS/122662979.txt
+  206  cp PRODUCTS/122662979.txt PRODUCTS/122662979.$DATETIME.txt 
+  207  MYCUSTOMTAB='     '
+  208  echo "US${MYCUSTOMTAB}1234${MYCUSTOMTAB}HDFAH${MYCUSTOMTAB}122662979${MYCUSTOMTAB}12345678${MYCUSTOMTAB}OpeningAndCLosing${MYCUSTOMTAB}Books${MYCUSTOMTAB}2${MYCUSTOMTAB}5${MYCUSTOMTAB}7${MYCUSTOMTAB}N${MYCUSTOMTAB}Headline${MYCUSTOMTAB}Review${MYCUSTOMTAB}2022-11-21" >> 122662979.$DATETIME.txt
+  209  cd PRODUCTS/
+  210  ls
+  211  cat 122662979.20221018_223705.txt
+  212  wc 122662979.20221018_223705.txt
+  213  echo "US${MYCUSTOMTAB}1234${MYCUSTOMTAB}HDFAH${MYCUSTOMTAB}122662979${MYCUSTOMTAB}12345678${MYCUSTOMTAB}OpeningAndCLosing${MYCUSTOMTAB}Books${MYCUSTOMTAB}2${MYCUSTOMTAB}5${MYCUSTOMTAB}7${MYCUSTOMTAB}N${MYCUSTOMTAB}Headline${MYCUSTOMTAB}Review${MYCUSTOMTAB}2022-11-21" >> 122662979.20221018_223705.txt
+  214  wc 122662979.20221018_223705.txt
+  215  ln -vfns 122662979.20221018_203355.txt 122662979.new1.txt
+  216  ln -vfns 122662979.20221018_223705.txt 122662979.LASTEST.txtaw
+  217  cat 122662979.LASTEST.txt
+  218  touch cron.log
+  219  crontab cron.log 
+  220  crontab -e
+  221  vi calc_avg_rating.sh
+  222  awk -f "\t" '{print $8}' 122662979.LASTEST.txt | awk '{ total +=$1; count++} END {print total/count}' > 122662979.AVGRATING.txt
+  223  cut -f8  122662979.LASTEST.txt | awk '{ total +=$1; count++} END {print total/count}' > 122662979.AVGRATING.txt
+  224  cat 122662979.AVGRATING.txt
+  225  crontab cron.log
+  226  crontab -e
+  227  vi calc_avg_rating.sh
+  228  crontab -l
+  229  vi cron.log 
+  230  crontab -e
+  231  crontab cron.log 
+  232  crontab -e
+  233  crontab -l
+  234  cd
+  235  ls
+  236  cd worksheet6
+  237  ls
+  238  echo "Using $DATETIME for outdir suffix"
+  239  export DATETIME=`date "+%Y%m%d_%H%M%S"
+  240  export DATETIME=`date "+%Y%m%d_%H%M%S"`
+  241  head -n 3 amazon_reviews_us_Books_v1_02.tsv 
+  242  fgrep -h "1581603681" amazon_reviews_us_Books_v1_02.tsv > PRODUCTS/1581603681.txt
+  243  head PRODUCTS/1581603681.txt
+  244  cp PRODUCTS/1581603681.txt PRODUCTS/1581603681.$DATETIME.txt
+  245  ls
+  246  cd PRODUCTS/
+  247  ls
+  248  echo " US\t1234\tHDFAMFEU124\t15816036811\t12345678 
+  249  echo " US\t1234\tHDFAMFEU124\t15816036811\t12345678" >> 1581603681.20221018_203355.txt 
+  250  head 1581603681.20221018_203355.txt
+  251  echo "US51313610R1AUPMPXT72QRK1581603681640542054Opening Combination Padlocks: No Tools, No ProblemBooks5610NNgreat bookit really says what it is! This book has everthing you need to know about combination locks. very useful if you are forgetfull or have a family member who is.2004-02-25
+  252  echo " US\n1234\nHDFAMFEU124\n15816036811\n12345678" >> 1581603681.20221018_203355.txt 
+  253  head 1581603681.20221018_203355.txt
+  254  echo -e " US\n1234\nHDFAMFEU124\n15816036811\n12345678" >> 1581603681.20221018_203355.txt 
+  255  head 1581603681.20221018_203355.txt
+  256  echo -e " US\t1234\tHDFAMFEU124\t15816036811\t12345678" >> 1581603681.20221018_203355.txt 
+  257  head 1581603681.20221018_203355.txt
+  258  echo "US 
+  259  1234" >> 1581603681.20221018_203355.txt 
+  260  head 1581603681.20221018_203355.txt
+  261  echo -e " US\r1234\rHDFAMFEU124\r15816036811\r12345678" >> 1581603681.20221018_203355.txt 
+  262  head 1581603681.20221018_203355.txt
+  263  MYCUSTOMTAB='     '
+  264  echo "1234${MYCUSTOMTAB}1234" 
+  265  cd ..
+  266  ln -sf PRODUCTS/1581603681.20221018_203355.txt PRODUCTS/1581603681.LASTEST.txt
+  267  cat PRODUCTS/1581603681.LASTEST.txt
+  268  ln -s PRODUCTS/1581603681.20221018_203355.txt PRODUCTS/1581603681.LASTEST.txt
+  269  cat PRODUCTS/1581603681.LASTEST.txt
+  270  ls
+  271  cd PRODUCTS/
+  272  ls
+  273  cat 1581603681.20221018_203355.txt
+  274  cd ..
+  275  cat PRODUCTS/1581603681.20221018_203355.txt
+  276  ln -s PRODUCTS/1581603681.20221018_203355.txt PRODUCTS/1581603681.LASTEST.txt
+  277  ln -s PRODUCTS/1581603681.20221018_203355.txt PRODUCTS/1581603681.LAST.txt
+  278  cat PRODUCTS/1581603681.LAST.txt
+  279  cd PRODUCTS/
+  280  cat 1581603681.LAST.txt
+  281  awk -F'\r' '{print$8}' PRODUCTS/1581603681.LAST.txt
+  282  ls -latr
+  283  awk -F'\r' '{print$8}' 1581603681.LAST.txt
+  284  awk -F'\r' '{print$8}'1581603681.LAST.txt
+  285  cd ..
+  286  ln -s "PRODUCTS/1581603681.20221018_203355.txt" PRODUCTS/1581603681.LASTest.txt
+  287  cat PRODUCTS/1581603681.LASTest.txt
+  288  cat PRODUCTS/1581603681.20221018_203355.txt
+  289  ln -s ~PRODUCTS/1581603681.20221018_203355.txt ~PRODUCTS/1581603681.LASTest.txt
+  290  ln -s ~PRODUCTS/1581603681.20221018_203355.txt ~PRODUCTS/1581603681.test.txt
+  291  ln -s ~/PRODUCTS/1581603681.20221018_203355.txt ~/PRODUCTS/1581603681.test.txt
+  292  cat ~/PRODUCTS/1581603681.test.txt
+  293  cd PRODUCTS/
+  294  ln -s ../1581603681.20221018_203355.txt ../1581603681.TEST.txt
+  295  cat 1581603681.TEST.txt
+  296  cat ../1581603681.TEST.txt
+  297  more ../1581603681.TEST.txt
+  298  ln -s ../1581603681.20221018_203355.txt ../1581603681.TEST.txt ./
+  299  ln -s ../1581603681.20221018_203355.txt ../1581603681.new.txt ./
+  300  cd ..
+  301  ln -vfns PRODUCTS/1581603681.20221018_203355.txt PRODUCTS/1581603681.last.txt
+  302  cat PRODUCTS/1581603681.last.tx
+  303  cat PRODUCTS/1581603681.20221018_203355.txt
+  304  cd ..
+  305  cat PRODUCTS/1581603681.last.tx
+  306  ls -latr /worksheet6
+  307  cd worksheet6
+  308  ls -latr
+  309  cat 1581603681.TEST.txt
+  310  cd P
+  311  cd PRODUCTS/
+  312  ls
+  313  cat 1581603681.last.txt
+  314  ln -vfns 1581603681.20221018_203355.txt 1581603681.new1.txt
+  315  cat 1581603681.new1.txt
+  316  cd
+  317  cat 1581603681.new1.txt
+  318  cd worksheet6
+  319  cat 1581603681.new1.txt
+  320  cd PRODUCTS/
+  321  cat 1581603681.new1.txt
+  322  cd ..
+  323  cat PRODUCTS/1581603681.new1.txt
+  324  vi myfirstscript.sh
+  325  chmod +x myfirstscript.sh
+  326  /myfirstscript.sh
+  327  cat myfirstscript.sh 
+  328  m
+  329  ./myfirstscript.sh
+  330  cd ..
+  331  ls
+  332  rm -r worksheet6
+  333  mkdir worksheet6
+  334  cd worksheet6
+  335  vi avg.sh
+  336  cat avg.sh 
+  337  ./avh.sh
+  338  chmod +x avg.sh
+  339  ./avg.sh
+  340  wget    https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Books_v1_02.tsv.gz
+  341  gunzip amazon_reviews_us_Books_v1_02.tsv.gz
+  342  ./avg.sh
+  343  ls
+  344  vi avg.sh
+  345  ./avg.sh
+  346  cd ..
+  347  mkdir ws6
+  348  cd ws6
+  349  wget    https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Books_v1_02.tsv.gz
+  350  gunzip amazon_reviews_us_Books_v1_02.tsv.gz
+  351  script ws6.txt
+  352  fgrep -h "1581603681” amazon_reviews_us_Books_v1_02.tsv >  PRODUCTS/1581603681.txt
+  353  grep -i “1581603681” amazon_reviews_us_Books_v1_02.tsv
+  354  grep -i 915891133 amazon_reviews_us_Books_v1_02.tsv 
+  355  grep -i 122662979 amazon_reviews_us_Books_v1_02.tsv 
+  356  fgrep -h "122662979” amazon_reviews_us_Books_v1_02.tsv >  PRODUCTS/122662979.txt
+  357  grep -i 122662979 amazon_reviews_us_Books_v1_02.tsv > PRODUCTS/122662979.txt
+  358  cat PRODUCTS/122662979.txt
+  359  cp PRODUCTS/122662979.txt PRODUCTS/122662979.$DATETIME.txt
+  360  cd PRODUCTS/
+  361  ls
+  362  rm -r 1581603681.txt 
+  363  wc 122662979.20221018_203355.txt 
+  364  echo "US${TAB}1234${TAB}HDFAH${TAB}122662979${TAB}12345678${TAB}OpeningAndCLosing${TAB}Books${TAB}2${TAB}5${TAB}7${TAB}N${TAB}Headline${TAB}Review${TAB}2022-11-21" >> 122662979.$DATETIME.txt
+  365  ls
+  366  wc 122662979.20221018_203355.txt 
+  367  ln -vfns 122662979.20221018_203355.txt 122662979.new1.txt
+  368  cat 122662979.new1.txt
+  369  echo -e "US${TAB}1234${TAB}HDFAH${TAB}122662979${TAB}12345678${TAB}OpeningAndCLosing${TAB}Books${TAB}2${TAB}5${TAB}7${TAB}N${TAB}Headline${TAB}Review${TAB}2022-11-21" >> 122662979.$DATETIME.txt
+  370  cat 122662979.new1.txt
+  371  echo "a${TAB}h}
+  372  echo "a${TAB}h"
+  373  MYCUSTOMTAB='     '
+  374  echo "a${MYCUSTOMTAB]h"
+  375  echo "${MYCUSTOMTAB}blah blah"
+  376  echo "a${MYCUSTOMTAB}h"
+  377  crontab cron.log
+  378  crontab -e
+  379  ls
+  380  crontab -e cron.log
+  381  cd
+  382  ls
+  383  rm -r ws6
+  384  rm -r worksheet6
+  385  mkdir ws6
+  386  cd ws6
+  387  wget    https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Books_v1_02.tsv.gz
+  388  gunzip amazon_reviews_us_Books_v1_02.tsv.gz
+  389  script ws6.txt
+  390  export DATETIME=`date "+%Y%m%d_%H%M%S"`
+  391  grep -i 122662979 amazon_reviews_us_Books_v1_02.tsv > PRODUCTS/122662979.txt
+  392  mkdir PRODUCTS
+  393  grep -i 122662979 amazon_reviews_us_Books_v1_02.tsv > PRODUCTS/122662979.txt
+  394  wc PRODUCTS/122662979.txt
+  395  cp PRODUCTS/122662979.txt PRODUCTS/122662979.$DATETIME.txt
+  396  MYCUSTOMTAB='     '
+  397  echo "US${MYCUSTOMTAB}1234${MYCUSTOMTAB}HDFAH${MYCUSTOMTAB}122662979${MYCUSTOMTAB}12345678${MYCUSTOMTAB}OpeningAndCLosing${MYCUSTOMTAB}Books${MYCUSTOMTAB}2${MYCUSTOMTAB}5${MYCUSTOMTAB}7${MYCUSTOMTAB}N${MYCUSTOMTAB}Headline${MYCUSTOMTAB}Review${MYCUSTOMTAB}2022-11-21" >> 122662979.$DATETIME.txt
+  398  wc PRODUCTS/122662979.txt
+  399  cd PRODUCTS/
+  400  ls
+  401  wc 122662979.20221018_230547.txt
+  402  echo "US${MYCUSTOMTAB}1234${MYCUSTOMTAB}HDFAH${MYCUSTOMTAB}122662979${MYCUSTOMTAB}12345678${MYCUSTOMTAB}OpeningAndCLosing${MYCUSTOMTAB}Books${MYCUSTOMTAB}2${MYCUSTOMTAB}5${MYCUSTOMTAB}7${MYCUSTOMTAB}N${MYCUSTOMTAB}Headline${MYCUSTOMTAB}Review${MYCUSTOMTAB}2022-11-21" >> 122662979.20221018_230547.txt
+  403  wc 122662979.20221018_230547.txt
+  404  ln -vfns 122662979.20221018_230547.txt 122662979.LASTEST.txt
+  405  wc 122662979.LASTEST.txt
+  406  touch calc_avg_rating.sh
+  407  vi calc_avg_rating.sh
+  408  touch cron.log
+  409  crontab cron.log
+  410  crontab -e
+  411  crontab -l
+  412  history
+  413  mkdir worksheet6
+  414  cd worksheet6
+  415  wget    https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Books_v1_02.tsv.gz
+  416  gunzip amazon_reviews_us_Books_v1_02.tsv.gz
+  417  script ws6.txt
+  418  vi ws6.txt 
+  419  git init
+  420  history > cmds.log
+  421  git status
+  422  cd PRODUCTS/
+  423  ls
+  424  crontab -e
+  425  cd ..
+  426  git add ws6.txt 
+  427  git cmds.log
+  428  git add cmds.log 
+  429  git checkout -b ws6
+  430  git remote add origin https://github.com/Khang8078/CS131.git
+  431  git commit -m "ws6 done!"
+  432  git push -u origin ws6
+  433  history 
+  434  cd ws6
+  435  cd PRODUCTS/
+  436  cd ..
+  437  vi ws6.txt 
+  438  ls
+  439  rm -r PRODUCTS/
+  440  cd a3
+  441  ls
+  442  grep retweeted downloaded_tweets_extend_nolf2.tsv | head -n 3
+  443  grep retweeted downloaded_tweets_extend_nolf2.tsv | hawk -F '\t' '{print $5}' | head -n 3
+  444  grep retweeted downloaded_tweets_extend_nolf2.tsv | awk -F '\t' '{print $5}' | head -n 3
+  445  grep retweeted downloaded_tweets_extend_nolf2.tsv | awk -F '\t' '{print $5}' | sed 's/^.* id=//g' | sed 's/ type=retweeted.//g' > retweets.txt
+  446  fgrep -f retweets.txt downloaded_tweets_extend_original_nolf2.tsv 
+  447  fgrep -f retweets.txt downloaded_tweets_extend_original_nolf2.tsv | awk -F '\t' "{print $2}" > user_retweetID.txt
+  448  sot user_retweetID.txt | uniq -c | sort -n
+  449  sort user_retweetID.txt | uniq -c | sort -n
+  450  fgrep -f retweets.txt downloaded_tweets_extend_original_nolf2.tsv | awk -F '\t' '{print $2}' > user_retweetID.txt
+  451  sort user_retweetID.txt | uniq -c | sort -n
+  452  grep retweeted downloaded_tweets_extend_original_nolf2.tsv | head -n 3 
+  453  grep retweeted downloaded_tweets_extend_nolf2.tsv | head -n 3 
+  454  grep 1486780227242147845  downloaded_tweets_extend_nolf2.tsv  
+  455  grep 1486780227242147845 downloaded_tweets_extend_nolf2.tsv  
+  456  grep 1486780227242147845 downloaded_tweets_extend_original_nolf2.tsv  
+  457  grep 18831926 downloaded_tweets_extend_original_nolf2.tsv  
+  458  head downloaded_tweets_extend_original_nolf2.tsv 
+  459  grep retweeted downloaded_tweets_extend_nolf2.tsv | head -n 3
+  460  head -n retweets.txt 
+  461  head -n 3 retweets.txt 
+  462  grep 1513654494504136709 downloaded_tweets_extend_original_nolf2.tsv  
+  463  grep 1513774168348704770 downloaded_tweets_extend_original_nolf2.tsv  
+  464  grep 1513774168348704770 downloaded_tweets_extend_nolf2.tsv  
+  465  grep 1513774168348704770 downloaded_tweets_extend_original_nolf2.tsv  
+  466  wc retweets.txt 
+  467  head -n retweets.txt 
+  468  head -n 4 retweets.txt 
+  469  sor 
+  470  for i in $(cat retweets.txt): do ( grep $i 
+  471  for i in $(cat retweets.txt): do ( grep $i downloaded_twls
+  472  cd a3
+  473  for i in $(cat retweets.txt); do ( grep $i downloaded_tweets_extend_original_nolf2.tsv | awk '{print $1,$2}' >> userA.txt; grep $i downloaded_tweets_extend_nolf2.tsv | awk '{print $2}' >> userB.txt); done
+  474  head -n4  userA.txt
+  475  head -n4  userB.txt
+  476  grep 1496645834951299072 downloaded_tweets_extend_original_nolf2.tsv
+  477  sort userA.txt | uniq -c 
+  478  grep 720139699 downloaded_tweets_extend_original_nolf2.tsv
+  479  head -n 20  userA.txt
+  480  cat userA.txt
+  481  cat userA.txt userB.txt >> output.txt
+  482  wc output.txt 
+  483  wc userA.txt 
+  484  wc userB.txt 
+  485  head -n 5 output.txt
+  486  cat output.txt 
+  487  paste -d' ' userA.txt userB.txt
+  488  grep 1494496979447025665 downloaded_tweets_extend_original_nolf2 
+  489  grep 1494496979447025665 downloaded_tweets_extend_original_nolf2.tsv 
+  490  grep 1494496979447025665 downloaded_tweets_extend_nolf2.tsv 
+  491  for i in $(cat retweets.txt); do ( grep $i downloaded_tweets_extend_original_nolf2.tsv | awk '{print $1,$2}' >> userA.txt; grep $i downloaded_tweets_extend_nolf2.tsv | awk '{print $2}' >> userB.txt; paste -d' ' userA.txt userB.txt >> output.txt); done
+  492  ls
+  493  cd ..
+  494  ls
+  495  rm -r worksheet1
+  496  rm -r worksheet2
+  497  rm -r worksheet3
+  498  rm -r A1
+  499  ls
+  500  ls -latr
+  501  rm -r worksheet1
+  502  ls
+  503  rm -r worksheet4
+  504  cd CS131
+  505  ls
+  506  cd ..
+  507  rm -r CS131
+  508  cd a3
+  509  for i in $(cat retweets.txt); do ( grep $i downloaded_tweets_extend_original_nolf2.tsv | awk '{print $1,$2}' >> userA.txt; grep $i downloaded_tweets_extend_nolf2.tsv | awk '{print $2}' >> userB.txt; paste -d' ' userA.txt userB.txt >> output.txt); done
+  510  ls
+  511  for i in $(cat retweets.txt); do (echo "i"); done
+  512  for i in $(cat retweets.txt); do (echo "$i"); done
+  513  head -n 3 userA.txt userB.txt
+  514  grep 1496645834951299072 downloaded_tweets_extend_original_nolf2.tsv 
+  515  grep 578601744 downloaded_tweets_extend_nolf2.tsv | 
+  516  fgrep -l "1496645834951299072" downloaded_tweets_extend_original_nolf2.tsv downloaded_tweets_extend_nolf2.tsv 
+  517  fgrep -l "1496645834951299072" downloaded_tweets_extend_nolf2.tsv 
+  518  rm -r userA.txt
+  519  rm -r userB.txt
+  520  touch userA.txt
+  521  touch userB.txt
+  522  rm -r out
+  523  rm -r output.txt 
+  524  touch output.txt
+  525  for i in $(cat retweets.txt); do (awk '{print $i}'); done
+  526  for i in $(cat retweets.txt); do ( grep $i downloaded_tweets_extend_original_nolf2.tsv | awk '{print $1,$2}' >> userA.txt; grep $i downloaded_tweets_extend_nolf2.tsv | awk '{print $i,$2}' >> userB.txt; paste -d' ' userA.txt userB.txt >> output.txt); done
+  527  cd ..
+  528  ls
+  529  rm -r a2
+  530  yes
+  531  ls
+  532  rm -r worksheet5
+  533  yes
+  534  ls
+  535  cd a3
+  536  ls
+  537  for i in $(cat retweets.txt); do ( grep $i downloaded_tweets_extend_original_nolf2.tsv | awk '{print $1,$2}' > userA.txt; grep $i downloaded_tweets_extend_nolf2.tsv | awk '{print $i,$2}' > userB.txt; paste -d' ' userA.txt userB.txt >> output.txt); done
+  538  cat output.txt 
+  539  head -n 1 output.txt 
+  540  grep 1513654494504136709 downloaded_tweets_extend_original_nolf2.tsv 
+  541  grep 1513654494504136709 downloaded_tweets_extend_nolf2.tsv 
+  542  head -n 3 output.txt 
+  543  rm -r userA.txt
+  544  rm -r userB.txt
+  545  rm -r output.txt
+  546  touch  userB.txt
+  547  touch userA.txt
+  548  touch output.txt
+  549  lsfor i in $(cat retweets.txt); do ( grep $i downloaded_tweets_extend_original_nolf2.tsv | awk '{print $1,$2}' > userA.txt; grep $i downloaded_tweets_extend_nolf2.tsv | awk '{print $2}' > userB.txt; paste -d' ' userA.txt userB.txt >> output.txt); done
+  550  for i in $(cat retweets.txt); do ( grep $i downloaded_tweets_extend_original_nolf2.tsv | awk '{print $1,$2}' > userA.txt; grep $i downloaded_tweets_extend_nolf2.tsv | awk '{print $2}' > userB.txt; paste -d' ' userA.txt userB.txt >> output.txt); done
+  551  cd a3
+  552  for i in $(cat retweets.txt); do ( grep $i downloaded_tweets_extend_original_nolf2.tsv | awk '{print $1,$2}' > userA.txt; grep $i downloaded_tweets_extend_nolf2.tsv | awk '{print $2}' > userB.txt; paste -d' ' userA.txt userB.txt >> output.txt); done
+  553  ls
+  554  head -n 5 output.txt 
+  555  head -n 15 output.txt 
+  556  grep 41653384 downloaded_tweets_extend_original_nolf2.tsv 
+  557  grep 41653384 downloaded_tweets_extend_nolf2.tsv 
+  558  head -n 10 output.txt 
+  559  grep 1513654494504136709 downloaded_tweets_extend_nolf2.tsv
+  560  grep 1513654494504136709 downloaded_tweets_extend_original_nolf2.tsv
+  561  grep 950215424981028864 downloaded_tweets_extend_original_nolf2.tsv
+  562  grep 950215424981028864 downloaded_tweets_extend_nolf2.tsv
+  563  grep 1497450626019647491  downloaded_tweets_extend_original_nolf2.tsv
+  564  grep retweeted downloaded_tweets_extend_nolf2.tsv | wc
+  565  wc output.txt 
+  566  head -n 20 output.txt 
+  567  awk  '$2!=""' output.txt 
+  568  awk  '$2!=""' output.txt | wc
+  569  awk  '$2!=""' output.txt | awk  '$3!=""' | wc
+  570  wc output.txt 
+  571  awk  '$2!=""' output.txt | awk  '$3!=""' | awk -F"\t" '($2 != $3) {print$0}' | wc
+  572  awk  '$2!=""' output.txt | awk  '$3!=""' | awk -F"\t" '($2 == $3) {print$0}' | wc
+  573  awk  '$2!=""' output.txt | awk  '$3!=""' | awk '{print $2,$3}'
+  574  cd a3
+  575  grep 19816088 downloaded_tweets_extend_original_nolf2.tsv 
+  576  grep 29447428  downloaded_tweets_extend_nolf2.tsv 
+  577  grep 19816088 downloaded_tweets_extend_original_nolf2.tsv 
+  578  grep 1500010930293383174 downloaded_tweets_extend_nolf2.tsv 
+  579  awk -F"\t" '($2 == $6) {print $0}' output.txt 
+  580  awk -F"\t" '($2 != $6) {print $0}' output.txt 
+  581  awk -F"\t" '($2 != $3) {print $0}' output.txt 
+  582  awk -F"\t" '($2 == $3) {print $0}' output.txt 
+  583  history
+  584  awk '(&2 == $3) {pritn $0}' | wc
+  585  awk '(&2 == $3) {pritn $0}' output.txt | wc
+  586  awk '($2 == $3) {pritn $0}' output.txt | wc
+  587  awk '($2 != $3) {pritn $0}' output.txt | wc
+  588  awk  '$2!=""' output.txt | awk  '$3!=""' | awk -f'\t' '{print $2,$3}' | head -n 10
+  589  awk  '$2!=""' output.txt | awk  '$3!=""' | awk -F"\t" '{print $2,$3}' | head -n 10
+  590  awk  '$2!=""' output.txt | awk  '$3!=""' | awk -F"\t" '{print $1,$2}' | head -n 10
+  591  awk  '$2!=""' output.txt | awk  '$3!=""' | awk -F"\t" '{print $1}' | head -n 10
+  592  awk -F"\t" '{print $1}' output.txt | head -n 10
+  593  awk -F"\t" '{print $2}' output.txt | head -n 10
+  594  for i in $(cat retweets.txt); do ( grep $i downloaded_tweets_extend_original_nolf2.tsv | awk '{print $2}' > userA.txt; grep $i downloaded_tweets_extend_nolf2.tsv | awk '{print $2}' > userB.txt; paste -d' ' userA.txt userB.txt >> output.txt); done
+  595  awk -F"\t" '{print $1}' output.txt | head -n 10
+  596  awk -F"\t" '{print $2}' output.txt | head -n 10
+  597  rm -r output.txt 
+  598  touch output.txt
+  599  for i in $(cat retweets.txt); do ( grep $i downloaded_tweets_extend_original_nolf2.tsv | awk '{print $2}' > userA.txt; grep $i downloaded_tweets_extend_nolf2.tsv | awk '{print $2}' > userB.txt; paste -d' ' userA.txt userB.txt >> output.txt); done
+  600  head -n 5 output.txt 
+  601  cut -f1 output.txt | head 
+  602  awk '{print $1}' output.txt | head
+  603  awk '{print $2}' output.txt | head
+  604  awk '{print $1","$2}' output.txt | head
+  605  awk '($1!=$2) {print $1","$2}' output.txt | wc
+  606  wc output.txt 
+  607  awk  '$1!=""' output.txt | wc
+  608  awk  '$2!=""' output.txt | wc
+  609  awk  '$1!=""' output.txt | awk  '$2!=""' output.txt | awk '($1!=$2) {print $1","$2}' | wc
+  610  grep retweeted downloaded_tweets_extend_nolf2.tsv | awk -F '\t' '{print $5}' | sed 's/^.* id=//g' | sed 's/ type=retweeted.//g' > retweets.tsv
+  611  diff retweets.txt retweets.tsv 
+  612  diff retweets.txt user_retweetID.txt 
+  613  ls
+  614  awk '{print $1}' output.txt | sort | uniq -c | sort -nr | awk '{ if ($ 
+  615  awk '{print $1}' output.txt | sort | uniq -c | sort -nr | awk '{ if ($$1 >= 3) {print} }' 
+  616  awk '{print $1}' output.txt | sort | uniq -c | sort -nr | awk '{ if ($$1 >= 3) {print} }' | head -n 30
+  617  awk '{print $1}' output.txt | sort | uniq -c | sort -nr | awk '{ if ($1 >= 3) {print} }' | head -n 30
+  618  cat a3.txt 
+  619  history > cm.log
+  620  ls
+  621  logout
+  622  cd a3
+  623  ls
+  624  cd ..
+  625  mkdir a4
+  626  cd a4
+  627  cp ~test/A1/downloaded_tweets_extend_original_nolf2.tsv .
+  628  cp ~test/A1/downloaded_tweets_extend_nolf2.tsv .
+  629   grep retweeted downloaded_tweets_extend_nolf2.tsv | awk -F '\t' '{print $5}' | sed 's/^.* id=//g' | sed 's/ type=retweeted.//g' > retweets.txt
+  630  wc retweets.txt 
+  631  fgrep -f retweets.txt downloaded_tweets_extend_original_nolf2.tsv | awk -F '\t' "{print $2}" > user_retweetID.txt
+  632  wc user_retweetID.txt 
+  633  sort user_retweetID.txt | uniq -c | sort -n | head -n 5
+  634  fgrep -f retweets.txt downloaded_tweets_extend_original_nolf2.tsv | awk -F '\t' '{print $2}' > user_retweetID.txt
+  635  sort user_retweetID.txt | uniq -c | sort -n | head -n 5
+  636  sort user_retweetID.txt | uniq -c | sort -nr | head -n 5
+  637  cd ..
+  638  cd a3
+  639  sort user_retweetID.txt | uniq -c | sort -nr | head -n 5
+  640  cd ..
+  641  cd a4
+  642  for i in $(cat retweets.txt); do ( grep $i downloaded_tweets_extend_original_nolf2.tsv | awk '{print $2}' > userA.txt; grep $i downloaded_tweets_extend_nolf2.tsv | awk '{print $2}' > userB.txt; paste -d' ' userA.txt userB.txt >> output.txt); done
+  643  awk  '$1!=""' output.txt | awk  '$2!=""' output.txt | awk '($1!=$2) {print $1","$2}' | wc
+  644  awk  '$1==""' output.txt |  wc
+  645  awk  '$2==""' output.txt |  wc
+  646  awk  '$1!=""' output.txt | awk  '$2!=""' output.txt | awk '($1!=$2) {print $1","$2}' | sort > q1.tsv
+  647  awk -F',' '{print $1,$2}' q1.tsv | sort | sort -nr | awk '{ if ($1 >= 3)
+  648  ) {print $1","$2} }' > q2.tsv
+  649  awk -F',' '{print $1,$2}' q1.tsv | sort | sort -nr | awk '{ if ($1 >= 3) {print $1","$2} }' > q2.tsv
+  650  head -n 5 q1.tsv 
+  651  head -n 5 q2.tsv 
+  652  awk -F',' '{print $1}' q2.tsv | sort | uniq -c | sort -nr | awk '{ if ($
+  653  $1 >= 3) {print} }'> q2_useID.tsv
+  654  awk -F',' '{print $1}' q2.tsv | sort | uniq -c | sort -nr | awk '{ if ($1 >= 3) {print} }'> q2_useID.tsv
+  655  cat q2_useID.tsv | head -n 5
+  656  awk -F',' '{print $1}' q2.tsv | sort | uniq -c | sort -nr | head -n 5
+  657  /etc/gnuplot-5.4.4/src/gnuplot
+  658  ls
+  659  pwd
+  660  wc q2.tsv 
+  661  wc q2_useID.tsv 
+  662  head -n 5 q2_useID.tsv 
+  663  /etc/gnuplot-5.4.4/src/gnuplot
+  664  ls
+  665  /etc/gnuplot-5.4.4/src/gnuplot
+  666  rm -r q3_2.svg 
+  667  /etc/gnuplot-5.4.4/src/gnuplot
+  668  /etc/gnuplot-5.4.4/src/gnuplot
+  669  ls
+  670  cat q2_useID.tsv | head -n 5
+  671  /etc/gnuplot-5.4.4/src/gnuplot
+  672  reset
+  673  /etc/gnuplot-5.4.4/src/gnuplot
+  674  ls\
+  675  ls
+  676  /etc/gnuplot-5.4.4/src/gnuplot
+  677  ls
+  678  rm -r histogram.svg 
+  679  rm -r out.svg 
+  680  rm -r q3_1
+  681  rm -r q3_1.svg 
+  682  rm -r q3_2.svg 
+  683  rm -r q3_3.svg 
+  684  rm -r q3_4.svg 
+  685  ls
+  686  rm -r 3.svg 
+  687  rm -r q3.svg 
+  688  ls
+  689  grep retweeted downloaded_tweets_extend_original_nolf2.tsv | head -n 3
+  690  awk '{print $9}' downloaded_tweets_extend_original_nolf2.tsv | head -n 3
+  691  head -n 3 downloaded_tweets_extend_original_nolf2.tsv
+  692  ls
+  693  head -n 5 user
+  694  head -n 5 user_retweetID.txt 
+  695  grep 457060718 downloaded_tweets_extend_original_nolf2.tsv 
+  696  cat downloaded_tweets_extend_original_nolf2.tsv | awk'($2=="457060718") {print $0}
+  697  cat downloaded_tweets_extend_original_nolf2.tsv | awk'($2=="457060718") {print $0}'
+  698  cat downloaded_tweets_extend_original_nolf2.tsv | awk'($2==457060718) {print $0}'
+  699  cat downloaded_tweets_extend_original_nolf2.tsv | awk'($2==${45706071}8) {print $0}'
+  700  cat downloaded_tweets_extend_original_nolf2.tsv | awk'($2==${457060718}) {print $0}'
+  701  cat downloaded_tweets_extend_original_nolf2.tsv | awk -F "457060718" {print $0}'
+  702  cat downloaded_tweets_extend_original_nolf2.tsv | awk -F "457060718" '{print $0}'
+  703  awk -F "457060718" '{print$0}' downloaded_tweets_extend_original_nolf2.tsv 
+  704  cat user_retweetID.txt | head -n 3
+  705  grep 457060718 downloaded_tweets_extend_original_nolf2.tsv 
+  706  for i in $(cat user_retweetID.txt); do (grep $i downloaded_tweets_extend_original_nolf2.tsv | awk '($2==$i) {print $4) >> q4.tsv); done 
+  707  for i in $(cat user_retweetID.txt); do (grep $i downloaded_tweets_extend_original_nolf2.tsv | awk '($2==$i) {print $4)' >> q4.tsv); done 
+  708  for i in $(cat user_retweetID.txt); do (grep $i downloaded_tweets_extend_original_nolf2.tsv | awk '($2==$i) {print $4}' >> q4.tsv); done 
+  709  wc q4.tsv 
+  710  head -n 3 user_retweetID.txt 
+  711  echo "457060718" > q4.tsv 
+  712  for i in $(q4.tsv); do (grep $i downloaded_tweets_extend_original_nolf2.tsv | awk '($2==$i) {print $4}'); done
+  713  echo "457060718" > q4.txt 
+  714  cat q4.txt
+  715  for i in $(q4.txt); do (grep $i downloaded_tweets_extend_original_nolf2.tsv | awk '($2==$i) {print $4}'); done
+  716  for i in $(cut -f2 user_retweetID.txt); do (grep $i downloaded_tweets_extend_original_nolf2.tsv | awk '($2==$i) {print $4}' >> q4.tsv); done 
+  717  wc q4.t
+  718  wc q4.tvs
+  719  wc q4.tsv
+  720  cat q4.ts
+  721  cat q4.tsv 
+  722  ls
+  723  head -n retweets.txt 
+  724  head -n 4  retweets.txt 
+  725  rm -r q4.tsv
+  726  touch q4.tsv
+  727  or i in $(retweets.txt); do (grep $i downloaded_tweets_extend_original_nolf2.tsv | cut -f4  >> q4.tsv); don
+  728  for i in $(cat retweets.txt); do (grep $i downloaded_tweets_extend_original_nolf2.tsv | cut -f4 >> q4.tsv); done
+  729  wc q4.tsv
+  730  sed -e 's/^"//' -e 's/"$//' < q4.tsv | tr , '\n' | tr '[:upper:]' '[:low
+  731  wer:]' | sort | uniq -c | sort -nr | head -n 30 > top30.tsv
+  732  sed -e 's/^"//' -e 's/"$//' < q4.tsv | tr , '\n' | tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -nr | head -n 30 > top30.tsv
+  733  head -n top30.tsv 
+  734  head -n 5 top30.tsv 
+  735  cut -f4 downloaded_tweets_extend_original_nolf2.tsv > hashtags_NEW.tsv
+  736  head -n 5 hashtags_NEW.tsv 
+  737  ed -e 's/^"//' -e 's/"$//' < hashtags_NEW.tsv | tr , '\n' | tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -nr | head -n 30 > top30_1.tsv
+  738  sed -e 's/^"//' -e 's/"$//' < hashtags_NEW.tsv | tr , '\n' | tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -nr | head -n 30 > top30_1.tsv
+  739  head -n 5 top30_1.tsv 
+  740  awk 'NR==FNR { id[$2]=$2; next }($2 in id){ print id[$2]}' top30.tsv top30_1.tsv > check.tsv
+  741  diff check.tsv top30_1.tsv
+  742  history
+  743  history > his.log
+  744  awk -F',' '{print $1}' q2.tsv | sort | uniq -c | sort -nr | head -n 5
+  745  cat q2.tsv | head -n 5
+  746  sed 's/\t/,/g' q2.tsv > q2.csv 
+  747  grep 18831926 q2.tsv 
+  748  grep 18831926 q2.csv 
+  749  grep 18831926 q2.csv > q5.csv
+  750  history
+  751  history > his.log 
+  752  logout
+  753  scp /Users/kennyhuynh/Desktop/q5.png khang@172.31.197.164:/home/khang/a4
+  754  cd a4
+  755  ls
+  756  cat q5.png 
+  757  display q5.png 
+  758  ls
+  759  cat his.log 
+  760  ls
+  761  grep retweeted downloaded_tweets_extend_nolf2.tsv | awk -F '\t' '{print $5}' | sed 's/^.* id=//g' | sed 's/ type=retweeted.//g' > retweets.txt
+  762  fgrep -f retweets.txt downloaded_tweets_extend_original_nolf2.tsv | awk -F '\t' "{print $2}" > user_retweetID.txt
+  763  fgrep -f retweets.txt downloaded_tweets_extend_original_nolf2.tsv | awk -F '\t' '{print $2}' > user_retweetID.txt
+  764  wc user_retweetID.txt 
+  765  sort user_retweetID.txt | uniq -c | sort -nr | head -n 10
+  766  for i in $(cat retweets.txt); do ( grep $i downloaded_tweets_extend_original_nolf2.tsv | awk '{print $2}' > userA.txt; grep $i downloaded_tweets_extend_nolf2.tsv | awk '{print $2}' > userB.txt; paste -d' ' userA.txt userB.txt >> output.txt); done
+  767   awk  '$1!=""' output.txt | awk  '$2!=""' output.txt | awk '($1!=$2) {print $1","$2}' | sort > q1.tsv
+  768  cat q1.tsv | head -n 5
+  769  awk -F',' '{print $1,$2}' q1.tsv | sort | sort -nr | awk '{ if ($1 >= 3) {print $1","$2} }' > q2.tsv
+  770  cat q2.tsv | head -n 5
+  771  awk -F',' '{print $1}' q2.tsv | sort | uniq -c | sort -nr | awk '{ if ($1 >= 3) {print} }'> q2_useID.tsv
+  772  cat q2_useID.tsv | head -n 5
+  773  awk -F',' '{print $1}' q2.tsv | sort | uniq -c | sort -nr | head -n 5
+  774  /etc/gnuplot-5.4.4/src/gnuplot
+  775  for i in $(cat retweets.txt); do (grep $i downloaded_tweets_extend_original_nolf2.tsv | cut -f4 >> q4.tsv); done
+  776  sed -e 's/^"//' -e 's/"$//' < q4.tsv | tr , '\n' | tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -nr | head -n 30 > top30.tsv
+  777  cut -f4 downloaded_tweets_extend_original_nolf2.tsv > hashtags_NEW.tsv
+  778  cd ..
+  779  ls
+  780  rm -r ws6
+  781  rm -r worksheet6-
+  782  cd A4
+  783  cut -f4 downloaded_tweets_extend_original_nolf2.tsv > hashtags_NEW.tsv
+  784  sed -e 's/^"//' -e 's/"$//' < hashtags_NEW.tsv | tr , '\n' | tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -nr | head -n 30 > top30_1.tsv
+  785  awk 'NR==FNR { id[$2]=$2; next }($2 in id){ print id[$2]}' top30.tsv top30_1.tsv > check.tsv
+  786  diff check.tsv top30_1.tsv
+  787  \
+  788  cp ./a4/q5.png
+  789  cp ~/a4/q5.png
+  790  cp /a4/q5.png
+  791  ls
+  792  cd A4
+  793  ls
+  794  more a4.txt 
+  795  cat a4.txt 
+  796  cat q2.tsv | head -n 5
+  797  awk -F',' '{print $1}' q2.tsv | sort | uniq -c | sort -nr | head -n 5
+  798  grep 18831926 downloaded_tweets_extend_original_nolf2.tsv | cut -f4 | sort | uniq -c | sort -nr
+  799  mkdir A4
+  800  cd A4
+  801  cp ~test/A1/downloaded_tweets_extend_original_nolf2.tsv .
+  802  cp ~test/A1/downloaded_tweets_extend_nolf2.tsv .
+  803  script a4.txt
+  804  cat a4.txt 
+  805  vi a4.txt 
+  806  git init
+  807  git branch
+  808  git checkout -d a4
+  809  git checkout -b a4
+  810  git status
+  811  git add a4.txt 
+  812  git add q3.svg 
+  813  git add q5.png 
+  814  git remote add origin https://github.com/Khang8078/CS131.git
+  815  git commit -m "A4 done!"
+  816  git push -u origin a4
+  817  cd ..
+  818  git clone -b a4 https://github.com/Khang8078/CS131.git a4_KhangHuynh
+  819  cd a4_KhangHuynh/
+  820  ls
+  821  cd ..
+  822  ls
+  823  rm -r a4
+  824  ls
+  825  logout 
+  826  mkdir ws7
+  827  cd ws7
+  828  wget    https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Books_v1_02.tsv.gz
+  829  gunzip amazon_reviews_us_Books_v1_02.tsv.gz
+  830  cd ..
+  831  ls
+  832  rm -r a4_KhangHuynh/
+  833  cd A
+  834  cd A4/
+  835  LS
+  836  ls
+  837  rm -r userA.txt 
+  838  rm -r userB.txt 
+  839  cd ..
+  840  cd ws7/
+  841  ls
+  842  grep 1581603681 amazon_reviews_us_Books_v1_02.tsv 
+  843  head -n 3 amazon_reviews_us_Books_v1_02.tsv 
+  844  grep 1581603681 amazon_reviews_us_Books_v1_02.tsv | awk -F'\t' '{print $15}'
+  845  grep 1581603681 amazon_reviews_us_Books_v1_02.tsv | awk -F'\t' '{print $14}'
+  846  \
+  847  echo "When looking for &lt;a href=\\"[...]\\">lock picking books&lt;/a>, this one is very informative. It will give one great ideas on opening padlocks, but the language is very basic, no frills here. This is not a romance novel, it's how to open locks without keys, and that's it. You will learn what you need to here. But you should always seek out more knowledge." > out.txt
+  848  wc out.txt 
+  849  sed -e $'s/,/\\\n/g' out.txt 
+  850  sed -e $'s/,/\\/g' out.txt 
+  851  sed 's/,//g' out.txt 
+  852  sed 's/,//g' out.txt | sed 's/.//g' 
+  853  sed 's/,//g' out.txt | tea sed 's/.//g' 
+  854  sed 's/,//g' out.txt | tee sed 's/.//g' 
+  855  sed 's/.//g' out.txt 
+  856  sed -e 's/\.//g' out.txt 
+  857  sed 's/,//g' out.txt | tee sed -e 's/\.//g'
+  858  sed 's/,//g' out.txt | tee sed 's/\.//g'
+  859  sed 's/,//g' out.txt | sed -e 's/\.//g'
+  860  sed 's/;\+$//' out.txt 
+  861  sed -e 's/<[^>]*>//g' out.txt 
+  862  echo "The writing style is clumsy and sometimes annoying, but the content is pure gold.  I used the instructions it gives to open my first combination lock (my brother had lost the combination) within an hour of opening the book.  The next two locks took 35 minutes each.  Not very difficult at all." > out.txt 
+  863  wc out.txt 
+  864  sed -e 's/<[^>]*>//g' out.txt 
+  865  sed 's/,//g' out.txt | sed -e 's/\.//g'
+  866  grep 1581603681 amazon_reviews_us_Books_v1_02.tsv | grep ';'
+  867  echo "When looking for &lt;a href=\\"[...]\\">lock picking books&lt;/a>, this one is very informative. It will give one great ideas on opening padlocks, but the language is very basic, no frills here. This is not a romance novel, it's how to open locks without keys, and that's it. You will learn what you need to here. But you should always seek out more knowledge." > out.txt
+  868  sed -r 's/;+$//' out.txt 
+  869  sed -re 's/;+/;/g' -e 's/(.*);/\1/' out.txt 
+  870  sed -e 's/.*;//' out.txt 
+  871   sed -e 's/\(.*;\)//g' out.txt 
+  872  sed “s/;//g” out.txt 
+  873  sed'sed “s/;//g” o
+  874  sed'sed “s/;//g” out.txt'' out.txt
+  875  sed'sed “s/;//g” out.txt' out.txt
+  876  sed 'sed “s/;//g” out.txt' out.txt
+  877  sed “s/;//g” out.txt
+  878  sed 's/;//g' out.txt
+  879  sed 's/,//g' out.txt | sed -e 's/\.//g' | sed 's/;//g'
+  880  sed 's/it//'
+  881  sed 's/it//' out.txt 
+  882  sed 's/[it]//g' out.txt 
+  883  sed 's/it//g' out.txt 
+  884  sed 's/but//g' out.txt 
+  885  tr , '\n' | tr '[:upper:]' '[:low
+  886  tr , '\n' | tr '[:upper:]' '[:lower:]' out.txt 
+  887  tr '[:upper:]' '[:lower:]' out.txt 
+  888  tr '[:upper:]' '[:lower:]' < out.txt 
+  889  tr '[:upper:]' '[:lower:]' < out.txt | sed 's/it//g'
+  890  sed 's/,//g' out.txt | sed -e 's/\.//g' | sed 's/;//g'
+  891  sed -e 's/<[^>]*>//g' out.txt 
+  892  sed 's/<[^>]*>//g ; /^$/d' out.txt 
+  893  echo "The writing style is clumsy and sometimes annoying, but the content is pure gold.  I used the instructions it gives to open my first combination lock (my brother had lost the combination) within an hour of opening the book.  The next two locks took 35 minutes each.  Not very difficult at all." > out1.txt 
+  894  sed 's/<[^>]*>//g ; /^$/d' out1.txt 
+  895  sed 's/<br>.*</br>//g' out1.txt 
+  896  sed -e 's/<br>.*</br>//g' out1.txt 
+  897  sed "s/<[^>]\+>//g" out1.txt 
+  898  sed "s/<[^>]\+>//g" out.txt 
+  899  awk '{gsub("<[^>]*>", "")}1' out.txt 
+  900  awk '{gsub("<[^>]*>", "")}1' out1.txt 
+  901  logout
+  902  grep 0373836635 amazon_reviews_us_Books_v1_02.tsv | cut -f 14 > final.txt
+  903  wc final.txt 
+  904  sed 's/,//g' final.txt | sed -e 's/\.//g' | sed 's/;//g' | tr '[:upper:]' '[:lower:]' | sed 's/it//g' | sed 's/in//g' | sed 's/and//g' | sed 's/or//g' | sed 's/if//g' > final.txt
+  905  cat final.txt 
+  906  wc final.txt 
+  907  grep 0373836635 amazon_reviews_us_Books_v1_02.tsv | cut -f 14 > final.txt
+  908  sed 's/,//g' final.txt | sed -e 's/\.//g' | sed 's/;//g' | tr '[:upper:]' '[:lower:]' | sed 's/it//g' | sed 's/in//g' | sed 's/and//g' | sed 's/or//g' | sed 's/if//g' >> final.txt
+  909  wc final.txt 
+  910  sed 's/,//g' final.txt | sed -e 's/\.//g' | sed 's/;//g' | tr '[:upper:]' '[:lower:]' | sed 's/it//g' | sed 's/in//g' | sed 's/and//g' | sed 's/or//g' | sed 's/if//g' > final.txt
+  911  wc final.txt 
+  912  sed 's/,//g' <  final.txt | sed -e 's/\.//g' | sed 's/;//g' | tr '[:upper:]' '[:lower:]' | sed 's/it//g' | sed 's/in//g' | sed 's/and//g' | sed 's/or//g' | sed 's/if//g' > final.txt
+  913  wc final.txt 
+  914  grep 0373836635 amazon_reviews_us_Books_v1_02.tsv | cut -f 14 > final.txt
+  915  sed 's/,//g' <  final.txt | sed -e 's/\.//g' | sed 's/;//g' | tr '[:upper:]' '[:lower:]' | sed 's/it//g' | sed 's/in//g' | sed 's/and//g' | sed 's/or//g' | sed 's/if//g' 
+  916  sed 's/,//g' <  final.txt | sed -e 's/\.//g' | sed 's/;//g' | tr '[:upper:]' '[:lower:]' | sed 's/it//g' | sed 's/in//g' | sed 's/and//g' | sed 's/or//g' | sed 's/if//g' | sed -e 's/<[^>]*>//g'
+  917  grep 0373836635 amazon_reviews_us_Books_v1_02.tsv | cut -f 14 > final.txt
+  918  cat final.txt 
+  919  sed 's/,//g' <  final.txt | sed -e 's/\.//g' | sed 's/;//g' | tr '[:upper:]' '[:lower:]' | sed 's/it//g' | sed 's/in//g' | sed 's/and//g' | sed 's/or//g' | sed 's/if//g' | sed -e 's/<[^>]*>//g'
+  920  cd ws7/
+  921  head -n 10 amazon_reviews_us_Books_v1_02.tsv 
+  922  echo "hough she is honored to be Chicago Woman of the Year, Victoria Colby-Camp is more euphoric over the mental improvement that her son Jim has shown recently especially since he and Tasha North fell in love.  Jim was snatched almost twenty years ago when he was seven and turned into the killing Seth whose goal was to murder Victoria for abandoning him.  However, her elation would turn to despair if she knew Seth resurfaced and started to rape a pregnant Tasha.<br /><br />Former military strategist Daniel Marks is in town complements of the Colby Agency that wants to hire him.  Also in Chicago is Emily Hastings whose father a veteran homicide detective was murdered.  She finds letters linking her dad to Victoria, the woman's long ago murdered first husband James, and her dad's first partner Marelyn Rutland that confuses her.  Soon she will meet Daniel and they will be embroiled in the COLBY CONSPIRACY that goes back almost two decades ago.<br /><br />Though the subplots can become confusing at first, once the audience comprehends how this complex superb suspense thriller starts to come together, they will want more Colby Agency tales; (see FILES FROM THE COLBY AGENCY: THE BODYGUARD'S BABY PROTECTIVE CUSTODY).  The ensemble cast is solid as fans will feel with Victoria who has overcome so much tragedy, hope Jim \\"defeats\\" Seth with Tasha at his side, and root for Daniel and Emily to make it while wondering what really happened two decades ago.  A final twist marks a strong Webb of deceit tale that showcases a fine author on her A-game.<br /><br />Harriet Klausner" > 1.txt
+  923  ls
+  924  sed -e 's/<[^>]*>//g' 1.txt 
+  925  cd ws7/
+  926  sed 's/,//g' 1.txt | sed -e 's/\.//g' | sed 's/;//g' | tr '[:upper:]' '[:lower:]' < out.txt | sed 's/it//g' | sed -e 's/<[^>]*>//g'
+  927  cat 1.txt 
+  928  sed 's/,//g' 1.txt | sed -e 's/\.//g' | sed 's/;//g' | tr '[:upper:]' '[:lower:]' | sed 's/it//g' | sed -e 's/<[^>]*>//g'
+  929  sed 's/,//g' 1.txt | sed -e 's/\.//g' | sed 's/;//g' | tr '[:upper:]' '[:lower:]' | sed 's/it//g' | sed 's/in//g' | sed ’s/and//g’ | sed 's/or//g’ | sed 's/if//g’ | sed -e 's/<[^>]*>//g'
+  930  sed 's/,//g' 1.txt | sed -e 's/\.//g' | sed 's/;//g' | tr '[:upper:]' '[:lower:]' | sed 's/in//g' | sed -e 's/<[^>]*>//g'
+  931  sed 's/,//g' 1.txt | sed -e 's/\.//g' | sed 's/;//g' | tr '[:upper:]' '[:lower:]' | sed 's/it//g' | sed 's/in//g' | sed 's/and//g' | sed 's/or//g' | sed 's/if//g' | sed -e 's/<[^>]*>//g'
+  932  grep 0373836635 amazon_reviews_us_Books_v1_02.tsv 
+  933  grep 0805076069 amazon_reviews_us_Books_v1_02.tsv 
+  934  head -n 1 amazon_reviews_us_Books_v1_02.tsv 
+  935  grep 0805076069 amazon_reviews_us_Books_v1_02.tsv | cut -f 14 > worksheet.txt
+  936  for i in ${cat worksheet.txt}; do ( sed 's/,//g' &i | sed -e 's/\.//g' | sed 's/;//g' | tr '[:upper:]' '[:lower:]' | sed 's/it//g' | sed 's/in//g' | sed 's/and//g' | sed 's/or//g' | sed 's/if//g' | sed -e 's/<[^>]*>//g' >> final.txt); done
+  937  for i in $(cat worksheet.txt); do ( sed 's/,//g' &i | sed -e 's/\.//g' | sed 's/;//g' | tr '[:upper:]' '[:lower:]' | sed 's/it//g' | sed 's/in//g' | sed 's/and//g' | sed 's/or//g' | sed 's/if//g' | sed -e 's/<[^>]*>//g' >> final.txt); done
+  938  for i in $(cat worksheet.txt); do( echo "$i"); done
+  939  cat worksheet.txt 
+  940  sed 's/,//g' worksheet.txt | sed -e 's/\.//g' | sed 's/;//g' | tr '[:upper:]' '[:lower:]' | sed 's/it//g' | sed 's/in//g' | sed 's/and//g' | sed 's/or//g' | sed 's/if//g' | sed -e 's/<[^>]*>//g'
+  941  script ws7.txt
+  942  rm -r ws7.txt 
+  943  script ws7.txt
+  944  vi ws7.txt 
+  945  cat ws7.txt 
+  946  vi ws7.txt 
+  947  history > cmds.log
+  948  git init
+  949  git checkout -b ws7
+  950  git status
+  951  git add ws7.txt 
+  952  git add cmds.log 
+  953  git commit -m "WS7 done!"
+  954  git remote add origin https://github.com/Khang8078/CS131.git
+  955  git push -u origin ws7
+  956  git clone -b ws7 https://github.com/Khang8078/CS131.git ws7_KhangHuynh
+  957  cd ws7_KhangHuynh/
+  958  ls
+  959  cd ..
+  960  rm -r ws7_KhangHuynh/
+  961  cd ..
+  962  ls
+  963  mkdir ws8
+  964  cd ws8
+  965  wget    https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Books_v1_02.tsv.gz
+  966  gunzip amazon_reviews_us_Books_v1_02.tsv.gz
+  967  head -n 2 amazon_reviews_us_Books_v1_02.tsv 
+  968  head -n 5 amazon_reviews_us_Books_v1_02.tsv 
+  969  grep -P "\tY\tY\t" amazon_reviews_us_Books_v1_02.tsv | wc -l
+  970  grep -P "\tY\tY\t" amazon_reviews_us_Books_v1_02.tsv 
+  971  awk -F '\t' '$12=="Y"{print}' amazon_reviews_us_Books_v1_02.tsv 
+  972  awk -F '\t' '$12=="Y"{print}' amazon_reviews_us_Books_v1_02.tsv | wc 
+  973  awk -F '\t' '$12=="N"{print}' amazon_reviews_us_Books_v1_02.tsv | wc 
+  974  wc amazon_reviews_us_Books_v1_02.tsv 
+  975  head -n 2 amazon_reviews_us_Books_v1_02.tsv 
+  976  awk -F '\t' '$12=="Y"{print$14}' amazon_reviews_us_Books_v1_02.tsv > verified.txt
+  977  head -n 2 verified.txt 
+  978  wc verified.txt 
+  979  cat verified.txt | tr -cs "[:alnum:]" "\n"| tr "[:lower:]" "[:upper:]" | sort -S16M | uniq -c |sort -nr | cat -n | head -n 30A
+  980  cat verified.txt | tr -cs "[:alnum:]" "\n"| tr "[:lower:]" "[:upper:]" | sort -S16M | uniq -c |sort -nr | cat -n | head -n 30
+  981  history 
+  982  history > his.log
+  983  logout
+  984  cd /mnt/scratch
+  985  ls
+  986  cd khang/
+  987  ls
+  988  cd ..
+  989  ls -latr
+  990  cd ws8
+  991  ls
+  992  cat his.log 
+  993  cd ..
+  994  cd /mnt/scratch
+  995  cd khang/
+  996  ls
+  997  cd ws8/
+  998  ls
+  999  head -n 3 unverified.txt 
+ 1000  cd ..
+ 1001  mkdir worksheet8
+ 1002  wget    https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Books_v1_02.tsv.gz
+ 1003  ls
+ 1004  rm amazon_reviews_us_Books_v1_02.tsv.gz 
+ 1005  cd ws8
+ 1006  ls
+ 1007  script ws8.txt
+ 1008  rm ws8.txt 
+ 1009  script ws8.txt
+ 1010  rm ws8.txt 
+ 1011  script ws8.txt
+ 1012  vi ws
+ 1013  rm ws
+ 1014  vi ws8.txt 
+ 1015  cat ws8.txt 
+ 1016  git init
+ 1017  git checkout -b ws8
+ 1018   git remote add origin https://github.com/Khang8078/CS131.git
+ 1019   git commit -m "WS8 done!"
+ 1020  git add ws8.txt 
+ 1021  history > cmds.log

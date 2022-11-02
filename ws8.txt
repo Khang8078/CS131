@@ -1,0 +1,73 @@
+Script started on 2022-11-02 04:04:09-04:00
+Command used:
+]0;khang@sjsu:/mnt/scratch/khang/ws8[khang@sjsu ws8]$ awk -F '\t' '$12=="Y"{print$14}' amazon_reviews_us_Books_v1_02.tsv > verified.txt
+]0;khang@sjsu:/mnt/scratch/khang/ws8[khang@sjsu ws8]$ awk -F '\t' '$12=="Y"{print$14}' amazon_reviews_us_Books_v1_02.tsv > verified.txtuverified.txtnverified.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1@N
+]0;khang@sjsu:/mnt/scratch/khang/ws8[khang@sjsu ws8]$ awk -F '\t' '$12=="N"{print$14}' amazon_reviews_us_Books_v1_02.tsv > unverified.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2PY"{print$14}' amazon_reviews_us_Books_v1_02.tsv > verified.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccat verified.txt | tr -cs "[:alnum:]" "\n" | fgrep -v -w -f /usr/share/groff/current/eign | tr "[:lower:]" "[:uppper:]" | sort -S16M | uniq -c | sort -nr | cat -n | head -n 30
+
+
+Output:
+     1	 656538 I
+     2	 506046 BOOK
+     3	 463532 BR
+     4	 350442 S
+     5	 262944 THE
+     6	 190399 QUOT
+     7	 149220 T
+     8	 144660 THIS
+     9	 142622 READ
+    10	 123496 IT
+    11	 119573 HAS
+    12	 109443 HER
+    13	  77637 SHE
+    14	  74051 BOOKS
+    15	  70167 STORY
+    16	  66518 GREAT
+    17	  60201 AUTHOR
+    18	  59824 LIFE
+    19	  55491 READING
+    20	  52110 IF
+    21	  50129 REALLY
+    22	  47146 IN
+    23	  45397 ITS
+    24	  44234 A
+    25	  44024 DOES
+    26	  43797 AFTER
+    27	  43661 THROUGH
+    28	  42623 FIND
+    29	  42437 WORLD
+    30	  41625 HE
+]0;khang@sjsu:/mnt/scratch/khang/ws8[khang@sjsu ws8]$ cat verified.txt | tr -cs "[:alnum:]" "\n" | fgrep -v -w -f /usr/share/groff/current/eign | tr "[:lower:]" "[:uppper:]" | sort -S16M | uniq -c | sort -nr | cat -n | head -n 30[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cuverified.txt | tr -cs "[:alnum:]" "\n" | fgrep -v -w -f /usr/share/groff/current/eign | tr "[:lower:]" "[:u[C[1@p[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cnverified.txt | tr -cs "[:alnum:]" "\n" | fgrep -v -w -f /usr/share/groff/current/eign | tr "[:lower:]" "[:[1@u[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+     1	7461036 I
+     2	5840768 BOOK
+     3	4484398 BR
+     4	4047616 S
+     5	3009020 THE
+     6	2458308 QUOT
+     7	1894464 READ
+     8	1742812 T
+     9	1650715 THIS
+    10	1584195 HER
+    11	1451711 IT
+    12	1414447 HAS
+    13	1120085 SHE
+    14	 977528 STORY
+    15	 832044 BOOKS
+    16	 812356 LIFE
+    17	 777353 GREAT
+    18	 690641 READING
+    19	 611648 REALLY
+    20	 610729 AUTHOR
+    21	 560750 A
+    22	 539435 IN
+    23	 538353 LOVE
+    24	 533419 IF
+    25	 530301 CHARACTERS
+    26	 523197 THROUGH
+    27	 518715 WORLD
+    28	 513694 ITS
+    29	 511479 AFTER
+    30	 488395 HE
+]0;khang@sjsu:/mnt/scratch/khang/ws8[khang@sjsu ws8]$ exit
+
+Script done on 2022-11-02 04:24:58-04:00
