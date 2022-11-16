@@ -1,0 +1,51 @@
+Script started on 2022-11-15 22:29:22-05:00
+
+Based on results below, the shell script runs faster on input file
+
+In numbers.sh:
+#! /bin/bash
+#Find min
+cat amazon.txt | sort -nk1,1 | head -1
+
+#Find max
+awk '{for(i=1;i<=NF;i++) if($i>maxval) maxval=$i;}; END { print maxval;}' amazon.txt
+
+#Find average
+awk '{ total += $1; count++ } END { print total/count }' amazon.txt
+
+]0;khang@sjsu:/mnt/scratch/khang/ws10[khang@sjsu ws10]$ vi numbers.sh
+[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;51r[?12h[?12l[27m[23m[29m[m[H[2J[?25l[51;1H"numbers.sh" 11L, 243C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[34m#! /bin/bash
+#Find min[m
+cat amazon.txt | [38;5;130msort[m [35m-nk[m1,[31m1[m | head [31m-1[m
+
+[34m#Find max[m
+awk [38;5;130m'[m[31m{for(i=1;i<=NF;i++) if($i>maxval) maxval=$i;}; END { print maxval;}[m[38;5;130m'[m amazon.txt
+
+[34m#Find average[m
+awk [38;5;130m'[m[31m{ total += $1; count++ } END { print total/count }[m[38;5;130m'[m amazon.txt
+
+
+[94m~                                                                                                                       [13;1H~                                                                                                                       [14;1H~                                                                                                                       [15;1H~                                                                                                                       [16;1H~                                                                                                                       [17;1H~                                                                                                                       [18;1H~                                                                                                                       [19;1H~                                                                                                                       [20;1H~                                                                                                                       [21;1H~                                                                                                                       [22;1H~                                                                                                                       [23;1H~                                                                                                                       [24;1H~                                                                                                                       [25;1H~                                                                                                                       [26;1H~                                                                                                                       [27;1H~                                                                                                                       [28;1H~                                                                                                                       [29;1H~                                                                                                                       [30;1H~                                                                                                                       [31;1H~                                                                                                                       [32;1H~                                                                                                                       [33;1H~                                                                                                                       [34;1H~                                                                                                                       [35;1H~                                                                                                                       [36;1H~                                                                                                                       [37;1H~                                                                                                                       [38;1H~                                                                                                                       [39;1H~                                                                                                                       [40;1H~                                                                                                                       [41;1H~                                                                                                                       [42;1H~                                                                                                                       [43;1H~                                                                                                                       [44;1H~                                                                                                                       [45;1H~                                                                                                                       [46;1H~                                                                                                                       [47;1H~                                                                                                                       [48;1H~                                                                                                                       [49;1H~                                                                                                                       [50;1H~                                                                                                                       [m[51;103H3,7[11CAll[3;7H[?25h[?25l[51;93H^[[3;7H[51;93H  [3;7H[51;93H^[[3;7H[51;93H  [3;7H[?25h[?25l[51;93H:[3;7H[51;1H[K[51;1H:[?2004h[?25hq[?25l[?25hw[?25l[?25h[?25l[51;3H[K[51;3H[?25h[?25l[51;2H[K[51;2H[?25hw[?25l[?25hq[?25l[?25h[?25l[?2004l"numbers.sh" 11L, 243C written
+[?2004l[?1l>[?25h[?1049l[23;0;0t]0;khang@sjsu:/mnt/scratch/khang/ws10[khang@sjsu ws10]$ 
+]0;khang@sjsu:/mnt/scratch/khang/ws10[khang@sjsu ws10]$ 
+]0;khang@sjsu:/mnt/scratch/khang/ws10[khang@sjsu ws10]$ 
+]0;khang@sjsu:/mnt/scratch/khang/ws10[khang@sjsu ws10]$ time python3 numbers.py
+min 0 max 15835 avg 9.33467921636312
+
+real	0m19.322s
+user	0m18.641s
+sys	0m0.680s
+]0;khang@sjsu:/mnt/scratch/khang/ws10[khang@sjsu ws10]$ time python3 numbers.py[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[10Pvi numbers.shhead -n 10 ws9.txt 2R1;95;0c10;rgb:0000/0000/000011;rgb:ffff/ffff/ffff[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccat ws9.txt [K2R1;95;0c10;rgb:0000/0000/000011;rgb:ffff/ffff/ffff[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccat ws9.txt [Kls[Kcat ws9.txt 2R1;95;0c10;rgb:0000/0000/000011;rgb:ffff/ffff/ffff[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccat ws9.txt [K2R1;95;0c10;rgb:0000/0000/000011;rgb:ffff/ffff/ffff[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[32Phead -n 10 ws9.txt [6Pvi numbers.shtime python3 numbers.py[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+]0;khang@sjsu:/mnt/scratch/khang/ws10[khang@sjsu ws10]$ 
+]0;khang@sjsu:/mnt/scratch/khang/ws10[khang@sjsu ws10]$ time ./numbers.sh
+0
+15835
+9.33468
+
+real	0m18.854s
+user	0m18.857s
+sys	0m0.001s
+]0;khang@sjsu:/mnt/scratch/khang/ws10[khang@sjsu ws10]$ 
+]0;khang@sjsu:/mnt/scratch/khang/ws10[khang@sjsu ws10]$ exit
+
+Script done on 2022-11-15 22:33:17-05:00
