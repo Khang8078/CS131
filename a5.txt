@@ -125,4 +125,11 @@ CityOnFire   1060440219097423872.hashtags   1964.00000000000001154832   1.000000
 ]0;khang@sjsu:/mnt/scratch/khang/a5/infl_retweeted[khang@sjsu infl_retweeted]$ for FILE in `ls | grep -v retweeted_hashtags_stats.tsv` ; do for HASHTAG in `cat $FILE`; do count_H_in_C=`grep $HAASHTAG $FILE | wc -l` ; count_hashtags_in_C=`cat $FILE | wc -l`; count_H_entire_dataset=`grep $HASHTAG ../downloaded_tweets_extend_nolf2_NOBOT__retweeted.tsv | wc -l` ; count_hashtags_entire_dataset=63068; frequency_H_in_C=`echo "$count_H_in_C / $count_hashtags_in_C" | bc -l`; frequenccy_H_overall=`echo "$count_H_entire_dataset / $count_hashtags_entire_dataset" | bc -l` ; relative_frequency_H_C=`echo "$frequency_H_in_C / $freequency_H_overall" | bc -l` ; echo "$HASHTAG   $FILE   $relative_frequency_H_C   $frequency_H_in_C   $frequency_H_overall   $count_H_in_C   $coount_hashtags_in_C   $count_H_entire_dataset   $count_hashtags_entire_dataset " ; done ; done > retweeted_hashtags_stats.tsv
 ]0;khang@sjsu:/mnt/scratch/khang/a5/infl_retweeted[khang@sjsu infl_retweeted]$ exit
 
+Do you see any hashtags that are "special" to some clusters, i.e. that occur often in a particular cluster of tweets, but less often in the tweets overall? Which hashtags and for which clusters (ID'ed by their leaders)? For this purpose, you can sort the rows based on relative_frequency_H_C (higher at top and lower at bottom).
+--> Yes, I saw some hashtags that are "special" to some clusters
+
+For replies, there are some different hashtags. Hashtags: 2022Election, 609BedtimeStory, 60minutes, … are popular in a particular cluster of tweets, but less often in the tweets overall
+
+For retweets, there are some different hashtags. Hashtags: 222222MyanmarStrikes, 6888th, 1619Project,… are popular in a particular cluster of tweets, but less often in the tweets overall
+
 Script done on 2022-11-18 05:34:09-05:00
